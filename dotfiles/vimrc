@@ -1,0 +1,47 @@
+set noswapfile
+syntax on
+
+colorscheme onedark
+
+filetype indent plugin on
+
+set tabstop=4 				"Number of visual spaces per TAB
+set softtabstop=4			"Number of spaces in tab when editing
+set shiftwidth=4			"How many columns text is indented
+set noexpandtab 			"Tab ARE NOT spaces
+set smartindent				"Indent source code
+
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+nnoremap<leader><space> :nohlsearch<CR>
+
+cmap Wq wq
+cmap Q q
+cmap W w
+cmap q1 q!
+
+set list
+hi SpecialKey ctermbg=White
+set listchars=tab:\ \ ,trail:\
+
+set number
+:highlight LineNr ctermfg=white
+
+set mat=5 "blink when matching found
+set confirm
+set showmode
+set showmatch
+set colorcolumn=80
+
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+				\| exe "normal! g'\"" | endif
+endif
+
+
+set mouse=a
+set mouse=c
+au BufNewFile,BufRead *.itex set filetype=tex
+
