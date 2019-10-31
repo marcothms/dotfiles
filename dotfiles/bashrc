@@ -1,13 +1,11 @@
 # bashrc from Marc
 
-export PS1="\[\033[0;37m\][\t] \[\033[0;32m\]\u\[\033[m\]@\h: \[\033[1;34m\]\w\[\033[m\] \n> "
+export PS1="\[\033[0;32m\]\u\[\033[m\]@\h: \[\033[1;34m\]\w\[\033[m\] \n> "
 
 LS_COLORS=$LS_COLORS:'di=1;32:'
 export LS_COLORS
 
-alias dotdrop='/home/mthomas/dotfiles/dotdrop.sh --cfg=/home/mthomas/dotfiles/config.yaml'
-
-# export {http,ftp,https}_proxy=http://tst-proxy.genua.de:8888
+alias dotdrop='~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
