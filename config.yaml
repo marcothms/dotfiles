@@ -10,7 +10,7 @@ dotfiles:
     src: vimrc
     dst: ~/.vimrc
 profiles:
-  farellien:
+  default:
     dotfiles:
     - f_bashrc
     - f_vimrc
