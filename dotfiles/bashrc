@@ -5,7 +5,6 @@ export PS1="\[\033[0;37m\][\t] \[\033[0;32m\]\u\[\033[m\]@\h: \[\033[1;34m\]\w\[
 LS_COLORS=$LS_COLORS:'di=1;32:'
 export LS_COLORS
 
-alias lizenz='cat /home/mfriedl/LIZENZ'
 alias dotdrop='/home/mthomas/dotfiles/dotdrop.sh --cfg=/home/mthomas/dotfiles/config.yaml'
 
 # export {http,ftp,https}_proxy=http://tst-proxy.genua.de:8888
