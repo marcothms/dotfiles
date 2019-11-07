@@ -1,47 +1,77 @@
+" vimrc from Marc
+
+
+" GENERAL
+" disables swapfile creation
 set noswapfile
+" syntax highlighting
 syntax on
-
+" my colorscheme
 colorscheme onedark
-
+" recognize stuff
 filetype indent plugin on
+" show line numbers at the left
+set number
+:highlight LineNr ctermfg=white
+" show matching paren
+set showmatch
+set mat=5
+" cant quit without saving
+set confirm
+" show editiing mode at the bottom
+set showmode
+" shows colored column
+set colorcolumn=80
+" mouse behavior
+set mouse=a
+set mouse=c
 
-set tabstop=4 				"Number of visual spaces per TAB
-set softtabstop=4			"Number of spaces in tab when editing
-set shiftwidth=4			"How many columns text is indented
-set noexpandtab 			"Tab ARE NOT spaces
-set smartindent				"Indent source code
 
+" INDENTS
+" visual spaces per TAB
+set tabstop=4
+" spaces per tab when editing
+set softtabstop=4
+" how many columns text is indented
+set shiftwidth=4
+" tabs are not spaces
+set noexpandtab
+" indent source code
+set smartindent
+
+
+" SEARCH
+" enable search with /
 set incsearch
+" ignores case in searches
 set ignorecase
+" only case sensitive search when typing upper case
 set smartcase
+" highlight all search matches
 set hlsearch
 nnoremap<leader><space> :nohlsearch<CR>
 
+
+" MACROS (cmap old new)
 cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
 
+
+" WHITESPACES
 set list
 hi SpecialKey ctermbg=White
 set listchars=tab:\ \ ,trail:\
 
-set number
-:highlight LineNr ctermfg=white
 
-set mat=5 "blink when matching found
-set confirm
-set showmode
-set showmatch
-set colorcolumn=80
-
+" gose to line edited, when closed
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 				\| exe "normal! g'\"" | endif
 endif
 
 
-set mouse=a
-set mouse=c
+" no clue
 au BufNewFile,BufRead *.itex set filetype=tex
 
