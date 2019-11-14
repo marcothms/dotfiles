@@ -25,6 +25,8 @@ set colorcolumn=80
 " mouse behavior
 set mouse=a
 set mouse=c
+" encoding
+set encoding=utf-8
 
 
 " INDENTS

@@ -5,7 +5,18 @@ export PS1="\[\033[0;32m\]\u\[\033[m\]@\h: \[\033[1;34m\]\w\[\033[m\] \n> "
 LS_COLORS=$LS_COLORS:'di=1;32:'
 export LS_COLORS
 
-alias dotdrop='~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml'
+# dotfile management
+alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
+
+# general shorcuts
+alias ..="cd .."
+alias ll="ls -l"
+
+# git shotcuts
+alias ga="git add"
+alias gs="git show"
+alias gl="git log"
+alias gd="git diff"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
