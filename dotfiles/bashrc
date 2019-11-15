@@ -11,14 +11,7 @@ alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
 # general shorcuts
 alias ..="cd .."
 alias ll="ls -l"
-
-# git shotcuts
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gs="git show"
-alias gl="git log"
-alias gd="git diff"
+alias la="ls -la"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

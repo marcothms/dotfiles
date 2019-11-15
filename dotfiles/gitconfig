@@ -1,0 +1,13 @@
+[alias]
+	a = add
+	c = commit
+	d = diff
+	l = log
+	ps = push
+	pl = pull
+	sh = show
+	st = status
+[user]
+	name = Marco Thomas
+[log]
+	decorate = true

@@ -9,8 +9,12 @@ dotfiles:
   f_vimrc:
     src: vimrc
     dst: ~/.vimrc
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
 profiles:
   default:
     dotfiles:
     - f_bashrc
     - f_vimrc
+    - f_gitconfig
