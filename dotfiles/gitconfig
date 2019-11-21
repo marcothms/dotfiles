@@ -1,9 +1,11 @@
 [alias]
 	a = add
 	c = commit
+	co = checkout
 	d = diff
 	l = log
 	ps = push
+	ph = push
 	pl = pull
 	sh = show
 	st = status
