@@ -1,78 +1,63 @@
-" vimrc from Marc
+" ########################
+" ### .vimrc from Marc ###
+" ########################
 
-
-" GENERAL
-" disables swapfile creation
-set noswapfile
-" syntax highlighting
+" Coloooooors
 syntax on
-" my colorscheme
 colorscheme onedark
-" recognize stuff
+filetype on
 filetype indent plugin on
-" show line numbers at the left
+set colorcolumn=80
+
+" Numbers at the left side
 set number
-:highlight LineNr ctermfg=white
-" show matching paren
+:highlight LineNr ctermfg=white "color
+" set relativenumber
+
+" Parathesis highlighting
 set showmatch
 set mat=5
-" cant quit without saving
-set confirm
-" show editiing mode at the bottom
-set showmode
-" shows colored column
-set colorcolumn=80
-" mouse behavior
+
+" General
+set noswapfile
+set confirm "cant quit wo saving
+set showmode " shows editing mode
+set encoding=utf-8
 set mouse=a
 set mouse=c
-" encoding
-set encoding=utf-8
+set undolevels=1337
 
-
-" INDENTS
-" visual spaces per TAB
+" Indents
 set tabstop=4
-" spaces per tab when editing
 set softtabstop=4
-" how many columns text is indented
 set shiftwidth=4
-" tabs are not spaces
-set noexpandtab
-" indent source code
+set noexpandtab " tabs are not spaces
+" set expandtab " tabs are spaces
 set smartindent
 
+" Whitespaces
+set list
+hi SpecialKey ctermbg=White
+set listchars=tab:\ \ ,trail:\
 
-" SEARCH
-" enable search with /
+" Search
 set incsearch
-" ignores case in searches
 set ignorecase
-" only case sensitive search when typing upper case
-set smartcase
-" highlight all search matches
-set hlsearch
+set smartcase " case sens only when capitol letters
+set hlsearch " highlight all results
 nnoremap<leader><space> :nohlsearch<CR>
 
-
-" MACROS (cmap old new)
+" Macros (cmap old new)
 cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
 
-
-" WHITESPACES
-set list
-hi SpecialKey ctermbg=White
-set listchars=tab:\ \ ,trail:\
-
-
-" gose to line edited, when closed
+" go to line edited, when closed
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 				\| exe "normal! g'\"" | endif
 endif
-
 
 " no clue
 au BufNewFile,BufRead *.itex set filetype=tex

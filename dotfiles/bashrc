@@ -1,14 +1,18 @@
-# bashrc from Marc
+#########################
+### .bashrc from Marc ###
+#########################
 
+# command line
 export PS1="\[\033[0;32m\]\u\[\033[m\]@\h: \[\033[1;34m\]\w\[\033[m\] \n> "
 
+# colored files
 LS_COLORS=$LS_COLORS:'di=1;32:'
 export LS_COLORS
 
 # dotfile management
 alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
 
-# general shorcuts
+# shortcuts
 alias ..="cd .."
 alias ll="ls -l"
 alias la="ls -la"
