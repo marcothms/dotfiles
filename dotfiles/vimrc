@@ -21,7 +21,8 @@ set mat=5
 " General
 set noswapfile
 set confirm "cant quit wo saving
-set showmode " shows editing mode
+set showmode " shows editing mode in status
+set showcmd " shows commands in status
 set encoding=utf-8
 set mouse=a
 set mouse=c
@@ -37,8 +38,8 @@ set smartindent
 
 " Whitespaces
 set list
-hi SpecialKey ctermbg=White
-set listchars=tab:\ \ ,trail:\
+"hi SpecialKey ctermbg=Darkgray " colored tabs
+set list listchars=tab:>-,trail:\\
 
 " Search
 set incsearch
@@ -56,7 +57,7 @@ cmap q1 q!
 " go to line edited, when closed
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-				\| exe "normal! g'\"" | endif
+		\| exe "normal! g'\"" | endif
 endif
 
 " no clue
