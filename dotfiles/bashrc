@@ -11,6 +11,8 @@ export LS_COLORS
 
 # dotfile management
 alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
+alias dddef="dotdrop -p default"
+alias ddef="dotdrop -p default"
 
 # shortcuts
 alias ..="cd .."
