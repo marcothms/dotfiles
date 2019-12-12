@@ -2,8 +2,32 @@
 " ### .vimrc from Marc ###
 " ########################
 
+" Vundle Plugin Manager - START
+" Required
+set nocompatible
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" Plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'editorconfig/editorconfig-vim'
+" Colorscheme
+Plugin 'joshdick/onedark.vim'
+Plugin 'itchyny/lightline.vim'
+" Required
+call vundle#end()
+filetype plugin indent on
+" Vundle Plugin Manager - END
+
+" Plugin Settings
+let NERDTreeShowHidden=1
+
 " Coloooooors
 syntax on
+let g:lightline = {
+	\ 'colorscheme' : 'wombat',
+	\}
 colorscheme onedark
 filetype on
 filetype indent plugin on
@@ -11,7 +35,7 @@ set colorcolumn=80
 
 " Numbers at the left side
 set number
-:highlight LineNr ctermfg=white "color
+:highlight LineNr ctermfg=gray "color
 " set relativenumber
 
 " Parathesis highlighting
@@ -54,9 +78,11 @@ cmap Q q
 cmap W w
 cmap q1 q!
 
+map <C-t> :NERDTreeToggle<CR>
+
 " go to line edited, when closed
 if has("autocmd")
-	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+	au BufReadPost * if line("' f\"") > 0 && line("'\"") <= line("$")
 		\| exe "normal! g'\"" | endif
 endif
 
