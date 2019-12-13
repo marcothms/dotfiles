@@ -1,20 +1,23 @@
-" ########################
-" ### .vimrc from Marc ###
-" ########################
+" #######################
+" ### vimrc from Marc ###
+" #######################
 
 " Vundle Plugin Manager - START
 " Required
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
+
 " Colorscheme
 Plugin 'joshdick/onedark.vim'
 Plugin 'itchyny/lightline.vim'
+
 " Required
 call vundle#end()
 filetype plugin indent on
@@ -22,12 +25,13 @@ filetype plugin indent on
 
 " Plugin Settings
 let NERDTreeShowHidden=1
-
-" Coloooooors
-syntax on
 let g:lightline = {
 	\ 'colorscheme' : 'wombat',
 	\}
+set laststatus=2 " lightline
+
+" Coloooooors
+syntax on
 colorscheme onedark
 filetype on
 filetype indent plugin on
