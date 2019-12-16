@@ -25,10 +25,10 @@ filetype plugin indent on
 
 " Plugin Settings
 let NERDTreeShowHidden=1
-let g:lightline = {
-	\ 'colorscheme' : 'wombat',
-	\}
+let g:lightline={ 'colorscheme':'wombat', }
 set laststatus=2 " lightline
+let g:onedark_hide_endofbuffer=1
+let g:onedark_terminal_italics=1
 
 " Coloooooors
 syntax on
@@ -83,6 +83,7 @@ cmap W w
 cmap q1 q!
 
 map <C-t> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 
 " go to line edited, when closed
 if has("autocmd")
@@ -90,6 +91,6 @@ if has("autocmd")
 		\| exe "normal! g'\"" | endif
 endif
 
-" no clue
+" no clue, but didn't bother removing it
 au BufNewFile,BufRead *.itex set filetype=tex
 

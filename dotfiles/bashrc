@@ -2,7 +2,10 @@
 ### bashrc from Marc ###
 ########################
 
-export PS1="\[\033[0;32m\]\u\[\033[m\]@\h: \[\033[1;34m\]\w\[\033[m\] \n> "
+PS2="\n>"
+NAME="\[\033[0;32m\]\u\[\033[m\]"
+DIR="\[\033[1;34m\]\w\[\033[m\]"
+export PS1="${NAME}@\h: ${DIR} ${PS2} "
 
 # Colored Files
 LS_COLORS=$LS_COLORS:'di=1;32:'
@@ -20,5 +23,3 @@ alias la="ls -la"
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
-
-
