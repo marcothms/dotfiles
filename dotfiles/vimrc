@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'maxboisvert/vim-simple-complete'
 
 " Colorscheme
 Plugin 'joshdick/onedark.vim'
@@ -24,9 +25,17 @@ filetype plugin indent on
 " Vundle Plugin Manager - END
 
 " Plugin Settings
+" NerdTree
 let NERDTreeShowHidden=1
-let g:lightline={ 'colorscheme':'wombat', }
-set laststatus=2 " lightline
+" Lightline Statusbar
+set laststatus=2
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\ 'active': {
+	\    'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+	\}
+	\ }
+" Onedark Colorscheme
 let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
 
@@ -49,8 +58,10 @@ set mat=5
 " General
 set noswapfile
 set confirm "cant quit wo saving
-set showmode " shows editing mode in status
-set showcmd " shows commands in status
+"set showmode " shows editing mode in status
+set noshowmode " reverse of above
+" set showcmd " shows commands in status
+set noshowcmd " reverse of above
 set encoding=utf-8
 set mouse=a
 set mouse=c
@@ -67,7 +78,8 @@ set smartindent
 " Whitespaces
 set list
 "hi SpecialKey ctermbg=Darkgray " colored tabs
-set list listchars=tab:>-,trail:\\
+set list listchars=tab:>-,trail:\\ " default
+" ADD JUST TRAILING HERE " just trailing
 
 " Search
 set incsearch
@@ -91,6 +103,5 @@ if has("autocmd")
 		\| exe "normal! g'\"" | endif
 endif
 
-" no clue, but didn't bother removing it
+" no clue, got it from a co-worker
 au BufNewFile,BufRead *.itex set filetype=tex
-
