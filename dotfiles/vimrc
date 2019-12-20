@@ -49,7 +49,7 @@ set colorcolumn=80
 " Numbers at the left side
 set number
 :highlight LineNr ctermfg=gray "color
-" set relativenumber
+"set relativenumber
 
 " Parathesis highlighting
 set showmatch
@@ -60,7 +60,7 @@ set noswapfile
 set confirm "cant quit wo saving
 "set showmode " shows editing mode in status
 set noshowmode " reverse of above
-" set showcmd " shows commands in status
+"set showcmd " shows commands in status
 set noshowcmd " reverse of above
 set encoding=utf-8
 set mouse=a
@@ -78,8 +78,8 @@ set smartindent
 " Whitespaces
 set list
 "hi SpecialKey ctermbg=Darkgray " colored tabs
-set list listchars=tab:>-,trail:\\ " default
-" ADD JUST TRAILING HERE " just trailing
+"set listchars=tab:>-,trail:\\ " default
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
 " Search
 set incsearch
@@ -93,7 +93,6 @@ cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
-
 map <C-t> :NERDTreeToggle<CR>
 map <F2> :NERDTreeToggle<CR>
 
