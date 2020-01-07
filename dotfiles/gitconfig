@@ -12,6 +12,7 @@
 	sh = show
 	st = status
 [user]
-	name = Marco Thomas
+	name = CramMK
+	email = ma_tho@web.de
 [log]
 	decorate = true
