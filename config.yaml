@@ -12,9 +12,17 @@ dotfiles:
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
 profiles:
   default:
     dotfiles:
     - f_bashrc
     - f_vimrc
     - f_gitconfig
+    - f_xresources
+    - f_config
