@@ -180,4 +180,13 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+Shift+d exec "xlock"
+mode "lock-screen" {
+	bindsym $mod+b exec "xlock -mode blank"
+	bindsym $mod+d exec "xlock -mode matrix"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+Shift+d mode "default"
+}
+
+	bindsym $mod+Shift+d mode "lock-screen"
+# xrandr --output DVI-I-1 --auto --right-of VGA-1

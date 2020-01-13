@@ -18,6 +18,9 @@ dotfiles:
   f_config:
     src: config/i3/config
     dst: ~/.config/i3/config
+  f_i3status_config:
+    src: config/i3status/config
+    dst: ~/.config/i3status/config
 profiles:
   default:
     dotfiles:
@@ -25,4 +28,8 @@ profiles:
     - f_vimrc
     - f_gitconfig
     - f_xresources
+    - f_config
+  farellien:
+    dotfiles:
+    - f_i3status_config
     - f_config
