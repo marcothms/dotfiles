@@ -190,3 +190,6 @@ mode "lock-screen" {
 
 	bindsym $mod+Shift+d mode "lock-screen"
 # xrandr --output DVI-I-1 --auto --right-of VGA-1
+
+# exec "--no-startup-id setxkbmap -layout us"
+exec setxkbmap -layout us

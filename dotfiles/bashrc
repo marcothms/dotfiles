@@ -2,14 +2,11 @@
 ### bashrc from Marc ###
 ########################
 
-PS2="\n>"
-NAME="\[\033[0;32m\]\u\[\033[m\]"
-DIR="\[\033[1;34m\]\w\[\033[m\]"
-export PS1="${NAME}@\h: ${DIR} ${PS2} "
-
-# Colored Files
-LS_COLORS=$LS_COLORS:'di=1;32:'
-export LS_COLORS
+CHAR="\[\033[1;93m\]$\[\033[m\]"
+NAME="\[\033[1;32m\]\u\[\033[m\]"
+HOST="\[\033[0;37m\]\h\[\033[m\]"
+DIR="\[\033[1;94m\]\w\[\033[m\]"
+export PS1="${NAME}@${HOST}:${DIR} ${CHAR} "
 
 # dotfile management
 alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
