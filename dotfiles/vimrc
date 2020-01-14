@@ -62,6 +62,7 @@ set confirm "cant quit wo saving
 set noshowmode " reverse of above
 "set showcmd " shows commands in status
 set noshowcmd " reverse of above
+set cursorline " highlight current line
 set encoding=utf-8
 set mouse=a
 set mouse=c

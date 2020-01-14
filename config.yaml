@@ -29,7 +29,4 @@ profiles:
     - f_gitconfig
     - f_xresources
     - f_config
-  farellien:
-    dotfiles:
     - f_i3status_config
-    - f_config
