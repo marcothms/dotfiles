@@ -15,6 +15,7 @@ alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
 alias ..="cd .."
 alias ll="ls -l"
 alias la="ls -la"
+alias rm="rm -i"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

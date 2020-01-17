@@ -180,14 +180,10 @@ bar {
         status_command i3status
 }
 
-mode "lock-screen" {
-	bindsym $mod+b exec "xlock -mode blank -startCmd /opt/genua/bin/isweg - endCmd /opt/genua/bin/isda"
-	bindsym $mod+d exec "xlock -mode matrix"
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+Shift+d mode "default"
-}
+bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /opt/genua/bin/isweg -endCmd /opt/genua/bin/isda"
+bindsym $mod+Shift+d exec "xlock -mode matrix"
 
-	bindsym $mod+Shift+d mode "lock-screen"
+bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us
+bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 
-exec "setxkbmap -layout us"
+new_window 1pixel
