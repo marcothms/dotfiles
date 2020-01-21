@@ -180,7 +180,7 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /opt/genua/bin/isweg -endCmd /opt/genua/bin/isda"
+bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
 bindsym $mod+Shift+d exec "xlock -mode matrix"
 
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us

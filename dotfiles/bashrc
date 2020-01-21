@@ -1,21 +1,23 @@
-########################
-### bashrc from Marc ###
-########################
+git_branch() {
+	git branch 2>/dev/null | grep '^*' | colrm 1 2
+}
 
 CHAR="\[\033[1;93m\]$\[\033[m\]"
 NAME="\[\033[1;32m\]\u\[\033[m\]"
 HOST="\[\033[0;37m\]\h\[\033[m\]"
+GIT="\[\033[1;91m\](\$(git_branch))\[\033[m\]"
 DIR="\[\033[1;94m\]\w\[\033[m\]"
-export PS1="${NAME}@${HOST}:${DIR} ${CHAR} "
+export PS1="${NAME}@${HOST}:${DIR} ${GIT} ${CHAR} "
 
-# dotfile management
 alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
-
-# shortcuts
 alias ..="cd .."
 alias ll="ls -l"
 alias la="ls -la"
 alias rm="rm -i"
+alias bashrc="vim ~/.bashrc"
+alias sourcebashrc="source ~/.bashrc"
+alias sbash="sourcebashrc"
+alias vimrc="vim ~/.vimrc"
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
