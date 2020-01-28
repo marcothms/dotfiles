@@ -9,15 +9,26 @@ GIT="\[\033[1;91m\](\$(git_branch))\[\033[m\]"
 DIR="\[\033[1;94m\]\w\[\033[m\]"
 export PS1="${NAME}@${HOST}:${DIR} ${GIT} ${CHAR} "
 
+# Dotdrop
 alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
+
+# Quality of Life
 alias ..="cd .."
 alias ll="ls -l"
 alias la="ls -la"
 alias rm="rm -i"
+
+# Common files
 alias bashrc="vim ~/.bashrc"
 alias sourcebashrc="source ~/.bashrc"
 alias sbash="sourcebashrc"
 alias vimrc="vim ~/.vimrc"
+
+# Fonts
+alias listfonts="fc-list :scalable=true:spacing=mono: family"
+alias cachefonts="fc-cache -f -v"
+# xterm -fa "Fontname" -fs 11
+# xrdb ~/.Xresources
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
