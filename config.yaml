@@ -21,6 +21,9 @@ dotfiles:
   f_i3status_config:
     src: config/i3status/config
     dst: ~/.config/i3status/config
+  f_inconsolata-regular.ttf:
+    src: fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
+    dst: ~/.fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
 profiles:
   default:
     dotfiles:
@@ -30,3 +33,4 @@ profiles:
     - f_xresources
     - f_config
     - f_i3status_config
+    - f_inconsolata-regular.ttf

@@ -4,13 +4,13 @@ set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Plugins
+" Plugins - load with :PluginInstall
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'maxboisvert/vim-simple-complete'
 Plugin 'itchyny/vim-gitbranch'
+Plugin 'tmsvg/pear-tree'
 
 " Colorscheme
 Plugin 'joshdick/onedark.vim'
@@ -24,6 +24,7 @@ filetype plugin indent on
 " Plugin Settings
 " NerdTree
 let NERDTreeShowHidden=1
+
 " Lightline Statusbar
 " absolutepath or filename
 set laststatus=2
@@ -37,10 +38,27 @@ let g:lightline = {
 	\	'gitbranch': 'gitbranch#name'
 	\ },
 	\ }
+
 " Onedark Colorscheme
 let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
+colorscheme onedark
 
+" PearTree
+let g:pear_tree_smart_openers=1
+let g:pear_tree_smart_closers=1
+let g:pear_tree_smart_backspace=1
+
+let g:pear_tree_pairs = {
+            \ '(': {'closer': ')'},
+            \ '[': {'closer': ']'},
+            \ '{': {'closer': '}'},
+            \ "'": {'closer': "'"},
+            \ '"': {'closer': '"'},
+            \ '<': {'closer': '>'}
+            \ }
+
+" Other configurations
 " Coloooooors
 syntax on
 colorscheme onedark
