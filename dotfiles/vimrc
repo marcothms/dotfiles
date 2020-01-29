@@ -68,7 +68,7 @@ set colorcolumn=80
 
 " Numbers at the left side
 set number
-:highlight LineNr ctermfg=gray "color
+:highlight LineNr ctermfg=white "color
 "set relativenumber
 
 " Parathesis highlighting

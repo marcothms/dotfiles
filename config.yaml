@@ -14,7 +14,7 @@ dotfiles:
     src: vimrc
     dst: ~/.vimrc
     actions:
-      - vundle-refresh
+    - vundle-refresh
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
@@ -22,7 +22,7 @@ dotfiles:
     src: Xresources
     dst: ~/.Xresources
     actions:
-      - reload-xresources
+    - reload-xresources
   f_config:
     src: config/i3/config
     dst: ~/.config/i3/config
@@ -33,18 +33,58 @@ dotfiles:
     src: fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
     dst: ~/.fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
     actions:
-      - cache-font
+    - cache-font
   f_gdbinit:
     src: gdbinit
     dst: ~/.gdbinit
+  f_xinitrc:
+    src: xinitrc
+    dst: ~/.xinitrc
 profiles:
-  marc:
+  laptop:
+    include:
+    - bash
+    - vim
+    - x11
+    - i3
+    - font
+    - git
+    - gdb
+  workstation:
+    include:
+    - bash
+    - vim
+    - x11
+    - i3
+    - font
+    - git
+    - gdb
+  minimal:
+    include:
+    - bash
+    - vim
+
+  # Packages to be used above
+  bash:
     dotfiles:
     - f_bashrc
+  vim:
+    dotfiles:
     - f_vimrc
-    - f_gitconfig
+  x11:
+    dotfiles:
     - f_xresources
+    - f_xinitrc
+  i3:
+    dotfiles:
     - f_config
     - f_i3status_config
+  font:
+    dotfiles:
     - f_inconsolata-regular.ttf
+  git:
+    dotfiles:
+    - f_gitconfig
+  gdb:
+    dotfiles:
     - f_gdbinit

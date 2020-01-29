@@ -188,8 +188,7 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 new_window 1pixel
 
 
-{%@@ if exists('/home/mthomas') @@%}
-# CONFIG FOR WORK
+{%@@ if profile == "workstation" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
 
@@ -213,8 +212,7 @@ bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
 {%@@ endif @@%}
 
-{%@@ if exists('/home/marc') @@%}
-# CONFIG FOR HOME
+{%@@ if profile == "laptop" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode matrix"
 

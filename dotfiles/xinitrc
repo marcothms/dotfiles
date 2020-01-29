@@ -1,0 +1,10 @@
+export TERM="xterm-256color"
+
+xrdb -load $HOME/.Xresources
+
+{%@@ if profile == "workstation" @@%}
+/share/bin/isda
+~/bin/.keyboard.scm &
+xrandr --output DVI-I-1 --auto --right-of VGA-1
+exec i3
+{%@@ endif @@%}
