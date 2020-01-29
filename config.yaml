@@ -24,6 +24,9 @@ dotfiles:
   f_inconsolata-regular.ttf:
     src: fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
     dst: ~/.fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
+  f_gdbinit:
+    src: gdbinit
+    dst: ~/.gdbinit
 profiles:
   default:
     dotfiles:
@@ -34,3 +37,4 @@ profiles:
     - f_config
     - f_i3status_config
     - f_inconsolata-regular.ttf
+    - f_gdbinit

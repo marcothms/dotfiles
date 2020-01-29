@@ -180,10 +180,47 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
-bindsym $mod+Shift+d exec "xlock -mode matrix"
-
+# Keyboard lauyout shortcuts
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us
 bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 
+# Remove title bar
 new_window 1pixel
+
+{%@@ if exists('/home/mthomas') @@%}
+# CONFIG FOR WORK
+# Locking
+bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
+
+# Custom Workspaces
+exec --no-startup-id "xterm -e /home/mthomas/bin/info-tmux"
+exec --no-startup-id "firefox"
+
+for_window [class="XTerm" title="info-tmux"] move container to workspace 10
+for_window [class="Firefox"] move container to workspace 3
+
+# Monitors
+#mainscreen
+set $monitor1 "DVI-I-1"
+#side
+set $monitor2 "VGA-1"
+
+workspace $ws10 output $monitor2
+workspace $ws3 output $monitor1
+
+bindsym $mod+Ctrl+1 move workspace to output $monitor1
+bindsym $mod+Ctrl+2 move workspace to output $monitor2
+{%@@ endif @@%}
+
+{%@@ if exists('/home/marc') @@%}
+# CONFIG FOR HOME
+# Locking
+bindsym $mod+Shift+b exec "xlock -mode matrix"
+
+# Custom Workspaces
+exec --no-startup-id "firefox"
+exec --no-startup-id "discord"
+
+for_window [class=Firefox] move container to worskpsace 3
+for_window [class=Discord] move container to workspace 10
+{%@@ endif @@%}
