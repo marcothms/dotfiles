@@ -1,3 +1,7 @@
+actions:
+  cache-font: fc-cache -f -v
+  reload-xresources: xrdb ~/.Xresources
+  vundle-refresh: vim +VundleClean! +VundleInstall +VundleInstall! +qall
 config:
   backup: true
   create: true
@@ -9,12 +13,16 @@ dotfiles:
   f_vimrc:
     src: vimrc
     dst: ~/.vimrc
+    actions:
+      - vundle-refresh
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
   f_xresources:
     src: Xresources
     dst: ~/.Xresources
+    actions:
+      - reload-xresources
   f_config:
     src: config/i3/config
     dst: ~/.config/i3/config
@@ -24,11 +32,13 @@ dotfiles:
   f_inconsolata-regular.ttf:
     src: fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
     dst: ~/.fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
+    actions:
+      - cache-font
   f_gdbinit:
     src: gdbinit
     dst: ~/.gdbinit
 profiles:
-  default:
+  marc:
     dotfiles:
     - f_bashrc
     - f_vimrc

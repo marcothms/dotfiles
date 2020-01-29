@@ -18,6 +18,9 @@ alias ll="ls -l"
 alias la="ls -la"
 alias rm="rm -i"
 
+# Screenhots
+alias screenshot="import ~/Downloads/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
+
 # Common files
 alias bashrc="vim ~/.bashrc"
 alias sourcebashrc="source ~/.bashrc"

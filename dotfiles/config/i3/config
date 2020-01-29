@@ -187,6 +187,7 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 # Remove title bar
 new_window 1pixel
 
+
 {%@@ if exists('/home/mthomas') @@%}
 # CONFIG FOR WORK
 # Locking
