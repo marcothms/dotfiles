@@ -220,6 +220,6 @@ bindsym $mod+Shift+b exec "xlock -mode matrix"
 exec --no-startup-id "firefox"
 exec --no-startup-id "discord"
 
-for_window [class=Firefox] move container to worskpsace 3
-for_window [class=Discord] move container to workspace 10
+for_window [class="Firefox"] move container to workspace 3
+for_window [class="Discord"] move container to workspace 10
 {%@@ endif @@%}
