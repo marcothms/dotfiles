@@ -8,4 +8,4 @@ Currently using:
 + `OneDark` Colortheme with `lightline` Statusbar for vim
 + `Inconsolata` Font from google for Xterm
 
-![bash] (https://i.imgur.com/EbrS1n6.png)
+![bash](https://i.imgur.com/EbrS1n6.png)
