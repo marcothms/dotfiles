@@ -1,7 +1,9 @@
 actions:
+  pre:
+    vundle-install: test -e ~/.vim/bundle/Vundle.vim || (mkdir -p ~/.vim/bundle; git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim )
+  vundle-refresh: vim +VundleClean! +VundleInstall +VundleInstall! +qall
   cache-font: fc-cache -f -v
   reload-xresources: xrdb ~/.Xresources
-  vundle-refresh: vim +VundleClean! +VundleInstall +VundleInstall! +qall
 config:
   backup: true
   create: true
@@ -14,6 +16,7 @@ dotfiles:
     src: vimrc
     dst: ~/.vimrc
     actions:
+    - vundle-install
     - vundle-refresh
   f_gitconfig:
     src: gitconfig

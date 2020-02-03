@@ -18,6 +18,7 @@ export EDITOR="vim"
 # Some aliases
 alias zshrc="vim ~/.zshrc"
 alias szsh="source ~/.zshrc"
+
 alias vimrc="vim ~/.vimrc"
 
 alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
