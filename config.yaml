@@ -40,34 +40,54 @@ dotfiles:
   f_xinitrc:
     src: xinitrc
     dst: ~/.xinitrc
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  d_oh-my-zsh:
+    src: oh-my-zsh
+    dst: ~/.oh-my-zsh
+  f_zsh_theme:
+    src: zsh/marc-pygmalion.zsh-theme
+    dst: ~/.oh-my-zsh/themes/marc-pygmalion.zsh-theme
 profiles:
   laptop:
     include:
     - bash
+    - zsh
     - vim
     - x11
     - i3
     - font
     - git
     - gdb
-  workstation:
+  work:
     include:
     - bash
+    - zsh
     - vim
     - x11
     - i3
     - font
     - git
     - gdb
-  minimal:
+  dev-bash:
     include:
     - bash
+    - vim
+  dev-zsh:
+    include:
+    - zsh
     - vim
 
   # Packages to be used above
   bash:
     dotfiles:
     - f_bashrc
+  zsh:
+    dotfiles:
+    - f_zshrc
+    - d_oh-my-zsh
+    - f_zsh_theme
   vim:
     dotfiles:
     - f_vimrc

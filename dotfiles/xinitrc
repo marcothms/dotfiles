@@ -2,9 +2,9 @@ export TERM="xterm-256color"
 
 xrdb -load $HOME/.Xresources
 
-{%@@ if profile == "workstation" @@%}
+{%@@ if profile == "work" @@%}
 /share/bin/isda
 ~/bin/.keyboard.scm &
-xrandr --output DVI-I-1 --auto --right-of VGA-1
+xrandr --output HDMI-2 --auto --right-of HDMI-1
 exec i3
 {%@@ endif @@%}

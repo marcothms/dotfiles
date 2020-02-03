@@ -1,0 +1,3 @@
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh/tree/64a7f6b38833d007394b9b4bf5d17e48db77c0d7

@@ -4,6 +4,13 @@ general {
 	interval = 1
 }
 
+{%@@ if profile == "workstation" @@%}
+order += "load"
+order += "memory"
+order += "tztime local"
+{%@@ endif @@%}
+
+{%@@ if profile == "laptop" @@%}
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
@@ -11,6 +18,8 @@ order += "disk /"
 order += "load"
 order += "memory"
 order += "tztime local"
+{%@@ endif @@%}
+
 
 wireless _first_ {
 	format_up = "W: (%quality at %essid) %ip"
@@ -36,7 +45,7 @@ load {
 }
 
 memory {
-	format = "%used of %available"
+	format = "%used - %available"
 	threshold_degraded = "1G"
 	format_degraded = "MEMORY < %available"
 }

@@ -47,8 +47,8 @@
 *.color15: nord6
 
 XTerm.vt100.faceName: xft:Inconsolata:antialias=true
-{%@@ if profile == "workstation" @@%}
-XTerm.vt100.faceSize: 12
+{%@@ if profile == "work" @@%}
+XTerm.vt100.faceSize: 13
 {%@@ endif @@%}
 {%@@ if profile == "laptop" @@%}
 XTerm.vt100.faceSize: 15

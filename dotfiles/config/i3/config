@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec xterm -e zsh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -188,7 +188,7 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 new_window 1pixel
 
 
-{%@@ if profile == "workstation" @@%}
+{%@@ if profile == "work" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
 
@@ -197,13 +197,13 @@ exec --no-startup-id "xterm -e /home/mthomas/bin/info-tmux"
 exec --no-startup-id "firefox"
 
 for_window [class="XTerm" title="info-tmux"] move container to workspace 10
-for_window [class="Firefox"] move container to workspace 3
+for_window [class="Firefox"] move container to workspace 9
 
 # Monitors
 #mainscreen
-set $monitor1 "DVI-I-1"
+set $monitor1 "HDMI-1"
 #side
-set $monitor2 "VGA-1"
+set $monitor2 "HDMI-2"
 
 workspace $ws10 output $monitor2
 workspace $ws3 output $monitor1
@@ -220,6 +220,6 @@ bindsym $mod+Shift+b exec "xlock -mode matrix"
 exec --no-startup-id "firefox"
 exec --no-startup-id "discord"
 
-for_window [class="Firefox"] move container to workspace 3
+for_window [class="Firefox"] move container to workspace 9
 for_window [class="Discord"] move container to workspace 10
 {%@@ endif @@%}
