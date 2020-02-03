@@ -20,7 +20,7 @@ alias zshrc="vim ~/.zshrc"
 alias szsh="source ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 
-alias dotdrop=~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml
+alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
 
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"

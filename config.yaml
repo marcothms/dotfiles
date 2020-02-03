@@ -23,11 +23,11 @@ dotfiles:
     dst: ~/.Xresources
     actions:
     - reload-xresources
-  f_config:
-    src: config/i3/config
+  f_i3_config:
+    src: i3_config
     dst: ~/.config/i3/config
   f_i3status_config:
-    src: config/i3status/config
+    src: i3status_config
     dst: ~/.config/i3status/config
   f_inconsolata-regular.ttf:
     src: fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
@@ -97,7 +97,7 @@ profiles:
     - f_xinitrc
   i3:
     dotfiles:
-    - f_config
+    - f_i3_config
     - f_i3status_config
   font:
     dotfiles:
