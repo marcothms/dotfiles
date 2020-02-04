@@ -92,8 +92,8 @@ set undolevels=1337
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab " tabs are not spaces
-" set expandtab " tabs are spaces
+" set noexpandtab " tabs are not spaces
+set expandtab " tabs are spaces
 set smartindent
 
 " Whitespaces

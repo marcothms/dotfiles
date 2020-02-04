@@ -4,7 +4,7 @@ general {
 	interval = 1
 }
 
-{%@@ if profile == "workstation" @@%}
+{%@@ if profile == "work" @@%}
 order += "load"
 order += "memory"
 order += "tztime local"

@@ -1,6 +1,10 @@
 export TERM="xterm-256color"
-
 xrdb -load $HOME/.Xresources
+export SHELL="/bin/zsh"
+setxkbmap -layout us
+
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
 
 {%@@ if profile == "work" @@%}
 /share/bin/isda

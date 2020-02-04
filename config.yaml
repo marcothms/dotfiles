@@ -2,8 +2,10 @@ actions:
   pre:
     vundle-install: test -e ~/.vim/bundle/Vundle.vim || (mkdir -p ~/.vim/bundle; git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim )
   vundle-refresh: vim +VundleClean! +VundleInstall +VundleInstall! +qall
-  cache-font: fc-cache -f -v
-  reload-xresources: xrdb ~/.Xresources
+  font-cache: fc-cache -f -v
+  xresources-reload: xrdb ~/.Xresources
+  zsh-source: source ~/.zshrc
+  bash-source: source ~/.bashrc
 config:
   backup: true
   create: true
@@ -12,6 +14,8 @@ dotfiles:
   f_bashrc:
     src: bashrc
     dst: ~/.bashrc
+    actions:
+    - bash-source
   f_vimrc:
     src: vimrc
     dst: ~/.vimrc
@@ -25,7 +29,7 @@ dotfiles:
     src: Xresources
     dst: ~/.Xresources
     actions:
-    - reload-xresources
+    - xresources-reload
   f_i3_config:
     src: i3_config
     dst: ~/.config/i3/config
@@ -36,7 +40,7 @@ dotfiles:
     src: fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
     dst: ~/.fonts/Inconsolata-Regular/Inconsolata-Regular.ttf
     actions:
-    - cache-font
+    - font-cache
   f_gdbinit:
     src: gdbinit
     dst: ~/.gdbinit
@@ -46,6 +50,8 @@ dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
+    actions:
+    - zsh-source
   d_oh-my-zsh:
     src: oh-my-zsh
     dst: ~/.oh-my-zsh
@@ -53,9 +59,17 @@ dotfiles:
     src: zsh/marc-pygmalion.zsh-theme
     dst: ~/.oh-my-zsh/themes/marc-pygmalion.zsh-theme
 profiles:
+  home:
+    include:
+    - zsh
+    - vim
+    - x11
+    - i3
+    - font
+    - git
+    - gdb
   laptop:
     include:
-    - bash
     - zsh
     - vim
     - x11
@@ -65,7 +79,6 @@ profiles:
     - gdb
   work:
     include:
-    - bash
     - zsh
     - vim
     - x11
