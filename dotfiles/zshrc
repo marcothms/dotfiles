@@ -1,5 +1,10 @@
 export ZSH="/home/$USER/.oh-my-zsh"
+
 ZSH_THEME="agnoster-plus"
+{%@@ if profile == "dev-obsd-zsh" @@%}
+ZSH_THEME="marc-theme"
+{%@@ endif @@%}
+
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"

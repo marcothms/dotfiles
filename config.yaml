@@ -81,12 +81,18 @@ profiles:
     - font
     - git
     - gdb
-  dev-bash:
+  dev-linux-bash:
     include:
     - bash
     - vim
-  dev-zsh:
+  dev-obsd-bash:
+    - bash
+    - vim
+  dev-linux-zsh:
     include:
+    - zsh
+    - vim
+  dev-obsd-zsh:
     - zsh
     - vim
 
