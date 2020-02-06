@@ -53,16 +53,10 @@ dotfiles:
   d_fonts:
     src: fonts
     dst: ~/.local/share/fonts
+  f_picom.conf:
+    src: picom.conf
+    dst: ~/.config/picom.conf
 profiles:
-  home:
-    include:
-    - zsh
-    - vim
-    - x11
-    - i3
-    - font
-    - git
-    - gdb
   laptop:
     include:
     - zsh
@@ -70,6 +64,7 @@ profiles:
     - x11
     - i3
     - font
+    - picom
     - git
     - gdb
   work:
@@ -79,21 +74,14 @@ profiles:
     - x11
     - i3
     - font
+    - picom
     - git
     - gdb
-  dev-linux-bash:
-    include:
-    - bash
-    - vim
-  dev-obsd-bash:
-    include:
-    - bash
-    - vim
-  dev-linux-zsh:
+  dev-linux:
     include:
     - zsh
     - vim
-  dev-obsd-zsh:
+  dev-obsd:
     include:
     - zsh
     - vim
@@ -127,3 +115,6 @@ profiles:
   gdb:
     dotfiles:
     - f_gdbinit
+  picom:
+    dotfiles:
+    - f_picom.conf

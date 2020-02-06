@@ -1,8 +1,8 @@
 export ZSH="/home/$USER/.oh-my-zsh"
 
 ZSH_THEME="agnoster-plus"
-{%@@ if profile == "dev-obsd-zsh" @@%}
-ZSH_THEME="marc-theme"
+{%@@ if profile == "dev-obsd" @@%}
+ZSH_THEME="marc-pygmalion"
 {%@@ endif @@%}
 
 DISABLE_AUTO_UPDATE="true"
