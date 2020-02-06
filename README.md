@@ -1,13 +1,15 @@
 Dotfiles
 ========
 
-My personal dotfiles/ configurations, managed with the 'dotdrop' submodule
+My personal configurations, managed with the 'dotdrop' submodule
 
 
-Currently using:
-+ `OneDark` Colortheme with `lightline` Statusbar for vim
-+ `Inconsolata` Powerline Patched Font for Xterm
-+ A modded `Agnoster` ZSH-Theme
-
-Outdated picture:
-![bash](https://i.imgur.com/EbrS1n6.png)
+| Usage | Name |
+| :--- | :--- |
+| OS | Fedora |
+| Shell | zsh with oh-my-zsh |
+| WM | i3 |
+| Terminal | xterm |
+| Font | Inconsolata for Powerline |
+| Transparency | picom |
+| Wallpaper | teh |
