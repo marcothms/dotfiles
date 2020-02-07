@@ -6,14 +6,12 @@ call vundle#begin()
 
 " Plugins - load with :PluginInstall
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'maxboisvert/vim-simple-complete'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'tmsvg/pear-tree'
 
 " Colorscheme
 Plugin 'joshdick/onedark.vim'
+Plugin 'fneu/breezy' "lightline
 Plugin 'itchyny/lightline.vim'
 
 " Required
@@ -22,14 +20,12 @@ filetype plugin indent on
 " Vundle Plugin Manager - END
 
 " Plugin Settings
-" NerdTree
-let NERDTreeShowHidden=1
 
 " Lightline Statusbar
 " absolutepath or filename
 set laststatus=2
 let g:lightline = {
-	\ 'colorscheme': 'wombat',
+	\ 'colorscheme': 'breezy',
 	\ 'active': {
 	\    'left': [ [ 'mode', 'paste' ],
 	\              [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -39,10 +35,12 @@ let g:lightline = {
 	\ },
 	\ }
 
+" Breezy
+set termguicolors
+
 " Onedark Colorscheme
 let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
-colorscheme onedark
 
 " PearTree
 let g:pear_tree_smart_openers=1
@@ -114,8 +112,6 @@ cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
-map <C-t> :NERDTreeToggle<CR>
-map <F2> :NERDTreeToggle<CR>
 
 " go to line edited, when closed
 if has("autocmd")

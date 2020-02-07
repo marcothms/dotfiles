@@ -4,21 +4,16 @@ general {
 	interval = 1
 }
 
-{%@@ if profile == "work" @@%}
-order += "load"
-order += "memory"
-order += "tztime local"
-{%@@ endif @@%}
-
 {%@@ if profile == "laptop" @@%}
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
 order += "disk /"
+{%@@ endif @@%}
+
 order += "load"
 order += "memory"
 order += "tztime local"
-{%@@ endif @@%}
 
 
 wireless _first_ {

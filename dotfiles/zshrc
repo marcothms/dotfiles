@@ -1,9 +1,6 @@
 export ZSH="/home/$USER/.oh-my-zsh"
 
-ZSH_THEME="agnoster-plus"
-{%@@ if profile == "dev-obsd" @@%}
-ZSH_THEME="marc-pygmalion"
-{%@@ endif @@%}
+ZSH_THEME="the-one"
 
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -19,6 +16,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 export TERM="xterm-256color"
 export EDITOR="vim"
+
+export LANG="en_US.UTF-8"
 
 # Some aliases
 alias zshrc="vim ~/.zshrc"
