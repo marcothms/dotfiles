@@ -45,7 +45,7 @@ dotfiles:
     src: oh-my-zsh
     dst: ~/.oh-my-zsh
   f_zsh_themes:
-    src: zsh-themes
+    src: zsh.themes
     dst: ~/.oh-my-zsh/themes
   d_fonts:
     src: fonts
@@ -53,7 +53,7 @@ dotfiles:
   d_xresources_d:
     src: Xresources.d
     dst: ~/.Xresources.d
-  f_picom.conf:
+  f_picom:
     src: picom.conf
     dst: ~/.config/picom.conf
 profiles:
@@ -113,4 +113,4 @@ profiles:
     - f_gdbinit
   picom:
     dotfiles:
-    - f_picom.conf
+    - f_picom

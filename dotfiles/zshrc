@@ -23,6 +23,8 @@ export LANG="en_US.UTF-8"
 alias zshrc="vim ~/.zshrc"
 alias szsh="source ~/.zshrc"
 
+alias dotf="cd ~/dotfiles/dotfiles"
+
 alias vimrc="vim ~/.vimrc"
 
 alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
@@ -30,3 +32,7 @@ alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
 alias fonts="/home/$USER/.local/share/fonts"
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
+
+if [ -f ~/.zsh/zshaliases_local ]; then
+    source ~/.zsh/zshaliases_local
+fi

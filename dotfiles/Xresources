@@ -1,5 +1,11 @@
 ! Colors
-#include ".Xresources.d/colors-nord"
+! more blue-ish
+!#include ".Xresources.d/colors-nord"
+! more vibrant
+#include ".Xresources.d/colors-afterglow"
+
+!others
+!#include ".Xresources.d/colors-clean-and-green"
 !#include ".Xresources.d/colors-breeze-dark"
 !#include ".Xresources.d/colors-onedark"
 !#include ".Xresources.d/colors-onedark-16"

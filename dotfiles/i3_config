@@ -178,10 +178,23 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    colors {
+        background #2f343f
+        statusline #2f343f
+        #separator #4b5262
+        separator #2f343f
+
+        # colour of border, background, and text
+        focused_workspace       #2f343f #00b111 #d8dee8
+        active_workspace        #2f343f #2f343f #d8dee8
+        inactive_workspace      #2f343f #2f343f #d8dee8
+        urgent_workspacei       #2f343f #ebcb8b #bf616a
+    }
+    status_command i3status
 }
 
 # Keyboard lauyout shortcuts
+exec setxkbmap -layout us
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us
 bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 
@@ -194,7 +207,7 @@ new_window 1pixel
 bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
 
 # Custom Workspaces
-exec --no-startup-id "xterm -e /home/mthomas/bin/info-tmux"
+exec --no-startup-id "xterm -e tmux"
 exec --no-startup-id "firefox"
 
 for_window [class="XTerm" title="info-tmux"] move container to workspace 10
@@ -213,14 +226,19 @@ bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
 {%@@ endif @@%}
 
+
+
+
+
 {%@@ if profile == "laptop" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode matrix"
 
 # Custom Workspaces
 exec --no-startup-id "firefox"
-exec --no-startup-id "discord"
 
 for_window [class="Firefox"] move container to workspace 9
-for_window [class="Discord"] move container to workspace 10
+
+exec --no-startup-id feh --bg-scale ~/.wallpaper/minimalist-forest.jpg
+exec --no-startup-id picom
 {%@@ endif @@%}
