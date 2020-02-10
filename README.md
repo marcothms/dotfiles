@@ -1,15 +1,20 @@
 Dotfiles
 ========
 
-My personal configurations, managed with the 'dotdrop' submodule
-
+My personal configurations, managed with the 'dotdrop' submodule.
 
 | Usage | Name |
 | :--- | :--- |
-| OS | Fedora |
+| Distribution | Fedora 31 |
 | Shell | zsh with oh-my-zsh |
 | WM | i3 |
 | Terminal | xterm |
 | Font | Inconsolata |
+| VIM-Theme | OneDark |
+| VIM-Bar | lightline |
+| Bar | i3Bar |
 | Transparency | picom |
 | Wallpaper | teh |
+
+![xterm](LINK)
+![vim](LINK)

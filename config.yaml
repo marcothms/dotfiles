@@ -56,6 +56,9 @@ dotfiles:
   f_picom:
     src: picom.conf
     dst: ~/.config/picom.conf
+  f_tmux:
+    src: tmux.conf
+    dst: ~/.tmux.conf
 profiles:
   laptop:
     include:
@@ -65,6 +68,7 @@ profiles:
     - i3
     - font
     - picom
+    - tmux
     - gdb
   work:
     include:
@@ -74,17 +78,14 @@ profiles:
     - i3
     - font
     - picom
+    - tmux
     - gdb
-  dev-linux:
-    include:
-    - zsh
-    - vim
-  dev-obsd:
+  dev:
     include:
     - zsh
     - vim
 
-  # Packages to be used above
+ # Packages to be used above
   bash:
     dotfiles:
     - f_bashrc
@@ -114,3 +115,6 @@ profiles:
   picom:
     dotfiles:
     - f_picom
+  tmux:
+    dotfiles:
+    - f_tmux

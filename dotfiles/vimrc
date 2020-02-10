@@ -85,6 +85,7 @@ set encoding=utf-8
 set mouse=a
 set mouse=c
 set undolevels=1337
+set backspace=indent,eol,start
 
 " Indents
 set tabstop=4
@@ -112,6 +113,7 @@ cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
+map <C-f> :Ex <CR>
 
 " go to line edited, when closed
 if has("autocmd")
