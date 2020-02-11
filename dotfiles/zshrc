@@ -35,6 +35,7 @@ alias fonts="/home/$USER/.local/share/fonts"
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
 
+# Allow pc local aliases
 if [ -f ~/.zshaliases_local ]; then
     source ~/.zshaliases_local
 fi

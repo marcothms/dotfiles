@@ -184,7 +184,7 @@ bar {
         #separator #4b5262
         separator #2f343f
 
-        # colour of border, background, and text
+        # class                 border  backgr. text
         focused_workspace       #2f343f #00b111 #d8dee8
         active_workspace        #2f343f #2f343f #d8dee8
         inactive_workspace      #2f343f #2f343f #d8dee8
@@ -192,6 +192,15 @@ bar {
     }
     status_command i3status
 }
+
+# Border
+for_window [class="^.*"] border pixel 2
+# class                 border  backgr. text    indicator child_border
+client.focused          #00b111 #222222 #ffffff #2e9ef4   #00b111
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.background       #ffffff
 
 # Keyboard lauyout shortcuts
 exec setxkbmap -layout us
@@ -201,7 +210,10 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 # Remove title bar
 new_window 1pixel
 
+# Wallpaper
+exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
 
+# PC specific configurations:
 {%@@ if profile == "work" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
@@ -227,9 +239,6 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 {%@@ endif @@%}
 
 
-
-
-
 {%@@ if profile == "laptop" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode matrix"
@@ -238,7 +247,4 @@ bindsym $mod+Shift+b exec "xlock -mode matrix"
 exec --no-startup-id "firefox"
 
 for_window [class="Firefox"] move container to workspace 9
-
-exec --no-startup-id feh --bg-scale ~/.wallpaper/minimalist-forest.jpg
-exec --no-startup-id picom
 {%@@ endif @@%}

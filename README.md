@@ -6,7 +6,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 | Usage | Name |
 | :--- | :--- |
 | Distribution | Fedora 31 |
-| Shell | zsh with oh-my-zsh |
+| Shell | zsh + oh-my-zsh |
 | WM | i3 |
 | Terminal | xterm |
 | Font | Inconsolata |

@@ -13,10 +13,10 @@
 ! Font
 XTerm.vt100.faceName: xft:Inconsolata:antialias=true
 {%@@ if profile == "work" @@%}
-XTerm.vt100.faceSize: 13
+XTerm.vt100.faceSize: 12
 {%@@ endif @@%}
 {%@@ if profile == "laptop" @@%}
-XTerm.vt100.faceSize: 15
+XTerm.vt100.faceSize: 14
 {%@@ endif @@%}
 
 ! Remove Scrollbar

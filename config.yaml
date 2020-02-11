@@ -30,8 +30,6 @@ dotfiles:
   f_i3status_config:
     src: i3status_config
     dst: ~/.config/i3status/config
-    actions:
-    - font-cache
   f_gdbinit:
     src: gdbinit
     dst: ~/.gdbinit
@@ -50,6 +48,8 @@ dotfiles:
   d_fonts:
     src: fonts
     dst: ~/.local/share/fonts
+    actions:
+    - font-cache
   d_xresources_d:
     src: Xresources.d
     dst: ~/.Xresources.d
@@ -59,6 +59,9 @@ dotfiles:
   f_tmux:
     src: tmux.conf
     dst: ~/.tmux.conf
+  d_wallpaper:
+    src: wallpaper
+    dst: ~/.wallpaper
 profiles:
   laptop:
     include:
@@ -70,6 +73,7 @@ profiles:
     - picom
     - tmux
     - gdb
+    - wallpaper
   work:
     include:
     - zsh
@@ -80,6 +84,7 @@ profiles:
     - picom
     - tmux
     - gdb
+    - wallpaper
   dev:
     include:
     - zsh
@@ -118,3 +123,6 @@ profiles:
   tmux:
     dotfiles:
     - f_tmux
+  wallpaper:
+    dotfiles:
+    - d_wallpaper
