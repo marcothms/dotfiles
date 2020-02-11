@@ -196,7 +196,7 @@ bar {
 # Border
 for_window [class="^.*"] border pixel 2
 # class                 border  backgr. text    indicator child_border
-client.focused          #00b111 #222222 #ffffff #2e9ef4   #00b111
+client.focused          #990000 #222222 #ffffff #2e9ef4   #900000
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -211,7 +211,7 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 new_window 1pixel
 
 # Wallpaper
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 
 # PC specific configurations:
 {%@@ if profile == "work" @@%}
@@ -222,7 +222,6 @@ bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd 
 exec --no-startup-id "xterm -e tmux"
 exec --no-startup-id "firefox"
 
-for_window [class="XTerm" title="info-tmux"] move container to workspace 10
 for_window [class="Firefox"] move container to workspace 9
 
 # Monitors
@@ -232,7 +231,7 @@ set $monitor1 "HDMI-1"
 set $monitor2 "HDMI-2"
 
 workspace $ws10 output $monitor2
-workspace $ws3 output $monitor1
+workspace $ws9 output $monitor2
 
 bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
