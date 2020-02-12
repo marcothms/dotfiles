@@ -1,14 +1,16 @@
 ! Colors
 ! more blue-ish
-!#include ".Xresources.d/colors-nord"
+!#include ".Xresources.d/Xresources.nord"
 ! more vibrant
-#include ".Xresources.d/colors-afterglow"
+#include ".Xresources.d/Xresources.afterglow"
+
+!#include ".Xresources.d/Xresources.solarized"
 
 !others
-!#include ".Xresources.d/colors-clean-and-green"
-!#include ".Xresources.d/colors-breeze-dark"
-!#include ".Xresources.d/colors-onedark"
-!#include ".Xresources.d/colors-onedark-16"
+!#include ".Xresources.d/Xresources.clean-and-green"
+!#include ".Xresources.d/Xresources.breeze-dark"
+!#include ".Xresources.d/Xresources.onedark"
+!#include ".Xresources.d/Xresources.onedark-16"
 
 ! Font
 XTerm.vt100.faceName: xft:Inconsolata:antialias=true

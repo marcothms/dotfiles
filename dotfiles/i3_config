@@ -194,9 +194,9 @@ bar {
 }
 
 # Border
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 # class                 border  backgr. text    indicator child_border
-client.focused          #990000 #222222 #ffffff #2e9ef4   #900000
+client.focused          #00b111 #222222 #ffffff #2e9ef4   #990000
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -213,13 +213,16 @@ new_window 1pixel
 # Wallpaper
 exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 
+# Background
+exec --no-startup-id picom
+
 # PC specific configurations:
 {%@@ if profile == "work" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode blank -startCmd /share/bin/isweg -endCmd /share/bin/isda"
 
 # Custom Workspaces
-exec --no-startup-id "xterm -e tmux"
+exec --no-startup-id "xterm"
 exec --no-startup-id "firefox"
 
 for_window [class="Firefox"] move container to workspace 9
