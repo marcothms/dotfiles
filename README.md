@@ -16,5 +16,5 @@ My personal configurations, managed with the 'dotdrop' submodule.
 | Transparency | picom |
 | Wallpaper | teh |
 
-![xterm](LINK)
-![vim](LINK)
+![neofetch](https://imgur.com/x0Y9qzF.png)
+![vim](https://imgur.com/iEcn2XF.png)

@@ -210,6 +210,16 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
 # Remove title bar
 new_window 1pixel
 
+# Screenshot
+bindsym --release $mod+Shift+p exec"import ~/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
+
+# Audio and Screen
+bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 3%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 3%+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 # Wallpaper
 exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 
