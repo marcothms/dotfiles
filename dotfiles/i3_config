@@ -203,9 +203,7 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.background       #ffffff
 
 # Keyboard lauyout shortcuts
-exec setxkbmap -layout us
-bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us
-bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de
+bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap za
 
 # Remove title bar
 new_window 1pixel
@@ -217,20 +215,12 @@ bindsym --release $mod+Shift+p exec"import ~/Screenshot-$(date '+%Y%m%d-%H%M%S')
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-
-# Background
-exec --no-startup-id picom
-
 # PC specific configurations:
 {%@@ if profile == "work" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode matrix -startCmd /share/bin/isweg -endCmd /share/bin/isda -bg '#6843bf' -info ''"
 
-# Wallpaper
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper_genuaW.png
-
 # Custom Workspaces
-exec --no-startup-id "xterm"
 exec --no-startup-id "firefox"
 
 for_window [class="Firefox"] move container to workspace 9
@@ -252,10 +242,6 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 {%@@ if profile == "laptop" @@%}
 # Locking
 bindsym $mod+Shift+b exec "xlock -mode matrix -info ''"
-
-# Wallpaper
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
-
 
 # Custom Workspaces
 exec --no-startup-id "firefox"

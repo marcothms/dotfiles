@@ -1,7 +1,10 @@
 export TERM="xterm-256color"
 xrdb -load $HOME/.Xresources
 export SHELL="/bin/zsh"
-setxkbmap -layout us
+
+setxkbmap -layout za
+
+picom &
 
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
@@ -10,5 +13,11 @@ export LANGUAGE="en_US.UTF-8"
 /share/bin/isda
 ~/bin/.keyboard.scm &
 xrandr --output HDMI-2 --auto --right-of HDMI-1
-exec i3
+feh --bg-scale ~/.wallpaper/wallpaper_genuaW.png
+i3
+{%@@ endif @@%}
+
+{%@@ if profile == "laptop" @@%}
+feh --bg-scale ~/.wallpaper/wallpaper.png
+i3
 {%@@ endif @@%}
