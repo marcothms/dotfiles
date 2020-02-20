@@ -13,6 +13,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 | VIM-Theme | OneDark |
 | VIM-Bar | lightline |
 | Bar | i3Bar |
+| Terminal-Mailing | mutt |
 | Transparency | picom |
 | Wallpaper | teh |
 
