@@ -13,7 +13,7 @@ export LANGUAGE="en_US.UTF-8"
 /share/bin/isda
 ~/bin/.keyboard.scm &
 xrandr --output HDMI-2 --auto --right-of HDMI-1
-feh --bg-scale ~/.wallpaper/wallpaper_genuaW.png
+feh --bg-scale ~/.wallpaper/wallpaper_genua.png
 i3
 {%@@ endif @@%}
 

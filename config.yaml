@@ -62,6 +62,12 @@ dotfiles:
   d_wallpaper:
     src: wallpaper
     dst: ~/.wallpaper
+  f_muttrc:
+    src: muttrc
+    dst: ~/.muttrc
+  d_mutt_themes:
+    src: mutt.themes
+    dst: ~/.mutt/mutt.themes
 profiles:
   laptop:
     include:
@@ -74,6 +80,7 @@ profiles:
     - tmux
     - gdb
     - wallpaper
+    - mutt
   work:
     include:
     - zsh
@@ -85,6 +92,7 @@ profiles:
     - tmux
     - gdb
     - wallpaper
+    - mutt
   dev:
     include:
     - zsh
@@ -126,3 +134,7 @@ profiles:
   wallpaper:
     dotfiles:
     - d_wallpaper
+  mutt:
+    dotfiles:
+    - f_muttrc
+    - d_mutt_themes

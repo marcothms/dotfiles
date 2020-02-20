@@ -91,9 +91,14 @@ set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-" set noexpandtab " tabs are not spaces
+"set noexpandtab " tabs are not spaces
 set expandtab " tabs are spaces
 set smartindent
+
+" File specific indents
+autocmd FileType rust setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType perl setlocal shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
 
 " Whitespaces
 set list
