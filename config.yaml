@@ -30,9 +30,6 @@ dotfiles:
   f_i3status_config:
     src: i3status_config
     dst: ~/.config/i3status/config
-  f_gdbinit:
-    src: gdbinit
-    dst: ~/.gdbinit
   f_xinitrc:
     src: xinitrc
     dst: ~/.xinitrc
@@ -78,7 +75,6 @@ profiles:
     - font
     - picom
     - tmux
-    - gdb
     - wallpaper
     - mutt
   work:
@@ -90,7 +86,6 @@ profiles:
     - font
     - picom
     - tmux
-    - gdb
     - wallpaper
     - mutt
   dev:
@@ -122,9 +117,6 @@ profiles:
   font:
     dotfiles:
     - d_fonts
-  gdb:
-    dotfiles:
-    - f_gdbinit
   picom:
     dotfiles:
     - f_picom
