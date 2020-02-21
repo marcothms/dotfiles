@@ -4,8 +4,6 @@ export SHELL="/bin/zsh"
 
 setxkbmap -layout za
 
-picom &
-
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 
@@ -14,10 +12,6 @@ export LANGUAGE="en_US.UTF-8"
 ~/bin/.keyboard.scm &
 xrandr --output HDMI-2 --auto --right-of HDMI-1
 feh --bg-scale ~/.wallpaper/wallpaper_genua.png
-i3
-{%@@ endif @@%}
-
-{%@@ if profile == "laptop" @@%}
-feh --bg-scale ~/.wallpaper/wallpaper.png
+picom &
 i3
 {%@@ endif @@%}

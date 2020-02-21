@@ -202,8 +202,13 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.background       #ffffff
 
-# Keyboard lauyout shortcuts
+# Keyboard lauyout
+exec --no-startup-id setxkbmap za
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap za
+
+# Background
+exec --no-startup-id picom
+exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 
 # Remove title bar
 new_window 1pixel
@@ -244,7 +249,7 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 bindsym $mod+Shift+b exec "xlock -mode matrix -info ''"
 
 # Custom Workspaces
-exec --no-startup-id "firefox"
+exec --no-startup-id "chromium-browser"
 
-for_window [class="Firefox"] move container to workspace 9
+for_window [class="Chromium"] move container to workspace 9
 {%@@ endif @@%}
