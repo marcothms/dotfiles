@@ -10,61 +10,51 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
-  f_bashrc:
-    src: bashrc
-    dst: ~/.bashrc
+  f_zshrc:
+    src: zsh/zshrc
+    dst: ~/.zshrc
+  d_oh-my-zsh:
+    src: zsh/oh-my-zsh
+    dst: ~/.oh-my-zsh
+  f_zsh_themes:
+    src: zsh/zsh.themes
+    dst: ~/.oh-my-zsh/themes
   f_vimrc:
-    src: vimrc
+    src: vim/vimrc
     dst: ~/.vimrc
     actions:
     - vundle-install
     - vundle-refresh
   f_xresources:
-    src: Xresources
+    src: X11/Xresources
     dst: ~/.Xresources
-    actions:
-    - xresources-reload
-  f_i3_config:
-    src: i3_config
-    dst: ~/.config/i3/config
-  f_i3status_config:
-    src: i3status_config
-    dst: ~/.config/i3status/config
+  d_xresources_themes:
+    src: X11/Xresources.themes
+    dst: ~/.Xresources.themes
   f_xinitrc:
-    src: xinitrc
+    src: X11/xinitrc
     dst: ~/.xinitrc
-  f_zshrc:
-    src: zshrc
-    dst: ~/.zshrc
-  d_oh-my-zsh:
-    src: oh-my-zsh
-    dst: ~/.oh-my-zsh
-  f_zsh_themes:
-    src: zsh.themes
-    dst: ~/.oh-my-zsh/themes
+  f_i3:
+    src: i3/i3
+    dst: ~/.config/i3/config
+  f_i3status:
+    src: i3/i3status
+    dst: ~/.config/i3status/config
   d_fonts:
     src: fonts
     dst: ~/.local/share/fonts
     actions:
     - font-cache
-  d_xresources_d:
-    src: Xresources.d
-    dst: ~/.Xresources.d
   f_picom:
-    src: picom.conf
+    src: picom/picom
     dst: ~/.config/picom.conf
   f_tmux:
-    src: tmux.conf
+    src: tmux/tmux
     dst: ~/.tmux.conf
   d_wallpaper:
     src: wallpaper
     dst: ~/.wallpaper
-  f_muttrc:
-    src: muttrc
-    dst: ~/.muttrc
-  d_mutt_themes:
-    src: mutt.themes
-    dst: ~/.mutt/mutt.themes
+
 profiles:
   laptop:
     include:
@@ -76,7 +66,6 @@ profiles:
     - picom
     - tmux
     - wallpaper
-    - mutt
   work:
     include:
     - zsh
@@ -87,16 +76,12 @@ profiles:
     - picom
     - tmux
     - wallpaper
-    - mutt
   dev:
     include:
     - zsh
     - vim
 
  # Packages to be used above
-  bash:
-    dotfiles:
-    - f_bashrc
   zsh:
     dotfiles:
     - f_zshrc
@@ -108,12 +93,12 @@ profiles:
   x11:
     dotfiles:
     - f_xresources
+    - d_xresources_themes
     - f_xinitrc
-    - d_xresources_d
   i3:
     dotfiles:
-    - f_i3_config
-    - f_i3status_config
+    - f_i3
+    - f_i3status
   font:
     dotfiles:
     - d_fonts
@@ -126,7 +111,3 @@ profiles:
   wallpaper:
     dotfiles:
     - d_wallpaper
-  mutt:
-    dotfiles:
-    - f_muttrc
-    - d_mutt_themes

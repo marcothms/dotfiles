@@ -1,0 +1,37 @@
+! Colors
+! more blue-ish
+!#include ".Xresources.themes/Xresources.nord"
+! more vibrant
+#include ".Xresources.themes/Xresources.afterglow"
+
+!#include ".Xresources.themes/Xresources.solarized"
+
+!others
+!#include ".Xresources.themes/Xresources.clean-and-green"
+!#include ".Xresources.themes/Xresources.breeze-dark"
+!#include ".Xresources.themes/Xresources.onedark"
+!#include ".Xresources.themes/Xresources.onedark-16"
+
+! Font
+XTerm.vt100.faceName: xft:Inconsolata:antialias=true
+{%@@ if profile == "work" @@%}
+XTerm.vt100.faceSize: 12
+{%@@ endif @@%}
+{%@@ if profile == "laptop" @@%}
+XTerm.vt100.faceSize: 13
+{%@@ endif @@%}
+
+! Remove Scrollbar
+XTerm.vt100.scrollBar: false
+Xterm.vt100.scrollBar.widht:1
+
+! Resize Term Font
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> minus: smaller-vt-font() \n\
+  Ctrl <Key> plus: larger-vt-font()
+
+! some urxvt term settings
+URxvt.font: xft:Inconsolata:size=11:antialias=true
+URxvt.transparent: true
+URxvt.shading: 50
+URxvt.scrollBar: false

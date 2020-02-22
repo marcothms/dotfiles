@@ -1,0 +1,132 @@
+actions:
+  pre:
+    vundle-install: test -e ~/.vim/bundle/Vundle.vim || (mkdir -p ~/.vim/bundle; git
+      clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim )
+  vundle-refresh: vim +VundleClean! +VundleInstall +VundleInstall! +qall
+  font-cache: fc-cache -f -v
+  xresources-reload: xrdb ~/.Xresources
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
+    actions:
+    - vundle-install
+    - vundle-refresh
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+    actions:
+    - xresources-reload
+  f_i3_config:
+    src: i3_config
+    dst: ~/.config/i3/config
+  f_i3status_config:
+    src: i3status_config
+    dst: ~/.config/i3status/config
+  f_xinitrc:
+    src: xinitrc
+    dst: ~/.xinitrc
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  d_oh-my-zsh:
+    src: oh-my-zsh
+    dst: ~/.oh-my-zsh
+  f_zsh_themes:
+    src: zsh.themes
+    dst: ~/.oh-my-zsh/themes
+  d_fonts:
+    src: fonts
+    dst: ~/.local/share/fonts
+    actions:
+    - font-cache
+  d_xresources_d:
+    src: Xresources.d
+    dst: ~/.Xresources.d
+  f_picom:
+    src: picom.conf
+    dst: ~/.config/picom.conf
+  f_tmux:
+    src: tmux.conf
+    dst: ~/.tmux.conf
+  d_wallpaper:
+    src: wallpaper
+    dst: ~/.wallpaper
+  f_muttrc:
+    src: muttrc
+    dst: ~/.muttrc
+  d_mutt_themes:
+    src: mutt.themes
+    dst: ~/.mutt/mutt.themes
+profiles:
+  laptop:
+    include:
+    - zsh
+    - vim
+    - x11
+    - i3
+    - font
+    - picom
+    - tmux
+    - wallpaper
+    - mutt
+  work:
+    include:
+    - zsh
+    - vim
+    - x11
+    - i3
+    - font
+    - picom
+    - tmux
+    - wallpaper
+    - mutt
+  dev:
+    include:
+    - zsh
+    - vim
+
+ # Packages to be used above
+  bash:
+    dotfiles:
+    - f_bashrc
+  zsh:
+    dotfiles:
+    - f_zshrc
+    - d_oh-my-zsh
+    - f_zsh_themes
+  vim:
+    dotfiles:
+    - f_vimrc
+  x11:
+    dotfiles:
+    - f_xresources
+    - f_xinitrc
+    - d_xresources_d
+  i3:
+    dotfiles:
+    - f_i3_config
+    - f_i3status_config
+  font:
+    dotfiles:
+    - d_fonts
+  picom:
+    dotfiles:
+    - f_picom
+  tmux:
+    dotfiles:
+    - f_tmux
+  wallpaper:
+    dotfiles:
+    - d_wallpaper
+  mutt:
+    dotfiles:
+    - f_muttrc
+    - d_mutt_themes
