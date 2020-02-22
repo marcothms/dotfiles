@@ -13,12 +13,12 @@ dotfiles:
   f_zshrc:
     src: zsh/zshrc
     dst: ~/.zshrc
-  d_oh-my-zsh:
-    src: zsh/oh-my-zsh
-    dst: ~/.oh-my-zsh
+  d_ohmyzsh:
+    src: zsh/ohmyzsh
+    dst: ~/.ohmyzsh
   f_zsh_themes:
     src: zsh/zsh.themes
-    dst: ~/.oh-my-zsh/themes
+    dst: ~/.ohmyzsh/themes
   f_vimrc:
     src: vim/vimrc
     dst: ~/.vimrc
@@ -85,7 +85,7 @@ profiles:
   zsh:
     dotfiles:
     - f_zshrc
-    - d_oh-my-zsh
+    - d_ohmyzsh
     - f_zsh_themes
   vim:
     dotfiles:

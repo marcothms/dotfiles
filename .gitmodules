@@ -1,6 +1,6 @@
 [submodule "dotdrop"]
 	path = dotdrop
 	url = https://github.com/deadc0de6/dotdrop.git
-[submodule "dotfiles/oh-my-zsh"]
-	path = dotfiles/zsh/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "dotfiles/zsh/ohmyzsh"]
+	path = dotfiles/zsh/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
