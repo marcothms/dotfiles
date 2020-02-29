@@ -1,0 +1,131 @@
+[bar/mybar]
+; monitor = DP1
+
+font-0 = "Inconsolata:pixelsize=12;0"
+
+bottom = false
+fixed-center = true
+width = 100%
+height = 35
+
+background = #882B303B
+foreground = #000
+
+green = #00d3a8
+
+#padding-left = 0.5
+padding-right = 2
+
+module-margin = 1
+
+modules-left = i3tabs title
+modules-center = date
+modules-right = network volume battery
+separator =
+
+dim-value = 0.5
+
+wm-name = i3
+wm-restack = i3
+
+dpi-x = 96
+dpi-y = 96
+
+enable-ipc = false
+
+[module/i3tabs]
+type = internal/i3
+pin-workspaces = true
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+label-unfocused-foreground = #ffffff
+
+label-focused = %index%
+label-focused-foreground = #00d3a8
+label-focused-background = #8865737E
+label-focused-underline = #fba922
+label-focused-padding = 2
+
+label-urgent = %index%
+label-urgent-background = #00d3a8
+label-urgent-foreground = #8865737E
+label-urgent-underline = #fba922
+label-urgent-padding = 2
+
+label-mode-padding = 2
+label-mode-foreground = #00d3ab 
+label-mode-background = #65737E
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+date = %Y-%m-%d%
+
+time = %H:%M
+
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
+
+label = %date% %time%
+label-font = 0
+label-foreground = #fff
+
+[module/title]
+type = internal/xwindow
+label = %title%
+format = <label>
+label-maxlen = 80
+label-empty = "Konnichiwa, Marc~~"
+format-padding = 2
+format-foreground = #fff
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+apdapter = ADP1
+
+format-charging = <label-charging>
+format-charging-foreground = #00d3a8
+label-charging = CHR %percentage%%
+
+format-discharging = <label-discharging>
+format-discharging-foreground = #00d3a8
+label-discharging = BAT %percentage%%
+
+format-full = <label-full>
+format-full-foreground = #00d3a8
+label-full = FULL
+
+[module/volume]
+type = internal/alsa
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+master-mixer = Master
+
+format-volume = <label-volume>
+format-volume-foreground = #fff
+label-volume = VOL %percentage%%
+
+label-muted = muted
+
+[module/network]
+type = internal/network
+interface = wlo1
+interval = 3.0
+
+format-connected = <label-connected>
+format-disconnectded = <label-disconnected>
+
+label-connected = WIFI %essid%
+label-connected-foreground = #fff

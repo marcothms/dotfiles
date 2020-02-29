@@ -54,6 +54,9 @@ dotfiles:
   d_wallpaper:
     src: wallpaper
     dst: ~/.wallpaper
+  d_polybar:
+    src: polybar
+    dst: ~/.config/polybar
 
 profiles:
   laptop:
@@ -66,6 +69,7 @@ profiles:
     - picom
     - tmux
     - wallpaper
+    - polybar
   work:
     include:
     - zsh
@@ -111,3 +115,6 @@ profiles:
   wallpaper:
     dotfiles:
     - d_wallpaper
+  polybar:
+    dotfiles:
+    - d_polybar

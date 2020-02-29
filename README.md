@@ -7,12 +7,12 @@ My personal configurations, managed with the 'dotdrop' submodule.
 | :--- | :--- |
 | Distribution | Fedora 31 |
 | Shell | zsh + oh-my-zsh |
-| WM | i3 |
+| WM | i3 (work), i3-gaps (home) |
 | Terminal | xterm |
 | Font | Inconsolata |
 | VIM-Theme | OneDark |
 | VIM-Bar | lightline |
-| Bar | i3Bar |
+| Bar | polybar |
 | Transparency | picom |
 | Wallpaper | teh |
 
