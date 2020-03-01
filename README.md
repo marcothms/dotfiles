@@ -3,6 +3,9 @@ Dotfiles
 
 My personal configurations, managed with the 'dotdrop' submodule.
 
+![neofetch](https://i.imgur.com/zBQgwUu.png)
+![vim](https://i.imgur.com/NvSeJaH.png)
+
 | Usage | Name |
 | :--- | :--- |
 | Distribution | Fedora 31 |
@@ -15,6 +18,3 @@ My personal configurations, managed with the 'dotdrop' submodule.
 | Bar | polybar |
 | Transparency | picom |
 | Wallpaper | teh |
-
-![neofetch](https://imgur.com/x0Y9qzF.png)
-![vim](https://imgur.com/iEcn2XF.png)
