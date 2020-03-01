@@ -8,8 +8,8 @@ fixed-center = true
 width = 100%
 height = 35
 
-background = #882B303B
-foreground = #000
+background = #18191E
+foreground = #000000
 
 green = #00d3a8
 
@@ -23,7 +23,7 @@ modules-center = date
 modules-right = network volume battery
 separator =
 
-dim-value = 0.5
+dim-value = 1.0
 
 wm-name = i3
 wm-restack = i3
@@ -47,13 +47,13 @@ label-unfocused-foreground = #ffffff
 
 label-focused = %index%
 label-focused-foreground = #00d3a8
-label-focused-background = #8865737E
+label-focused-background = #383D41
 label-focused-underline = #fba922
 label-focused-padding = 2
 
 label-urgent = %index%
 label-urgent-background = #00d3a8
-label-urgent-foreground = #8865737E
+label-urgent-foreground = #383D41
 label-urgent-underline = #fba922
 label-urgent-padding = 2
 

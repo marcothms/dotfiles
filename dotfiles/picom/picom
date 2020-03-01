@@ -1,24 +1,16 @@
-# Shadow
-
 # Opacity
 opacity-rule = [
-    "100:class_g = 'XTerm' && !focused",
-    "100:class_g = 'XTerm' && focused",
+    "90:class_g = 'XTerm' && !focused",
+    "95:class_g = 'XTerm' && focused",
 ];
 inactive-opacity = 1.0;
 active-opacity = 1.0;
 
-# Dim
-inactive-dim = 0.0;
-inactive-dim-fixed = true;
-
-# Blur
+# Blur - currently not working
 blur-background = true;
-blur-kern = "5x5gaussian";
-blur-method = "gaussian";
-blur-strength = 50;
-backend = "glx";
-blur-background-fixed = false;
+blur-method = "kawase";
+blur-strength = 4;
 
 # Other
 vsync = true;
+backend = "glx";
