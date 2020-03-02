@@ -255,7 +255,7 @@ exec --no-startup-id "chromium-browser"
 for_window [class="Chromium"] move container to workspace 9
 
 # i3-gaps
-#smart_gaps on
+smart_gaps on
 gaps inner 10
 
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
