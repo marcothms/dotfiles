@@ -8,16 +8,7 @@ general {
     color_bad = '#ba5e57'
 }
 
-{%@@ if profile == "laptop" @@%} 
-order += "volume master"
 order += "tztime local"
-order += "battery all"
-{%@@ endif @@%}
-
-{%@@ if profile == "work" @@%} 
-order += "tztime local"
-{%@@ endif @@%}
-
 
 load {
     format = "<span background='#f59335'> %5min Load </span>"
@@ -65,7 +56,7 @@ battery all {
 }
 
 tztime local {
-  format = "<span background='#81a1c1'> %time </span>"
+  format = "<span foreground='#ffffff'> %time </span>"
   format_time = "%a %-d %b %H:%M"
 }
 
