@@ -82,7 +82,7 @@ type = internal/xwindow
 label = %title%
 format = <label>
 label-maxlen = 80
-label-empty = "Konnichiwa, Marc~~"
+label-empty = "Yoroshiku!"
 format-padding = 2
 format-foreground = #fff
 
