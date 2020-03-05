@@ -15,7 +15,7 @@ plugins=(
 )
 
 {%@@ if profile == "work" @@%}
-zstyle :omz:plugins:ssh-agent identities gerrit gg gitlab
+zstyle :omz:plugins:ssh-agent identities
 {%@@ endif @@%}
 
 {%@@ if profile == "laptop" @@%}
