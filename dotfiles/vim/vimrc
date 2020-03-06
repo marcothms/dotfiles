@@ -96,9 +96,10 @@ set expandtab " tabs are spaces
 set smartindent
 
 " File specific indents
-autocmd FileType rust setlocal shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType perl setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType rust setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType perl setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType conf setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Whitespaces
 set list
