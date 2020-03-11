@@ -1,0 +1,24 @@
+# Set vim as default
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# Dotdrop
+alias dotdrop="~/dotfiles/dotdrop.sh --cfg=~/dotfiles/config.yaml"
+
+# PS1
+HOST="\[\033[0;93m\]\h\[\033[m\]"
+GIT="\[\033[1;91m\](\$(git_branch))\[\033[m\]"
+ICON="\[\033[1;92m\]➜\[\033[m\]"
+DIR="\[\033[1;94m\]\w\[\033[m\]"
+export PS1="${HOST} ${ICON}  ${DIR} "
+
+# Quality of Life
+alias ..="cd .."
+alias ll="ls -l"
+alias la="ls -la"
+alias rm="rm -i"
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
