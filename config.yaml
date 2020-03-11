@@ -80,10 +80,6 @@ profiles:
     - picom
     - tmux
     - wallpaper
-  dev:
-    include:
-    - zsh
-    - vim
 
  # Packages to be used above
   zsh:
