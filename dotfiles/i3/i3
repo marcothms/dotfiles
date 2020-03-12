@@ -79,10 +79,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
-# bindsym $mod+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -146,34 +146,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 25 px or 25 ppt
-        bindsym j resize grow height 25 px or 25 ppt
-        bindsym k resize shrink height 25 px or 25 ppt
-        bindsym l resize grow width 25 px or 25 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Itterasshai!' -B 'Hai!' 'i3-msg exit'"
 
 # Border
 for_window [class="^.*"] border pixel 0
@@ -203,6 +176,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # PC specific configurations:
+# WORKSTATION:
 {%@@ if profile == "work" @@%}
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -244,6 +218,7 @@ bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
 {%@@ endif @@%}
 
+# LAPTOP
 
 {%@@ if profile == "laptop" @@%}
 # Locking
@@ -259,5 +234,4 @@ smart_gaps on
 gaps inner 10
 
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
-
 {%@@ endif @@%}
