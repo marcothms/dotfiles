@@ -78,11 +78,9 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+b split h
-
-# split in vertical orientation
-bindsym $mod+v split v
+# Splitting
+bindsym $mod+Shift+s split v
+bindsym $mod+Shift+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -198,7 +196,7 @@ bar {
 }
 
 # Locking
-bindsym $mod+Shift+b exec "xlock -mode matrix -startCmd /share/bin/isweg -endCmd /share/bin/isda -bg '#6843bf' -info ''"
+bindsym $mod+Shift+BackSpace exec "xlock -mode matrix -startCmd /share/bin/isweg -endCmd /share/bin/isda -bg '#6843bf' -info ''"
 
 # Custom Workspaces
 exec --no-startup-id "firefox"
@@ -222,7 +220,7 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 
 {%@@ if profile == "laptop" @@%}
 # Locking
-bindsym $mod+Shift+b exec "xlock -mode matrix -info ''"
+bindsym $mod+Shift+BackSpace exec "xlock -mode matrix -info ''"
 
 # Custom Workspaces
 exec --no-startup-id "chromium-browser"
