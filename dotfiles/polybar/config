@@ -14,7 +14,7 @@ foreground = #000000
 green = #00d3a8
 
 #padding-left = 0.5
-padding-right = 2
+padding-right = 1
 
 module-margin = 1
 
@@ -24,6 +24,8 @@ modules-right = network volume battery
 separator =
 
 dim-value = 1.0
+
+tray-position = right
 
 wm-name = i3
 wm-restack = i3
