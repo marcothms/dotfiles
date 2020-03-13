@@ -53,7 +53,7 @@ enable-click = true
 enable-scroll = false
 wrapping-scroll = false
 
-foreground = #00d3a8
+foreground = ${colors.accent}
 background = #383D41
 
 label-unfocused = %index%
@@ -111,15 +111,15 @@ battery = BAT0
 apdapter = ADP1
 
 format-charging = <label-charging>
-format-charging-foreground = #00d3a8
+format-charging-foreground = ${colors.accent}
 label-charging = CHR %percentage%%
 
 format-discharging = <label-discharging>
-format-discharging-foreground = #00d3a8
+format-discharging-foreground = ${colors.accent}
 label-discharging = BAT %percentage%%
 
 format-full = <label-full>
-format-full-foreground = #00d3a8
+format-full-foreground = ${colors.accent}
 label-full = FULL
 
 ###############################################################################
