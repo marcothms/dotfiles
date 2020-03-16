@@ -173,6 +173,10 @@ bindsym --release $mod+Shift+p exec"import ~/Screenshot-$(date '+%Y%m%d-%H%M%S')
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# Workspace Cycle
+bindsym $mod+n workspace next
+bindsym $mod+p workspace prev
+
 # PC specific configurations:
 # WORKSTATION:
 {%@@ if profile == "work" @@%}
