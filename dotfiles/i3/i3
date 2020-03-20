@@ -170,8 +170,8 @@ new_window 1pixel
 bindsym --release $mod+Shift+p exec"import ~/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
 
 # Audio and Screen
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Workspace Cycle
 bindsym $mod+n workspace next
