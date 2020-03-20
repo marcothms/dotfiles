@@ -92,16 +92,23 @@ wrapping-scroll = false
 foreground = ${colors.accent}
 background = #383D41
 
-label-unfocused = %index%
-label-unfocused-foreground = #ffffff
-label-unfocused-background = ${self.background}
-label-unfocused-padding = 2
-
 label-focused = %index%
 label-focused-foreground = ${self.foreground}
 label-focused-background = ${self.background}
 label-focused-underline = #fba922
 label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-foreground = #ffffff
+label-unfocused-background = ${self.background}
+label-unfocused-underline = #fba922
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-foreground = #ffffff
+label-visible-background = ${self.background}
+label-visible-underline = #fba922
+label-visible-padding = 2
 
 label-urgent = %index%
 label-urgent-background = ${self.foreground}
