@@ -1,8 +1,8 @@
 ! Colors
 ! more blue-ish
-!#include ".Xresources.themes/Xresources.nord"
+#include ".Xresources.themes/Xresources.nord"
 ! more vibrant
-#include ".Xresources.themes/Xresources.afterglow"
+!#include ".Xresources.themes/Xresources.afterglow"
 
 !#include ".Xresources.themes/Xresources.solarized"
 

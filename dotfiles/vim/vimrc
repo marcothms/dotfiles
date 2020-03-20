@@ -6,13 +6,13 @@ call vundle#begin()
 
 " Plugins - load with :PluginInstall
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'itchyny/vim-gitbranch'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tmsvg/pear-tree'
 
 " Colorscheme
-Plugin 'joshdick/onedark.vim'
-Plugin 'fneu/breezy' "lightline
-Plugin 'itchyny/lightline.vim'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Required
 call vundle#end()
@@ -21,22 +21,10 @@ filetype plugin indent on
 
 " Plugin Settings
 
-" Lightline Statusbar
-" absolutepath or filename
-set laststatus=2
-let g:lightline = {
-	\ 'colorscheme': 'breezy',
-	\ 'active': {
-	\    'left': [ [ 'mode', 'paste' ],
-	\              [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-	\ },
-	\ 'component_function': {
-	\	'gitbranch': 'gitbranch#name'
-	\ },
-	\ }
-
-" Breezy
-set termguicolors
+" airline bar
+let g:airline_theme='nord'
+let g:airline_powerline_fonts = 0
+let g:bufferline_echo = 0
 
 " Onedark Colorscheme
 let g:onedark_hide_endofbuffer=1
@@ -57,9 +45,9 @@ let g:pear_tree_pairs = {
             \ }
 
 " Other configurations
-" Coloooooors
+" Colors
 syntax on
-colorscheme onedark
+colorscheme nord
 filetype on
 filetype indent plugin on
 set colorcolumn=80
