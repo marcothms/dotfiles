@@ -83,6 +83,10 @@ profiles:
     - picom
     - tmux
     - wallpaper
+  dev:
+    include:
+    - vim
+    - tmux
 
  # Packages to be used above
   bash:
