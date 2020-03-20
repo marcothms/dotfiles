@@ -54,6 +54,9 @@ dotfiles:
   f_tmux:
     src: tmux/tmux
     dst: ~/.tmux.conf
+  d_tmux_themes:
+    src: tmux/themes
+    dst: ~/.tmux/themes
   d_wallpaper:
     src: wallpaper
     dst: ~/.wallpaper
@@ -114,6 +117,7 @@ profiles:
   tmux:
     dotfiles:
     - f_tmux
+    - d_tmux_themes
   wallpaper:
     dotfiles:
     - d_wallpaper
