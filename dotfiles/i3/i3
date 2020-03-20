@@ -231,6 +231,16 @@ exec --no-startup-id "chromium-browser"
 
 for_window [class="Chromium"] move container to workspace 9
 
+# Monitors
+# integrated
+set $monitor1 "eDP-1"
+# secondary
+set $monitor2 "HDMI-1"
+
+workspace $ws10 output $monitor2
+
+bindsym $mod+Ctrl+1 move workspace to output $monitor1
+bindsym $mod+Ctrl+2 move workspace to output $monitor2
 # i3-gaps
 smart_gaps on
 gaps inner 10
