@@ -4,7 +4,7 @@ green = #00d3a8
 
 accent = ${self.green}
 background = #18191E
-foreground = #000000
+foreground = #fff
 
 ###############################################################################
 [font]
@@ -25,14 +25,14 @@ height = 35
 #padding-left = 0.5
 padding-right = 1
 
-foreground = ${colors.background}
+foreground = ${colors.foreground}
 background = ${colors.background}
 
 module-margin = 1
 
 modules-left = i3tabs title
 modules-center = date
-modules-right = backlight network volume battery
+modules-right = spotify backlight network volume battery
 separator =
 
 dim-value = 1.0
@@ -89,13 +89,15 @@ enable-click = true
 enable-scroll = false
 wrapping-scroll = false
 
+format = <label-state> <label-mode>
+
 foreground = ${colors.accent}
 background = #383D41
 
 label-focused = %index%
 label-focused-foreground = ${self.foreground}
 label-focused-background = ${self.background}
-label-focused-underline = #fba922
+label-focused-underline = #fff
 label-focused-padding = 2
 
 label-unfocused = %index%
@@ -214,3 +216,10 @@ bar-width = 10
 bar-indicator = |
 bar-fill = -
 bar-empty = -
+
+###############################################################################
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh %artist% - %title%
+tail = true
+interval = 2
