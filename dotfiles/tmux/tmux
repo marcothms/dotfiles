@@ -4,7 +4,7 @@ set -g history-limit 10000
 
 #some vi behaviour
 bind-key -r h select-pane -L
-run-shell "~/.tmux/themes/nord-tmux/nord.tmux"  bind-key -r j select-pane -D
+bind-key -r j select-pane -D
 bind-key -r k select-pane -U
 bind-key -r l select-pane -R
 
