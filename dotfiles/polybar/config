@@ -1,10 +1,20 @@
+; vim: ft=dosini
 ###############################################################################
 [colors]
-green = #00d3a8
+my_green = #00d3a8
 
-accent = ${self.green}
+accent = ${self.my_green}
 background = #18191E
 foreground = #fff
+
+black    = #000000
+red      = #ff000f
+green    = #8ce10b
+yellow   = #ffb900
+blue     = #008df8
+magenta  = #6d43a6
+cyan     = #00d8eb
+white    = #fff
 
 ###############################################################################
 [font]
@@ -20,7 +30,7 @@ font-0 = ${font.inconsolata}
 bottom = false
 fixed-center = true
 width = 100%
-height = 35
+height = 25
 
 #padding-left = 0.5
 padding-right = 1
@@ -30,9 +40,9 @@ background = ${colors.background}
 
 module-margin = 1
 
-modules-left = i3tabs title
+modules-left = i3tabs
 modules-center = date
-modules-right = spotify backlight network volume battery
+modules-right = spotify backlight network volume battery powermenu
 separator =
 
 dim-value = 1.0
@@ -47,79 +57,51 @@ dpi-y = 96
 
 ###############################################################################
 [bar/HDMI1]
+inherit = bar/laptop
+
 monitor = "HDMI-1"
-enable-ipc = false
 
-font-0 = ${font.inconsolata}
-
-bottom = false
-fixed-center = true
-width = 100%
-height = 35
-
-#padding-left = 0.5
-padding-right = 1
-
-foreground = ${colors.background}
-background = ${colors.background}
-
-module-margin = 1
-
-modules-left = i3tabs title
+modules-left = i3tabs
 modules-center = date
-modules-right = network volume
-separator =
-
-dim-value = 1.0
-
-tray-position = right
-
-wm-name = i3
-wm-restack = i3
-
-dpi-x = 96
-dpi-y = 96
+modules-right = network volume powermenu
 
 ###############################################################################
 [module/i3tabs]
 type = internal/i3
+
 pin-workspaces = true
 index-sort = true
 enable-click = true
 enable-scroll = false
 wrapping-scroll = false
 
-format = <label-state> <label-mode>
+format = <label-state>
 
-foreground = ${colors.accent}
 background = #383D41
 
 label-focused = %index%
-label-focused-foreground = ${self.foreground}
+label-focused-foreground = ${colors.accent}
 label-focused-background = ${self.background}
-label-focused-underline = #fff
+label-focused-underline = ${colors.white}
 label-focused-padding = 2
 
 label-unfocused = %index%
-label-unfocused-foreground = #ffffff
+label-unfocused-foreground = ${colors.white}
 label-unfocused-background = ${self.background}
-label-unfocused-underline = #fba922
 label-unfocused-padding = 2
 
 label-visible = %index%
 label-visible-foreground = #ffffff
 label-visible-background = ${self.background}
-label-visible-underline = #fba922
 label-visible-padding = 2
 
 label-urgent = %index%
-label-urgent-background = ${self.foreground}
-label-urgent-foreground = ${self.background}
-label-urgent-underline = #fba922
+label-urgent-foreground = ${colors.red}
+label-urgent-background = ${self.background}
 label-urgent-padding = 2
 
-label-mode-padding = 2
-label-mode-foreground = ${self.foreground}
+label-mode-padding = 0
+label-mode-foreground = ${colors.accent}
 label-mode-background = ${self.background}
 
 ###############################################################################
@@ -223,3 +205,53 @@ type = custom/script
 exec = ~/.config/polybar/spotify.sh %artist% - %title%
 tail = true
 interval = 2
+
+###############################################################################
+[module/powermenu]
+type = custom/text
+content = "MARC"
+click-left = polybar powermenu
+
+[bar/powermenu]
+
+width = 350
+height = 27
+radius = 0
+
+offset-x = 1570
+offset-y = 35
+
+background = ${colors.background}
+
+separator = %{F#33}|
+
+font-0 = ${font.inconsolata}
+
+modules-center = logout reboot poweroff closepowermenubar
+
+override-redirect = true
+
+[module/powerbase]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.accent}
+
+[module/logout]
+inherit = module/powerbase
+content = "Logout"
+click-left = "pkill -n polybar ; i3-msg exit"
+
+[module/reboot]
+inherit = module/powerbase
+content = "Reboot"
+click-left = "pkill -n polybar ; systemctl reboot"
+
+[module/poweroff]
+inherit = module/powerbase
+content = "Poweroff"
+click-left = "pkill -n polybar ; systemctl poweroff"
+
+[module/closepowermenubar]
+type = custom/text
+content = "Cancel"
+click-left = "pkill -n polybar"
