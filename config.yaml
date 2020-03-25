@@ -63,6 +63,9 @@ dotfiles:
   d_polybar:
     src: polybar
     dst: ~/.config/polybar
+  d_dunst:
+    src: dunst
+    dst: ~/.config/dunst
 
 profiles:
   laptop:
@@ -76,6 +79,7 @@ profiles:
     - tmux
     - wallpaper
     - polybar
+    - dunst
   work:
     include:
     - zsh
@@ -128,3 +132,6 @@ profiles:
   polybar:
     dotfiles:
     - d_polybar
+  dunst:
+    dotfiles:
+    - d_dunst

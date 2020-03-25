@@ -3,10 +3,6 @@
 [colors]
 my_green = #00d3a8
 
-accent = ${self.my_green}
-background = #18191E
-foreground = #fff
-
 black    = #000000
 red      = #ff000f
 green    = #8ce10b
@@ -16,9 +12,14 @@ magenta  = #6d43a6
 cyan     = #00d8eb
 white    = #fff
 
+accent = ${self.my_green}
+#background = #18191E
+background = #f018191E
+foreground = ${self.white}
+
 ###############################################################################
 [font]
-inconsolata = "Inconsolata:pixelsize=12;0"
+inconsolata = "Inconsolata Nerd Font Mono:pixelsize=11;0"
 
 ###############################################################################
 [bar/laptop]
@@ -30,7 +31,7 @@ font-0 = ${font.inconsolata}
 bottom = false
 fixed-center = true
 width = 100%
-height = 25
+height = 27
 
 #padding-left = 0.5
 padding-right = 1
@@ -38,12 +39,15 @@ padding-right = 1
 foreground = ${colors.foreground}
 background = ${colors.background}
 
+#border-size = 5
+#border-color = ${colors.background}
+
 module-margin = 1
 
 modules-left = i3tabs
-modules-center = date
-modules-right = spotify backlight network volume battery powermenu
-separator =
+modules-center =
+modules-right = backlight volume network battery date time powermenu
+separator = |
 
 dim-value = 1.0
 
@@ -52,8 +56,8 @@ tray-position = right
 wm-name = i3
 wm-restack = i3
 
-dpi-x = 96
-dpi-y = 96
+#dpi-x = 96
+#dpi-y = 96
 
 ###############################################################################
 [bar/HDMI1]
@@ -62,8 +66,9 @@ inherit = bar/laptop
 monitor = "HDMI-1"
 
 modules-left = i3tabs
-modules-center = date
-modules-right = network volume powermenu
+modules-center =
+modules-right = volume network battery date time powermenu
+separator = |
 
 ###############################################################################
 [module/i3tabs]
@@ -72,34 +77,36 @@ type = internal/i3
 pin-workspaces = true
 index-sort = true
 enable-click = true
-enable-scroll = false
+enable-scroll = true
 wrapping-scroll = false
 
-format = <label-state>
+format = <label-state> <label-mode>
 
-background = #383D41
+background_visible = #383D41
+background = ${colors.background}
 
 label-focused = %index%
-label-focused-foreground = ${colors.accent}
-label-focused-background = ${self.background}
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.accent}
 label-focused-underline = ${colors.white}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-unfocused = %index%
 label-unfocused-foreground = ${colors.white}
 label-unfocused-background = ${self.background}
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 label-visible = %index%
 label-visible-foreground = #ffffff
 label-visible-background = ${self.background}
-label-visible-padding = 2
+label-visible-padding = 1
 
 label-urgent = %index%
 label-urgent-foreground = ${colors.red}
 label-urgent-background = ${self.background}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
+label-mode = %mode%
 label-mode-padding = 0
 label-mode-foreground = ${colors.accent}
 label-mode-background = ${self.background}
@@ -110,16 +117,24 @@ type = internal/date
 
 interval = 1.0
 
-date = %Y-%m-%d%
+#date = %Y-%m-%d%
+date = %A, %d %B %Y
+
+label = %date%
+label-font = 0
+label-foreground = ${colors.white}
+
+###############################################################################
+[module/time]
+type = internal/date
+
+interval = 1.0
 
 time = %H:%M
 
-date-alt = %A, %d %B %Y
-time-alt = %H:%M:%S
-
-label = %date% %time%
+label = %time%
 label-font = 0
-label-foreground = #fff
+label-foreground = ${colors.accent}
 
 ###############################################################################
 [module/title]
@@ -161,7 +176,7 @@ headphone-soundcard = default
 master-mixer = Master
 
 format-volume = <label-volume>
-format-volume-foreground = #fff
+format-volume-foreground = ${colors.accent}
 label-volume = VOL %percentage%%
 
 format-muted <label-muted>
@@ -180,7 +195,7 @@ format-disconnectded = <label-disconnected>
 label-connected = %essid%
 label-connected-foreground = #fff
 
-label-disconnected =
+label-disconnected =  NO WIFI
 label-disconnected-foreground = #fff
 
 ###############################################################################
@@ -190,9 +205,10 @@ type = internal/backlight
 card = amdgpu_bl0
 enable-scroll = true
 
-format = <bar>
-format-foreground = #fff
-label = BRIGHT %percentage%%
+format = <label>
+format-foreground = ${colors.white}
+
+label = BRT %percentage%%
 
 bar-width = 10
 bar-indicator = |

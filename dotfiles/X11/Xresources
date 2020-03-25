@@ -31,7 +31,7 @@ XTerm.vt100.translations: #override \n\
   Ctrl <Key> plus: larger-vt-font()
 
 ! some urxvt term settings
-URxvt.font: xft:Inconsolata:size=11:antialias=true
+URxvt.font: xft:Inconsolata Nerd Font Mono:size=11:antialias=true
 URxvt.transparent: true
 URxvt.shading: 50
 URxvt.scrollBar: false

@@ -3,8 +3,10 @@ Dotfiles
 
 My personal configurations, managed with the 'dotdrop' submodule.
 
-![neofetch](https://i.imgur.com/zBQgwUu.png)
-![vim](https://i.imgur.com/NvSeJaH.png)
+Accent-Color: #00d3a8
+
+![neofetch](https://i.imgur.com/tBfX9Ao.png)
+![vim](https://i.imgur.com/m6NoNJE.png)
 
 | Usage | Name |
 | :--- | :--- |
@@ -12,9 +14,13 @@ My personal configurations, managed with the 'dotdrop' submodule.
 | Shell | zsh + oh-my-zsh |
 | WM | i3 (work), i3-gaps (home) |
 | Terminal | xterm |
-| Font | Inconsolata |
-| VIM-Theme | OneDark |
-| VIM-Bar | lightline |
+| Font | Inconsolata Nerd Font Mono |
+| VIM-Theme | Nord |
+| VIM-Bar | airline |
+| Xresources | Nord |
+| Backlight | light |
+| Notifications | dunst |
+| Audio Control | playerctl |
 | Bar | polybar |
 | Transparency | picom |
 | Wallpaper | teh |
