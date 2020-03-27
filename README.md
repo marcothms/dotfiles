@@ -5,7 +5,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 Accent-Color: #00d3a8
 
-![neofetch](https://i.imgur.com/tBfX9Ao.png)
+![neofetch](https://i.imgur.com/vvGbeeL.png)
 ![vim](https://i.imgur.com/m6NoNJE.png)
 
 | Usage | Name |
@@ -15,12 +15,13 @@ Accent-Color: #00d3a8
 | WM | i3 (work), i3-gaps (home) |
 | Terminal | xterm |
 | Font | Inconsolata Nerd Font Mono |
-| VIM-Theme | Nord |
-| VIM-Bar | airline |
+| Vim-Theme | Nord |
+| Vim-Bar | airline |
 | Xresources | Nord |
 | Backlight | light |
 | Notifications | dunst |
 | Audio Control | playerctl |
+| Application Launcher | rofi |
 | Bar | polybar |
 | Transparency | picom |
 | Wallpaper | teh |

@@ -53,11 +53,10 @@ bindsym $mod+Return exec xterm
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Shift+d exec dmenu_run
+# Rofi
+bindsym $mod+space exec "rofi -show"
+bindsym $mod+d exec "rofi -show ssh"
 
 # change focus
 bindsym $mod+h focus left
@@ -99,7 +98,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -234,6 +233,9 @@ bindsym $mod+Shift+BackSpace exec "xlock -mode matrix -info ''"
 # Custom Workspaces
 # exec --no-startup-id "chromium-browser"
 
+for_window [class="spotify"] move container to workspace 7
+for_window [class="telegram"] move container to workspace 8
+for_window [class="discord"] move container to workspace 8
 for_window [class="Chromium"] move container to workspace 9
 
 # Monitors
@@ -246,6 +248,7 @@ workspace $ws10 output $monitor2
 
 bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
+
 # i3-gaps
 smart_gaps on
 gaps inner 5

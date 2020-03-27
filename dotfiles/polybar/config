@@ -19,7 +19,7 @@ foreground = ${self.white}
 
 ###############################################################################
 [font]
-inconsolata = "Inconsolata Nerd Font Mono:pixelsize=11;0"
+inconsolata = "Inconsolata:pixelsize=11;0"
 
 ###############################################################################
 [bar/laptop]
@@ -271,3 +271,10 @@ click-left = "pkill -n polybar ; systemctl poweroff"
 type = custom/text
 content = "Cancel"
 click-left = "pkill -n polybar"
+
+###############################################################################
+[module/load]
+type = custom/script
+exec = ~/.config/polybar/load.sh
+interval = 5.0
+

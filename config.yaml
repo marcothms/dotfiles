@@ -66,6 +66,9 @@ dotfiles:
   d_dunst:
     src: dunst
     dst: ~/.config/dunst
+  d_rofi:
+    src: rofi
+    dst: ~/.config/rofi
 
 profiles:
   laptop:
@@ -80,6 +83,7 @@ profiles:
     - wallpaper
     - polybar
     - dunst
+    - rofi
   work:
     include:
     - zsh
@@ -135,3 +139,6 @@ profiles:
   dunst:
     dotfiles:
     - d_dunst
+  rofi:
+    dotfiles:
+    - d_rofi
