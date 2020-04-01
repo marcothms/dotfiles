@@ -69,6 +69,9 @@ dotfiles:
   d_rofi:
     src: rofi
     dst: ~/.config/rofi
+  d_cava:
+    src: cava
+    dst: ~/.config/cava
 
 profiles:
   laptop:
@@ -84,6 +87,7 @@ profiles:
     - polybar
     - dunst
     - rofi
+    - cava
   work:
     include:
     - zsh
@@ -142,3 +146,6 @@ profiles:
   rofi:
     dotfiles:
     - d_rofi
+  cava:
+    dotfiles:
+    - d_cava

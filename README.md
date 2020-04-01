@@ -12,7 +12,7 @@ Accent-Color: #00d3a8
 | :--- | :--- |
 | Distribution | Fedora 31 |
 | Shell | zsh + oh-my-zsh |
-| WM | i3 (work), i3-gaps (home) |
+| WM | i3-gaps (home), i3 (work) |
 | Terminal | xterm |
 | Font | Inconsolata Nerd Font Mono |
 | Vim-Theme | Nord |
@@ -22,6 +22,7 @@ Accent-Color: #00d3a8
 | Notifications | dunst |
 | Audio Control | playerctl |
 | Application Launcher | rofi |
+| Audio Visualizer | cava |
 | Bar | polybar |
 | Transparency | picom |
 | Wallpaper | teh |

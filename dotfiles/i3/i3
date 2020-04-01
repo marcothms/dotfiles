@@ -12,7 +12,7 @@
 set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Inconsolata 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -56,7 +56,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+d exec dmenu_run
 # Rofi
 bindsym $mod+space exec "rofi -show"
-bindsym $mod+d exec "rofi -show ssh"
+bindsym $mod+d exec "rofi -show run"
+bindsym $mod+c exec "rofi -show ssh"
 
 # change focus
 bindsym $mod+h focus left
@@ -204,7 +205,7 @@ bar {
 }
 
 # Locking
-bindsym $mod+Shift+BackSpace exec "xlock -mode matrix -startCmd /share/bin/isweg -endCmd /share/bin/isda -bg '#6843bf' -info ''"
+bindsym $mod+Shift+BackSpace exec "xlock -mode rain -startCmd /share/bin/isweg -endCmd /share/bin/isda -bg '#6843bf' -info ''"
 
 # Custom Workspaces
 exec --no-startup-id "firefox"
@@ -228,7 +229,7 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 
 {%@@ if profile == "laptop" @@%}
 # Locking
-bindsym $mod+Shift+BackSpace exec "xlock -mode matrix -info ''"
+bindsym $mod+Shift+BackSpace exec "xlock -mode rain -info ''"
 
 # Custom Workspaces
 # exec --no-startup-id "chromium-browser"
