@@ -7,6 +7,7 @@ Accent-Color: #00d3a8
 
 ![neofetch](https://i.imgur.com/vvGbeeL.png)
 ![vim](https://i.imgur.com/m6NoNJE.png)
+![cava](https://i.imgur.com/GWsLaU8.png)
 
 | Usage | Name |
 | :--- | :--- |

@@ -72,6 +72,9 @@ dotfiles:
   d_cava:
     src: cava
     dst: ~/.config/cava
+  d_neofetch:
+    src: neofetch
+    dst: ~/.config/neofetch
 
 profiles:
   laptop:
@@ -88,6 +91,7 @@ profiles:
     - dunst
     - rofi
     - cava
+    - neofetch
   work:
     include:
     - zsh
@@ -149,3 +153,6 @@ profiles:
   cava:
     dotfiles:
     - d_cava
+  neofetch:
+    dotfiles:
+    - d_neofetch
