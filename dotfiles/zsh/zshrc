@@ -15,11 +15,11 @@ plugins=(
 )
 
 {%@@ if profile == "work" @@%}
-zstyle :omz:plugins:ssh-agent identities
+zstyle :omz:plugins:ssh-agent identities genua_internal gerrit
 {%@@ endif @@%}
 
 {%@@ if profile == "laptop" @@%}
-zstyle :omz:plugins:ssh-agent identities
+zstyle :omz:plugins:ssh-agent identities github
 {%@@ endif @@%}
 
 source $ZSH/oh-my-zsh.sh

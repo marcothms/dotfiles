@@ -15,12 +15,12 @@ Accent-Color: #00d3a8
 + WM: `i3-gaps (home), i3 (work)`
 + Terminal: `xterm`
 + Font: `Inconsolata Nerd Font Mono`
-
 + Vim-Theme: `Nord`
 + Vim-Bar: `airline`
 + Xresources: `Nord`
 
 ## Requirements
++ (`i3`, `Terminal`, `zsh`)
 + Bar: `polybar`
 + Transparency: `picom`
 + Backlight: `light`
