@@ -9,21 +9,28 @@ Accent-Color: #00d3a8
 ![vim](https://i.imgur.com/m6NoNJE.png)
 ![cava](https://i.imgur.com/GWsLaU8.png)
 
-| Usage | Name |
-| :--- | :--- |
-| Distribution | Fedora 31 |
-| Shell | zsh + oh-my-zsh |
-| WM | i3-gaps (home), i3 (work) |
-| Terminal | xterm |
-| Font | Inconsolata Nerd Font Mono |
-| Vim-Theme | Nord |
-| Vim-Bar | airline |
-| Xresources | Nord |
-| Backlight | light |
-| Notifications | dunst |
-| Audio Control | playerctl |
-| Application Launcher | rofi |
-| Audio Visualizer | cava |
-| Bar | polybar |
-| Transparency | picom |
-| Wallpaper | teh |
+## Features
++ Distro: `Fedora 31`
++ Shell: `zsh + oh-my-zsh`
++ WM: `i3-gaps (home), i3 (work)`
++ Terminal: `xterm`
++ Font: `Inconsolata Nerd Font Mono`
+
++ Vim-Theme: `Nord`
++ Vim-Bar: `airline`
++ Xresources: `Nord`
+
+## Requirements
++ Bar: `polybar`
++ Transparency: `picom`
++ Backlight: `light`
++ Notifications: `dunst`
++ Audio Control: `playerctl`
++ App Launcher: `rofi`
++ Audio Visualizer: `cava`
++ Wallpaper: `teh`
+
+## Profiles
++ `laptop`: All of the dotfiles
++ `work`: Everything I need for work
++ `dev`: Working on remote (dev-)servers
