@@ -22,6 +22,8 @@ Accent-Color: #00d3a8
 ## Requirements
 + (`i3`, `Terminal`, `zsh`)
 + Bar: `polybar`
++ Browser: `chromium`
++ Mail: `Thunderbird`
 + Transparency: `picom`
 + Backlight: `light`
 + Notifications: `dunst`
@@ -29,6 +31,7 @@ Accent-Color: #00d3a8
 + App Launcher: `rofi`
 + Audio Visualizer: `cava`
 + Wallpaper: `teh`
++ Filebrowser: `vifm`
 
 ## Profiles
 + `laptop`: All of the dotfiles

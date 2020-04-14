@@ -254,6 +254,9 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 smart_gaps on
 gaps inner 5
 
+# vifm
+bindsym $mod+Shift+Return exec xterm vifm
+
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
 exec_always --no-startup-id dunst
 {%@@ endif @@%}

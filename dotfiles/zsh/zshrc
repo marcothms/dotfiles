@@ -14,42 +14,46 @@ plugins=(
   ssh-agent
 )
 
-{%@@ if profile == "work" @@%}
-zstyle :omz:plugins:ssh-agent identities genua_internal gerrit
-{%@@ endif @@%}
 
-{%@@ if profile == "laptop" @@%}
 zstyle :omz:plugins:ssh-agent identities github
-{%@@ endif @@%}
 
 source $ZSH/oh-my-zsh.sh
+
+# Exports
 export TERM="xterm-256color"
 export EDITOR="vim"
-
 export LANG="en_US.UTF-8"
-
 export PATH=$HOME/.local/bin:$PATH
 
-# Some aliases
+# Aliases
 alias zshrc="vim ~/.zshrc"
-alias szsh="source ~/.zshrc"
-
-alias dotf="cd ~/dotfiles/dotfiles"
-
 alias vimrc="vim ~/.vimrc"
 
-alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
+alias szsh="source ~/.zshrc"
 
-alias screenshot="import ~/Downloads/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
-
+alias v="vifm"
+alias dotf="cd ~/dotfiles/dotfiles"
 alias fonts="/home/$USER/.local/share/fonts"
+
+alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
+alias screenshot="import ~/Downloads/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
 
-#touch ~/.github_token
-#source ~/.github_token
-
-# Allow pc local aliases
-if [ -f ~/.zshaliases_local ]; then
-    source ~/.zshaliases_local
+# Allow local aliases
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
 fi
+
+# Use C-z for 'fg'
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z

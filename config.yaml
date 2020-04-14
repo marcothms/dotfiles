@@ -15,7 +15,7 @@ dotfiles:
     dst: ~/.bashrc
   f_zshrc:
     src: zsh/zshrc
-    dst: ~/.zshrc
+    dst: ~/.zshrc￼
   d_ohmyzsh:
     src: zsh/ohmyzsh
     dst: ~/.ohmyzsh
@@ -75,6 +75,9 @@ dotfiles:
   d_neofetch:
     src: neofetch
     dst: ~/.config/neofetch
+  d_vifm:
+    src: vifm
+    dst: ~/.config/vifm
 
 profiles:
   laptop:
@@ -92,6 +95,7 @@ profiles:
     - rofi
     - cava
     - neofetch
+    - vifm
   work:
     include:
     - zsh
@@ -156,3 +160,6 @@ profiles:
   neofetch:
     dotfiles:
     - d_neofetch
+  vifm:
+    dotfiles:
+    - d_vifm
