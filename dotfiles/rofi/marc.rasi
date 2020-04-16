@@ -1,6 +1,6 @@
 * {
     none: rgba ( 0, 0, 0, 0% );
-    nord-green: rgba ( 163, 190, 140, 100 % );
+    nord-green: rgba ( 163, 190, 140, 100% );
     nord0: rgba ( 46, 52, 64, 100% );
     nord3: rgba ( 67, 76, 94, 100% );
     frost0: rgba ( 216, 222, 233, 100% );

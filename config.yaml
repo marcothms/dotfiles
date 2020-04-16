@@ -78,6 +78,9 @@ dotfiles:
   d_vifm:
     src: vifm
     dst: ~/.config/vifm
+  f_dir_colors:
+    src: dir_colors/dir_colors
+    dst: ~/.dir_colors
 
 profiles:
   laptop:
@@ -96,6 +99,7 @@ profiles:
     - cava
     - neofetch
     - vifm
+    - dir_colors
   work:
     include:
     - zsh
@@ -163,3 +167,6 @@ profiles:
   vifm:
     dotfiles:
     - d_vifm
+  dir_colors:
+    dotfiles:
+    - f_dir_colors
