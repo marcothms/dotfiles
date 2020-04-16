@@ -153,11 +153,13 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Itterasshai!' -B 'Hai!' 'i3-
 
 # Border
 for_window [class="^.*"] border pixel 0
+
+# Colors from https://www.nordtheme.com/
 # class                 border  backgr. text    indicator child_border
-client.focused          #00d3a8 #222222 #ffffff #2e9ef4   #990000
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.focused          #4C566A #4C566A #ECEFF4 #BF616A   #E5E9F0
+client.focused_inactive #3B4252 #3B4252 #ECEFF4 #BF616A   #5f676a
+client.unfocused        #333333 #222222 #D8DEE9 #BF616A   #222222
+client.urgent           #2f343a #BF616A #ECEFF4 #BF616A   #900000
 client.background       #ffffff
 
 # Keyboard lauyout

@@ -3,8 +3,19 @@
 [colors]
 my_green = #00d3a8
 
+nord_green = #A3BE8C
+
+nord_blue4 = #5E81AC
+
+nord0 = #2E3440
+nord3 = #4C566A
+
+nord0_trans = #f02E3440
+
+frost = #ECEFF4
+
 black    = #000000
-red      = #ff000f
+red      = #BF616A
 green    = #8ce10b
 yellow   = #ffb900
 blue     = #008df8
@@ -12,10 +23,12 @@ magenta  = #6d43a6
 cyan     = #00d8eb
 white    = #fff
 
-accent = ${self.my_green}
-#background = #18191E
-background = #f018191E
-foreground = ${self.white}
+dark_bg = #f018191E
+
+accent = ${colors.nord_green}
+
+background = ${colors.nord0_trans}
+foreground = ${colors.frost}
 
 ###############################################################################
 [font]
@@ -82,7 +95,6 @@ wrapping-scroll = false
 
 format = <label-state> <label-mode>
 
-background_visible = #383D41
 background = ${colors.background}
 
 label-focused = %index%
@@ -122,7 +134,7 @@ date = %A, %d %B %Y
 
 label = %date%
 label-font = 0
-label-foreground = ${colors.white}
+label-foreground = ${colors.foreground}
 
 ###############################################################################
 [module/time]
@@ -134,7 +146,7 @@ time = %H:%M
 
 label = %time%
 label-font = 0
-label-foreground = ${colors.accent}
+label-foreground = ${colors.foreground}
 
 ###############################################################################
 [module/title]
@@ -144,7 +156,7 @@ format = <label>
 label-maxlen = 80
 label-empty = "Yoroshiku!"
 format-padding = 2
-format-foreground = #fff
+format-foreground = ${colors.foreground}
 
 ###############################################################################
 [module/battery]
@@ -154,15 +166,15 @@ battery = BAT0
 apdapter = ADP1
 
 format-charging = <label-charging>
-format-charging-foreground = ${colors.accent}
+format-charging-foreground = ${colors.foreground}
 label-charging = CHR %percentage%%
 
 format-discharging = <label-discharging>
-format-discharging-foreground = ${colors.accent}
+format-discharging-foreground = ${colors.foreground}
 label-discharging = BAT %percentage%%
 
 format-full = <label-full>
-format-full-foreground = ${colors.accent}
+format-full-foreground = ${colors.foreground}
 label-full = FULL
 
 ###############################################################################
@@ -176,11 +188,11 @@ headphone-soundcard = default
 master-mixer = Master
 
 format-volume = <label-volume>
-format-volume-foreground = ${colors.accent}
+format-volume-foreground = ${colors.foreground}
 label-volume = VOL %percentage%%
 
 format-muted <label-muted>
-format-muted-foreground = #ff0000
+format-muted-foreground = ${colors.red}
 label-muted = MUTED
 
 ###############################################################################
@@ -193,10 +205,10 @@ format-connected = <label-connected>
 format-disconnectded = <label-disconnected>
 
 label-connected = %essid%
-label-connected-foreground = #fff
+label-connected-foreground = ${colors.foreground}
 
 label-disconnected =  NO WIFI
-label-disconnected-foreground = #fff
+label-disconnected-foreground = ${colors.foreground}
 
 ###############################################################################
 [module/backlight]
@@ -206,7 +218,7 @@ card = amdgpu_bl0
 enable-scroll = true
 
 format = <label>
-format-foreground = ${colors.white}
+format-foreground = ${colors.foreground}
 
 label = BRT %percentage%%
 
@@ -225,7 +237,7 @@ interval = 2
 ###############################################################################
 [module/powermenu]
 type = custom/text
-content = "MARC"
+content = "Marc"
 click-left = polybar powermenu
 
 [bar/powermenu]
