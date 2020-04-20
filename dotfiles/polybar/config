@@ -42,15 +42,15 @@ foreground = ${colors.frost2}
 ###############################################################################
 [font]
 inconsolata = "Inconsolata:pixelsize=11;0"
-siji = "Siji:style=Regular"
+inconsolata_nerd = "InconsolataLGC Nerd Font Mono:style=Medium"
 
 ###############################################################################
-[bar/laptop]
+[bar/laptop_top]
 monitor = "eDP-1"
 enable-ipc = false
 
 font-0 = ${font.inconsolata}
-font-1 = ${font.siji}
+font-1 = ${font.inconsolata_nerd}
 
 bottom = false
 fixed-center = true
@@ -58,15 +58,17 @@ width = 100%
 height = 27
 
 #padding-left = 0.5
-padding-right = 1
+padding-right = 2
 
 foreground = ${colors.foreground}
 background = ${colors.background}
 
+tray-position = none
+
 #border-size = 5
 #border-color = ${colors.background}
 
-module-margin = 2
+module-margin = 1
 
 modules-left = i3tabs
 modules-center =
@@ -75,7 +77,6 @@ separator =
 
 dim-value = 1.0
 
-tray-position = right
 
 wm-name = i3
 wm-restack = i3
@@ -84,14 +85,46 @@ wm-restack = i3
 #dpi-y = 96
 
 ###############################################################################
-[bar/HDMI1]
-inherit = bar/laptop
+[bar/laptop_bottom]
+inherit = bar/laptop_top
+
+tray-position = right
+tray-scale = 0.9
+
+bottom = true
+
+monitor = "eDP-1"
+
+modules-left = title
+modules-center =
+modules-right =
+
+###############################################################################
+[bar/HDMI1_top]
+inherit = bar/laptop_top
+
+tray-position = none
 
 monitor = "HDMI-1"
 
-modules-left = i3tabs modules-center =
+modules-left = i3tabs
+modules-center =
 modules-right = volume date time battery powermenu
 separator =
+
+###############################################################################
+[bar/HDMI1_bottom]
+inherit = bar/laptop_top
+
+tray-position = none
+
+bottom = true
+
+monitor = "HDMI-1"
+
+modules-left = title
+modules-center =
+modules-right =
 
 ###############################################################################
 [module/i3tabs]
@@ -106,6 +139,17 @@ wrapping-scroll = false
 format = <label-state> <label-mode>
 
 background = ${colors.background}
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
 
 label-focused = %index%
 label-focused-foreground = ${colors.background}
@@ -177,15 +221,15 @@ apdapter = ADP1
 
 format-charging = <label-charging>
 format-charging-foreground = ${colors.nord_green}
-label-charging = [CHR %percentage%%]
+label-charging =  %percentage%% CHR
 
 format-discharging = <label-discharging>
 format-discharging-foreground = ${colors.nord_green}
-label-discharging = [%percentage%%]
+label-discharging =  %percentage%%
 
 format-full = <label-full>
 format-full-foreground = ${colors.nord_green}
-label-full = [FULL]
+label-full =  FULL
 
 ###############################################################################
 [module/volume]
@@ -200,11 +244,11 @@ master-mixer = Master
 format-volume = <label-volume>
 format-volume-foreground = ${colors.frost2}
 format-volume-underline = ${colors.frost2}
-label-volume = %percentage%%
+label-volume = 墳 %percentage%%
 
 format-muted <label-muted>
 format-muted-foreground = ${colors.nord_red}
-label-muted = MUTED
+label-muted = 婢 MUTED
 
 ###############################################################################
 [module/network]
@@ -230,7 +274,7 @@ card = amdgpu_bl0
 format = <label>
 format-foreground = ${colors.frost2}
 
-label = %percentage%%
+label =  %percentage%%
 
 bar-width = 10
 bar-indicator = |
@@ -247,7 +291,7 @@ interval = 2
 ###############################################################################
 [module/powermenu]
 type = custom/text
-content = "(X)"
+content = "⏻"
 click-left = polybar powermenu
 
 [bar/powermenu]
