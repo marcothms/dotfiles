@@ -13,8 +13,8 @@
 !#include ".Xresources.themes/Xresources.onedark-16"
 
 ! Font
-XTerm.vt100.faceName: xft:Inconsolata:antialias=true
-XTerm.vt100.faceSize: 13
+XTerm.vt100.faceName: xft:InconsolataLGC Nerd Font Mono:antialias=true
+XTerm.vt100.faceSize: 11
 
 ! Remove Scrollbar
 XTerm.vt100.scrollBar: false

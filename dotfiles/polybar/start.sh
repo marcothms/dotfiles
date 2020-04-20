@@ -9,9 +9,11 @@ laptop=$(xrandr --query | grep 'eDP-1')
 hdmi1=$(xrandr --query | grep 'HDMI-1')
 
 if [[ ${laptop} = *connected* ]]; then
-    polybar laptop &
+    polybar laptop_top &
+    polybar laptop_bottom &
 fi
 
 if [[ ${hdmi1} = *connected* ]]; then
-    polybar HDMI1 &
+    polybar HDMI1_top &
+    polybar HDMI1_bottom &
 fi

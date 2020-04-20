@@ -5,16 +5,16 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 Accent-Color: #00d3a8
 
-![neofetch](https://i.imgur.com/vvGbeeL.png)
-![vim](https://i.imgur.com/m6NoNJE.png)
-![cava](https://i.imgur.com/GWsLaU8.png)
+![home](https://i.imgur.com/cid2gQf.png)
+![busy](https://i.imgur.com/bwwvWKM.png)
+![chromium](https://i.imgur.com/XfpeqZf.png)
 
 ## Features
 + Distro: `Fedora 31`
 + Shell: `zsh + oh-my-zsh`
 + WM: `i3-gaps and i3`
 + Terminal: `xterm`
-+ Font: `Inconsolata Nerd Font Mono`
++ Font: `InconsolataLGC Nerd Font Mono (+ Inconsolata for text in polybar)`
 + Vim-Theme: `Nord`
 + Vim-Bar: `airline`
 + Xresources: `Nord`

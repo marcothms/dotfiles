@@ -1,11 +1,17 @@
 configuration {
     modi: "drun,run,ssh";
-    //combi-modi: "drun,ssh,run";
+    hide-scrollbar: true;
+    separator-style: none;
     show-icons: true;
-    theme: "marc.rasi";
     terminal: "xterm";
     font: "Inconsolata 13";
     lines: 7;
-    width: 30;
-    yoffset: -300;
+    // Marc theme
+    // width: 30;
+    // yoffset: -300;
+    // NORD
+    theme: "nord.rasi";
+    width: 750;
+    fullscreen: true;
+    bw: 0;
 }

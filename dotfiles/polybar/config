@@ -41,8 +41,8 @@ foreground = ${colors.frost2}
 
 ###############################################################################
 [font]
-inconsolata = "Inconsolata:pixelsize=11;0"
-inconsolata_nerd = "InconsolataLGC Nerd Font Mono:style=Medium"
+inconsolata = "Inconsolata:pixelsize=11;2"
+inconsolata_nerd = "InconsolataLGC Nerd Font Mono:pixelsize=14;4"
 
 ###############################################################################
 [bar/laptop_top]
@@ -72,7 +72,7 @@ module-margin = 1
 
 modules-left = i3tabs
 modules-center =
-modules-right = backlight volume date time battery powermenu
+modules-right = backlight volume battery date time powermenu
 separator =
 
 dim-value = 1.0
@@ -109,7 +109,7 @@ monitor = "HDMI-1"
 
 modules-left = i3tabs
 modules-center =
-modules-right = volume date time battery powermenu
+modules-right = volume battery date time
 separator =
 
 ###############################################################################
@@ -221,15 +221,15 @@ apdapter = ADP1
 
 format-charging = <label-charging>
 format-charging-foreground = ${colors.nord_green}
-label-charging =  %percentage%% CHR
+label-charging =  %percentage%%
 
 format-discharging = <label-discharging>
 format-discharging-foreground = ${colors.nord_green}
-label-discharging =  %percentage%%
+label-discharging =  %percentage%%
 
 format-full = <label-full>
 format-full-foreground = ${colors.nord_green}
-label-full =  FULL
+label-full =  FULL
 
 ###############################################################################
 [module/volume]
@@ -321,7 +321,7 @@ content-foreground = ${colors.accent}
 
 [module/logout]
 inherit = module/powerbase
-content = "Logout "
+content = " Logout "
 click-left = "pkill -n polybar ; i3-msg exit"
 
 [module/reboot]
