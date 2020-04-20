@@ -12,7 +12,7 @@ Accent-Color: #00d3a8
 ## Features
 + Distro: `Fedora 31`
 + Shell: `zsh + oh-my-zsh`
-+ WM: `i3-gaps (home), i3 (work)`
++ WM: `i3-gaps and i3`
 + Terminal: `xterm`
 + Font: `Inconsolata Nerd Font Mono`
 + Vim-Theme: `Nord`

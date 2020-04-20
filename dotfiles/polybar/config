@@ -3,16 +3,23 @@
 [colors]
 my_green = #00d3a8
 
+nord_red = #BF616A
+nord_orange = #D08770
+nord_yellow = #EBCB8B
 nord_green = #A3BE8C
+nord_purple = #B48EAD
 
-nord_blue4 = #5E81AC
+nord_blue0 = #8FBCBB
+nord_blue1 = #88C0D0
+nord_blue2 = #81A1C1
+nord_blue3 = #5E81AC
 
 nord0 = #2E3440
 nord3 = #4C566A
 
 nord0_trans = #f02E3440
 
-frost = #ECEFF4
+frost2 = #ECEFF4
 
 black    = #000000
 red      = #BF616A
@@ -27,12 +34,15 @@ dark_bg = #f018191E
 
 accent = ${colors.nord_green}
 
+modules_fg = ${colors.frost2}
+
 background = ${colors.nord0_trans}
-foreground = ${colors.frost}
+foreground = ${colors.frost2}
 
 ###############################################################################
 [font]
 inconsolata = "Inconsolata:pixelsize=11;0"
+siji = "Siji:style=Regular"
 
 ###############################################################################
 [bar/laptop]
@@ -40,6 +50,7 @@ monitor = "eDP-1"
 enable-ipc = false
 
 font-0 = ${font.inconsolata}
+font-1 = ${font.siji}
 
 bottom = false
 fixed-center = true
@@ -55,12 +66,12 @@ background = ${colors.background}
 #border-size = 5
 #border-color = ${colors.background}
 
-module-margin = 1
+module-margin = 2
 
 modules-left = i3tabs
 modules-center =
-modules-right = backlight volume network battery date time powermenu
-separator = |
+modules-right = backlight volume date time battery powermenu
+separator =
 
 dim-value = 1.0
 
@@ -78,10 +89,9 @@ inherit = bar/laptop
 
 monitor = "HDMI-1"
 
-modules-left = i3tabs
-modules-center =
-modules-right = volume network battery date time powermenu
-separator = |
+modules-left = i3tabs modules-center =
+modules-right = volume date time battery powermenu
+separator =
 
 ###############################################################################
 [module/i3tabs]
@@ -100,7 +110,6 @@ background = ${colors.background}
 label-focused = %index%
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.accent}
-label-focused-underline = ${colors.white}
 label-focused-padding = 1
 
 label-unfocused = %index%
@@ -129,12 +138,13 @@ type = internal/date
 
 interval = 1.0
 
-#date = %Y-%m-%d%
-date = %A, %d %B %Y
+date = %Y-%m-%d%
+date-alt = %A, %d %B %Y
 
+format-underline = ${colors.frost2}
+
+label-foreground = ${colors.modules_fg}
 label = %date%
-label-font = 0
-label-foreground = ${colors.foreground}
 
 ###############################################################################
 [module/time]
@@ -146,7 +156,7 @@ time = %H:%M
 
 label = %time%
 label-font = 0
-label-foreground = ${colors.foreground}
+label-foreground = ${colors.modules_fg}
 
 ###############################################################################
 [module/title]
@@ -156,7 +166,7 @@ format = <label>
 label-maxlen = 80
 label-empty = "Yoroshiku!"
 format-padding = 2
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.modules_fg}
 
 ###############################################################################
 [module/battery]
@@ -166,16 +176,16 @@ battery = BAT0
 apdapter = ADP1
 
 format-charging = <label-charging>
-format-charging-foreground = ${colors.foreground}
-label-charging = CHR %percentage%%
+format-charging-foreground = ${colors.nord_green}
+label-charging = [CHR %percentage%%]
 
 format-discharging = <label-discharging>
-format-discharging-foreground = ${colors.foreground}
-label-discharging = BAT %percentage%%
+format-discharging-foreground = ${colors.nord_green}
+label-discharging = [%percentage%%]
 
 format-full = <label-full>
-format-full-foreground = ${colors.foreground}
-label-full = FULL
+format-full-foreground = ${colors.nord_green}
+label-full = [FULL]
 
 ###############################################################################
 [module/volume]
@@ -188,11 +198,12 @@ headphone-soundcard = default
 master-mixer = Master
 
 format-volume = <label-volume>
-format-volume-foreground = ${colors.foreground}
-label-volume = VOL %percentage%%
+format-volume-foreground = ${colors.frost2}
+format-volume-underline = ${colors.frost2}
+label-volume = %percentage%%
 
 format-muted <label-muted>
-format-muted-foreground = ${colors.red}
+format-muted-foreground = ${colors.nord_red}
 label-muted = MUTED
 
 ###############################################################################
@@ -205,22 +216,21 @@ format-connected = <label-connected>
 format-disconnectded = <label-disconnected>
 
 label-connected = %essid%
-label-connected-foreground = ${colors.foreground}
+label-connected-foreground = ${colors.modules_fg}
 
 label-disconnected =  NO WIFI
-label-disconnected-foreground = ${colors.foreground}
+label-disconnected-foreground = ${colors.modules_fg}
 
 ###############################################################################
 [module/backlight]
 type = internal/backlight
 # ls -1 /sys/class/backlight
 card = amdgpu_bl0
-enable-scroll = true
 
 format = <label>
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.frost2}
 
-label = BRT %percentage%%
+label = %percentage%%
 
 bar-width = 10
 bar-indicator = |
@@ -237,16 +247,17 @@ interval = 2
 ###############################################################################
 [module/powermenu]
 type = custom/text
-content = "Marc"
+content = "(X)"
 click-left = polybar powermenu
 
 [bar/powermenu]
 
-width = 350
+width = 280
 height = 27
 radius = 0
 
-offset-x = 1570
+; 1920 - width - offset-y - mainbar-height
+offset-x = 1632
 offset-y = 35
 
 background = ${colors.background}
@@ -266,22 +277,22 @@ content-foreground = ${colors.accent}
 
 [module/logout]
 inherit = module/powerbase
-content = "Logout"
+content = "Logout "
 click-left = "pkill -n polybar ; i3-msg exit"
 
 [module/reboot]
 inherit = module/powerbase
-content = "Reboot"
+content = " Reboot "
 click-left = "pkill -n polybar ; systemctl reboot"
 
 [module/poweroff]
 inherit = module/powerbase
-content = "Poweroff"
+content = " Poweroff "
 click-left = "pkill -n polybar ; systemctl poweroff"
 
 [module/closepowermenubar]
 type = custom/text
-content = "Cancel"
+content = " Cancel"
 click-left = "pkill -n polybar"
 
 ###############################################################################

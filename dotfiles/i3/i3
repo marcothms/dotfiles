@@ -240,6 +240,7 @@ for_window [class="spotify"] move container to workspace 7
 for_window [class="telegram"] move container to workspace 8
 for_window [class="discord"] move container to workspace 8
 for_window [class="Chromium"] move container to workspace 9
+for_window [class="Firefox"] move container to workspace 9
 
 # Monitors
 # integrated

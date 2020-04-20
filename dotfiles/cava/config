@@ -105,7 +105,8 @@
  gradient = 1
 # gradient_color_1 = '#ff5c57'
 # gradient_color_2 = '#ff3399'
- gradient_color_1 = '#00d3a8'
+# gradient_color_1 = '#00d3a8'
+ gradient_color_1 = '#A3BE8C'
  gradient_color_2 = '#dddddd'
 
 
