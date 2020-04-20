@@ -3,7 +3,7 @@ Dotfiles
 
 My personal configurations, managed with the 'dotdrop' submodule.
 
-Accent-Color: #00d3a8
+Nord-themed.
 
 ![home](https://i.imgur.com/cid2gQf.png)
 ![busy](https://i.imgur.com/bwwvWKM.png)
