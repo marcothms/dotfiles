@@ -219,34 +219,32 @@ full-at = 99
 battery = BAT0
 apdapter = ADP1
 
-format-charging = <label-charging>
+format-charging = <ramp-capacity> <label-charging>
 format-charging-foreground = ${colors.nord_green}
-label-charging =  %percentage%%
+label-charging = %percentage%%
 
-format-discharging = <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.nord_green}
-label-discharging =  %percentage%%
+label-discharging = %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
 
 format-full = <label-full>
 format-full-foreground = ${colors.nord_green}
-label-full =  FULL
+label-full =  FULL
 
 ###############################################################################
 [module/volume]
-type = internal/alsa
-
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
-
-master-mixer = Master
+type = internal/pulseaudio
 
 format-volume = <label-volume>
 format-volume-foreground = ${colors.frost2}
-format-volume-underline = ${colors.frost2}
 label-volume = 墳 %percentage%%
 
-format-muted <label-muted>
+format-muted = <label-muted>
 format-muted-foreground = ${colors.nord_red}
 label-muted = 婢 MUTED
 
@@ -344,4 +342,3 @@ click-left = "pkill -n polybar"
 type = custom/script
 exec = ~/.config/polybar/load.sh
 interval = 5.0
-
