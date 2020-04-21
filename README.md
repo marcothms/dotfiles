@@ -5,8 +5,8 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 Nord-themed.
 
-![home](https://i.imgur.com/Dcfq7xL.png)
-![busy](https://i.imgur.com/P5IeDuj.png)
+![home](https://i.imgur.com/DvgRFZH.png)
+![busy](https://i.imgur.com/FgAPoQ3.png)
 
 ## Features
 + Distro: `Fedora 31`
