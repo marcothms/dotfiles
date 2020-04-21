@@ -23,8 +23,10 @@ filetype plugin indent on
 
 " airline bar
 let g:airline_theme='nord'
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
+
+set guifont="InconsolataLGC Nerd Font Mono"
 
 " Onedark Colorscheme
 let g:onedark_hide_endofbuffer=1
