@@ -329,7 +329,7 @@ click-left = "pkill -n polybar ; systemctl reboot"
 
 [module/poweroff]
 inherit = module/powerbase
-content = " Poweroff "
+content = " Shutdown "
 click-left = "pkill -n polybar ; systemctl poweroff"
 
 [module/closepowermenubar]
