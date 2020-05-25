@@ -165,7 +165,7 @@ bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap za
 
 # Background
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
+exec --no-startup-id feh --bg-scale ~/wallpaper/wallpaper.png
 
 # Remove title bar
 new_window 1pixel

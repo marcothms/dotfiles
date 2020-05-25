@@ -57,9 +57,6 @@ dotfiles:
   d_tmux_themes:
     src: tmux/themes
     dst: ~/.tmux/themes
-  d_wallpaper:
-    src: wallpaper
-    dst: ~/.wallpaper
   d_polybar:
     src: polybar
     dst: ~/.config/polybar
@@ -92,7 +89,6 @@ profiles:
     - font
     - picom
     - tmux
-    - wallpaper
     - polybar
     - dunst
     - rofi
@@ -109,7 +105,6 @@ profiles:
     - font
     - picom
     - tmux
-    - wallpaper
   dev:
     include:
     - vim
@@ -146,9 +141,6 @@ profiles:
     dotfiles:
     - f_tmux
     - d_tmux_themes
-  wallpaper:
-    dotfiles:
-    - d_wallpaper
   polybar:
     dotfiles:
     - d_polybar
