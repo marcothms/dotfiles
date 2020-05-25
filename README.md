@@ -30,7 +30,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + App Launcher: `rofi`
 + Audio Visualizer: `cava`
 + Wallpaper: `teh`
-+ Filebrowser: `vifm`
++ Filebrowser: `ranger`
 
 ## Profiles
 + `laptop`: All of the dotfiles

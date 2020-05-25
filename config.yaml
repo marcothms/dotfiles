@@ -75,9 +75,6 @@ dotfiles:
   d_neofetch:
     src: neofetch
     dst: ~/.config/neofetch
-  d_vifm:
-    src: vifm
-    dst: ~/.config/vifm
   f_dir_colors:
     src: dir_colors/dir_colors
     dst: ~/.dir_colors
@@ -98,7 +95,6 @@ profiles:
     - rofi
     - cava
     - neofetch
-    - vifm
     - dir_colors
   work:
     include:
@@ -164,9 +160,6 @@ profiles:
   neofetch:
     dotfiles:
     - d_neofetch
-  vifm:
-    dotfiles:
-    - d_vifm
   dir_colors:
     dotfiles:
     - f_dir_colors
