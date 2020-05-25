@@ -75,6 +75,9 @@ dotfiles:
   d_neofetch:
     src: neofetch
     dst: ~/.config/neofetch
+  d_ranger:
+    src: ranger
+    dst: ~/.config/ranger
   f_dir_colors:
     src: dir_colors/dir_colors
     dst: ~/.dir_colors
@@ -95,6 +98,7 @@ profiles:
     - rofi
     - cava
     - neofetch
+    - ranger
     - dir_colors
   work:
     include:
@@ -160,6 +164,9 @@ profiles:
   neofetch:
     dotfiles:
     - d_neofetch
+  ranger:
+    dotfiles:
+    - d_ranger
   dir_colors:
     dotfiles:
     - f_dir_colors
