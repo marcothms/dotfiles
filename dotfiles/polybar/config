@@ -339,8 +339,7 @@ interval = 5.0
 ###############################################################################
 [module/wpchanger]
 type = custom/text
-content = "Wallpaper"
-;content = ""
+content = "WP"
 click-left = polybar wallpaper
 
 [bar/wallpaper]
@@ -371,12 +370,12 @@ content-foreground = ${colors.accent}
 [module/aincrad]
 inherit = module/powerbase
 content = " Aincrad "
-click-left = "feh --bg-scale ~/.wallpaper/aincrad.png"
+click-left = "feh --bg-scale ~/.wallpaper/aincrad.png; pkill -n polybar"
 
 [module/hp_nord]
 inherit = module/powerbase
 content = " HP Nord "
-click-left = "feh --bg-scale ~/.wallpaper/hp_nord.png"
+click-left = "feh --bg-scale ~/.wallpaper/hp_nord.png; pkill -n polybar"
 
 [module/closewpbar]
 type = custom/text

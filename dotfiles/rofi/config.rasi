@@ -10,6 +10,9 @@ configuration {
     // width: 30;
     // yoffset: -300;
     // NORD
+    display-drun: "理";
+    display-run: "ﰌ";
+    display-ssh: "力";
     theme: "nord.rasi";
     width: 750;
     fullscreen: true;
