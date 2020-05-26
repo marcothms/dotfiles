@@ -6,7 +6,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 [Nord-themed.](https://www.nordtheme.com/) [Wallpaper.](https://www.reddit.com/r/swordartonline/comments/amj88q/aincrad_kirito_asuna_wallpaper/)
 
 ![home](https://i.imgur.com/DvgRFZH.png)
-![busy](https://i.imgur.com/FgAPoQ3.png)
+![busy](https://i.imgur.com/T1bRQb5.png)
 
 ## Features
 + Distro: `Fedora 31`
@@ -19,22 +19,23 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Xresources: `Nord`
 
 ## Requirements
-+ (`i3`, `Terminal`, `zsh`)
++ (`i3`, `xterm`, `zsh`)
 + Bar: `polybar`
 + Browser: `chromium`
 + Mail: `Thunderbird`
-+ Transparency: `picom`
++ Transparency: `compton`
 + Backlight: `light`
 + Notifications: `dunst`
 + Audio Control: `playerctl`
 + App Launcher: `rofi`
 + Audio Visualizer: `cava`
 + Wallpaper: `teh`
-+ Filebrowser: `ranger` (with w3m-img)
++ Filebrowser: `ranger (with w3m-img)`
 + pdf-Preview: `zathura`
 + Image-Preview: `feh`
 
 ## Profiles
 + `laptop`: All of the dotfiles
++ `win-sub`: Linux Subsystem in Windows
 + `work`: Everything I need for work
 + `dev`: Working on remote (dev-)servers

@@ -110,6 +110,7 @@ cmap Q q
 cmap W w
 cmap q1 q!
 map <C-f> :Ex <CR>
+let g:netrw_banner = 0
 
 " go to line edited, when closed
 if has("autocmd")

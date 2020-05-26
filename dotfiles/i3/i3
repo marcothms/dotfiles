@@ -253,8 +253,8 @@ bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
 
 # i3-gaps
-smart_gaps on
-gaps inner 7
+#smart_gaps on
+gaps inner 8
 
 # ranger
 bindsym $mod+e exec xterm ranger
