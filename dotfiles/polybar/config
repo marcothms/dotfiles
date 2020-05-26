@@ -89,7 +89,7 @@ monitor = "eDP-1"
 
 modules-left = title
 modules-center =
-modules-right = wpchanger
+modules-right =
 
 ###############################################################################
 [bar/external_top]

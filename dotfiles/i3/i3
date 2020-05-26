@@ -171,7 +171,7 @@ exec --no-startup-id feh --bg-scale ~/wallpaper/wallpaper.png
 new_window 1pixel
 
 # Screenshot
-bindsym --release $mod+Shift+p exec"import ~/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
+bindsym --release $mod+Shift+p exec"import ~/screenshots/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
 
 # Audio and Screen
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
@@ -233,8 +233,10 @@ bindsym $mod+Shift+BackSpace exec "xlock -mode rain -info ''"
 # Custom Workspaces
 # exec --no-startup-id "chromium-browser"
 
-for_window [class="spotify"] move container to workspace 7
-for_window [class="telegram"] move container to workspace 8
+for_window [class="Thunderbird"] move container to workspace 6
+# doesnt work
+# for_window [class="spotify"] move container to workspace 7
+#for_window [class="telegram"] move container to workspace 8
 for_window [class="discord"] move container to workspace 8
 for_window [class="Chromium"] move container to workspace 9
 for_window [class="Firefox"] move container to workspace 9
@@ -252,10 +254,7 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 
 # i3-gaps
 smart_gaps on
-gaps inner 5
-
-# vifm
-bindsym $mod+Shift+Return exec xterm vifm
+gaps inner 7
 
 # ranger
 bindsym $mod+e exec xterm ranger

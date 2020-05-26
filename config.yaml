@@ -48,9 +48,9 @@ dotfiles:
     dst: ~/.local/share/fonts
     actions:
     - font-cache
-  f_picom:
-    src: picom/picom
-    dst: ~/.config/picom.conf
+  f_compton:
+    src: compton/compton.conf
+    dst: ~/.config/compton.conf
   f_tmux:
     src: tmux/tmux
     dst: ~/.tmux.conf
@@ -87,7 +87,7 @@ profiles:
     - x11
     - i3
     - font
-    - picom
+    - compton
     - tmux
     - polybar
     - dunst
@@ -103,7 +103,7 @@ profiles:
     - x11
     - i3
     - font
-    - picom
+    - compton
     - tmux
   dev:
     include:
@@ -134,9 +134,9 @@ profiles:
   font:
     dotfiles:
     - d_fonts
-  picom:
+  compton:
     dotfiles:
-    - f_picom
+    - f_compton
   tmux:
     dotfiles:
     - f_tmux
