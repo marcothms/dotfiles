@@ -1,16 +1,5 @@
 ! Colors
-! more blue-ish
 #include ".Xresources.themes/Xresources.nord"
-! more vibrant
-!#include ".Xresources.themes/Xresources.afterglow"
-
-!#include ".Xresources.themes/Xresources.solarized"
-
-!others
-!#include ".Xresources.themes/Xresources.clean-and-green"
-!#include ".Xresources.themes/Xresources.breeze-dark"
-!#include ".Xresources.themes/Xresources.onedark"
-!#include ".Xresources.themes/Xresources.onedark-16"
 
 ! Font
 XTerm.vt100.faceName: xft:InconsolataLGC Nerd Font Mono:antialias=true

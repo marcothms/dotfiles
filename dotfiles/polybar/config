@@ -1,8 +1,6 @@
 ; vim: ft=dosini
 ###############################################################################
 [colors]
-my_green = #00d3a8
-
 nord_red = #BF616A
 nord_orange = #D08770
 nord_yellow = #EBCB8B
@@ -36,7 +34,7 @@ inconsolata = "Inconsolata:pixelsize=11;2"
 inconsolata_nerd = "InconsolataLGC Nerd Font Mono:pixelsize=14;4"
 
 ###############################################################################
-[bar/laptop_top]
+[bar/laptop]
 monitor = "eDP-1"
 enable-ipc = false
 
@@ -77,23 +75,8 @@ wm-restack = i3
 #dpi-y = 96
 
 ###############################################################################
-[bar/laptop_bottom]
-inherit = bar/laptop_top
-
-tray-position = right
-tray-scale = 0.9
-
-bottom = true
-
-monitor = "eDP-1"
-
-modules-left = title
-modules-center =
-modules-right =
-
-###############################################################################
-[bar/external_top]
-inherit = bar/laptop_top
+[bar/external]
+inherit = bar/laptop
 
 tray-position = right
 
@@ -103,20 +86,6 @@ modules-left = i3tabs title
 modules-center =
 modules-right = volume battery date time
 separator =
-
-###############################################################################
-[bar/external_bottom]
-inherit = bar/laptop_top
-
-tray-position = none
-
-bottom = true
-
-monitor = ${env:MONITOR:}
-
-modules-left = title
-modules-center =
-modules-right =
 
 ###############################################################################
 [module/i3tabs]
@@ -274,7 +243,7 @@ bar-empty = -
 ###############################################################################
 [module/spotify]
 type = custom/script
-exec = ~/.config/polybar/spotify.sh %artist% - %title%
+exec = ~/.config/polybar/scripts/spotify.sh %artist% - %title%
 tail = true
 interval = 2
 
@@ -333,7 +302,7 @@ click-left = "pkill -n polybar"
 ###############################################################################
 [module/load]
 type = custom/script
-exec = ~/.config/polybar/load.sh
+exec = ~/.config/polybar/scripts/load.sh
 interval = 5.0
 
 ###############################################################################
