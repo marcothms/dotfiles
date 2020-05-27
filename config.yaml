@@ -38,7 +38,7 @@ dotfiles:
     src: X11/xinitrc
     dst: ~/.xinitrc
   f_i3:
-    src: i3/i3
+    src: i3/config
     dst: ~/.config/i3/config
   f_i3status:
     src: i3/i3status
@@ -52,7 +52,7 @@ dotfiles:
     src: compton/compton.conf
     dst: ~/.config/compton.conf
   f_tmux:
-    src: tmux/tmux
+    src: tmux/tmux.conf
     dst: ~/.tmux.conf
   d_tmux_themes:
     src: tmux/themes

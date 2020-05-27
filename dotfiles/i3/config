@@ -47,6 +47,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec xterm
+set $terminal xterm
 # for_window [class="XTerm"] floating enable move right 450px,move down 350px
 
 # kill focused window
@@ -153,7 +154,7 @@ for_window [class="^.*"] border pixel 0
 
 # Colors from https://www.nordtheme.com/
 # class                 border  backgr. text    indicator child_border
-client.focused          #4C566A #4C566A #ECEFF4 #BF616A   #E5E9F0
+client.focused          #4C566A #4C566A #ECEFF4 #A3BE8C   #A3BE8C
 client.focused_inactive #3B4252 #3B4252 #ECEFF4 #BF616A   #5f676a
 client.unfocused        #333333 #222222 #D8DEE9 #BF616A   #222222
 client.urgent           #2f343a #BF616A #ECEFF4 #BF616A   #900000
@@ -164,7 +165,7 @@ exec --no-startup-id setxkbmap za
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap za
 
 # Background
-exec --no-startup-id picom
+exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale ~/wallpaper/wallpaper.png
 
 # Remove title bar
@@ -256,8 +257,8 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 #smart_gaps on
 gaps inner 8
 
-# ranger
-bindsym $mod+e exec xterm ranger
+# Ranger
+bindsym $mod+e exec $terminal ranger
 
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
 exec_always --no-startup-id dunst

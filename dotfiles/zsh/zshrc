@@ -25,19 +25,16 @@ export LANG="en_US.UTF-8"
 export PATH=$HOME/.local/bin:$PATH
 
 # Aliases
-alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 
-alias szsh="source ~/.zshrc"
-
-alias v="vifm"
 alias dotf="cd ~/dotfiles/dotfiles"
-alias fonts="/home/$USER/.local/share/fonts"
-
 alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
-alias screenshot="import ~/Downloads/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
+
+alias fonts="/home/$USER/.local/share/fonts"
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
+
+alias wiki="vim ~/vimwiki/index.wiki"
 
 # Allow local aliases
 if [ -f ~/.zshrc_local ]; then

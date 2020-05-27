@@ -14,6 +14,8 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'vimwiki/vimwiki'
+
 " Required
 call vundle#end()
 filetype plugin indent on
@@ -45,6 +47,9 @@ let g:pear_tree_pairs = {
             \ '"': {'closer': '"'},
             \ '<': {'closer': '>'}
             \ }
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/'}]
 
 " Other configurations
 " Colors

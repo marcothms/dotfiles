@@ -5,10 +5,10 @@ if type "xrandr"; then
   for mon in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     if [[ ${mon} = *eDP-1* ]]; then
         polybar --reload laptop_top &
-        polybar --reload laptop_bottom &
+        #polybar --reload laptop_bottom &
     else
         MONITOR=$mon polybar --reload external_top &
-        MONITOR=$mon polybar --reload external_bottom &
+        #MONITOR=$mon polybar --reload external_bottom &
     fi
   done
 else
