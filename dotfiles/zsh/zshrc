@@ -34,7 +34,9 @@ alias fonts="/home/$USER/.local/share/fonts"
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
 
-alias wiki="vim ~/vimwiki/index.wiki"
+alias c="clear"
+alias v="vim"
+alias w="vim ~/vimwiki/index.md"
 
 # Allow local aliases
 if [ -f ~/.zshrc_local ]; then

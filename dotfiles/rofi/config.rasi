@@ -1,17 +1,12 @@
 configuration {
-    modi: "drun,run,ssh";
+    modi: "drun,ssh";
     hide-scrollbar: true;
     separator-style: none;
     show-icons: true;
     terminal: "xterm";
     font: "Inconsolata 13";
     lines: 7;
-    // Marc theme
-    // width: 30;
-    // yoffset: -300;
-    // NORD
     display-drun: "理";
-    display-run: "ﰌ";
     display-ssh: "力";
     theme: "nord.rasi";
     width: 750;

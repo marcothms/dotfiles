@@ -15,7 +15,7 @@ dotfiles:
     dst: ~/.bashrc
   f_zshrc:
     src: zsh/zshrc
-    dst: ~/.zshrc￼
+    dst: ~/.zshrc
   d_ohmyzsh:
     src: zsh/ohmyzsh
     dst: ~/.ohmyzsh

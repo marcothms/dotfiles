@@ -31,8 +31,9 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Audio Visualizer: `cava`
 + Wallpaper: `teh`
 + Filebrowser: `ranger (with w3m-img)`
-+ pdf-Preview: `zathura`
-+ Image-Preview: `feh`
++ pdf-Viewer: `zathura`
++ Image-Viewer: `feh`
++ Movie-Viewer: `mpv`
 
 ## Profiles
 + `laptop`: All of the dotfiles
