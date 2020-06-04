@@ -1,39 +1,23 @@
-" Vundle Plugin Manager - START
-" Required
+" ------------------------------------- Vundle Setup ---------------------------
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Plugins - load with :PluginInstall
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tmsvg/pear-tree'
 
-" Colorscheme
+Plugin 'tpope/vim-fugitive' " Git wrapper
+Plugin 'tmsvg/pear-tree' " parathesis matching
+Plugin 'vimwiki/vimwiki'
+
+" Colors
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-Plugin 'vimwiki/vimwiki'
-
-" Required
 call vundle#end()
 filetype plugin indent on
-" Vundle Plugin Manager - END
 
-" Plugin Settings
-
-" airline bar
-let g:airline_theme='nord'
-let g:airline_powerline_fonts = 1
-let g:bufferline_echo = 0
-
-set guifont="InconsolataLGC Nerd Font Mono"
-
-" Onedark Colorscheme
-let g:onedark_hide_endofbuffer=1
-let g:onedark_terminal_italics=1
-
+" ------------------------------------- Plugin Settings ------------------------
 " PearTree
 let g:pear_tree_smart_openers=1
 let g:pear_tree_smart_closers=1
@@ -47,43 +31,40 @@ let g:pear_tree_pairs = {
             \ '"': {'closer': '"'},
             \ '<': {'closer': '>'}
             \ }
-
+"
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-" Other configurations
-" Colors
+" Airline
+let g:airline_theme='nord'
+let g:airline_powerline_fonts = 1
+let g:bufferline_echo = 0
+
+set guifont="InconsolataLGC Nerd Font Mono"
+" ------------------------------------- Colors ---------------------------------
 syntax on
 colorscheme nord
-filetype on
+set colorcolumn=81
 filetype indent plugin on
-set colorcolumn=80
 
-" Numbers at the left side
+" ------------------------------------- General --------------------------------
 set number
-:highlight LineNr ctermfg=white "color
-"set relativenumber
-
-" Parathesis highlighting
-set showmatch
+" :highlight LineNr ctermfg=white "color
+set showmatch " Highlights paranthesis
 set mat=5
-
-" General
 set noswapfile
-set confirm "cant quit wo saving
-"set showmode " shows editing mode in status
-set noshowmode " reverse of above
-"set showcmd " shows commands in status
-set noshowcmd " reverse of above
-set cursorline " highlight current line
+set confirm " can't quit without saving
+set noshowmode " don't show mode in status
+set noshowcmd " don't show command in status
+set cursorline " highlight cursorline
 set encoding=utf-8
 set mouse=a
 set mouse=c
 set undolevels=1337
 set backspace=indent,eol,start
 
-" Indents
+" ------------------------------------- Indents & Whitespaces ------------------
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -97,32 +78,32 @@ autocmd FileType perl setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType conf setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-" Whitespaces
 set list
-"hi SpecialKey ctermbg=Darkgray " colored tabs
-"set listchars=tab:>-,trail:\\ " default
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
 
-" Search
+" ------------------------------------- Search ---------------------------------
 set incsearch
 set ignorecase
-set smartcase " case sens only when capitol letters
+set smartcase " case sensitive with capital letters
 set hlsearch " highlight all results
 nnoremap<leader><space> :nohlsearch<CR>
 
-" Macros (cmap old new)
+" ------------------------------------- netrw ----------------------------------
+map <C-f> :Ex <CR>
+
+let g:netrw_winsize = 25
+let g:netrw_browse_split = 4 " open in previous window
+let g:netrw_liststyle = 3 " Tree-like structure
+let g:netrw_banner = 0 " Remove useless banner at the top of netrw
+
+" ------------------------------------- Macros & Mappings ----------------------
 cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
-map <C-f> :Ex <CR>
-let g:netrw_banner = 0
 
-" go to line edited, when closed
+" Return to last edited line
 if has("autocmd")
-	au BufReadPost * if line("' f\"") > 0 && line("'\"") <= line("$")
-		\| exe "normal! g'\"" | endif
+    au BufReadPost * if line("' f\"") > 0 && line("'\"") <= line("$")
+        \| exe "normal! g'\"" | endif
 endif
-
-" no clue, got it from a co-worker
-au BufNewFile,BufRead *.itex set filetype=tex

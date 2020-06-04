@@ -11,6 +11,6 @@ export LANGUAGE="en_US.UTF-8"
 /share/bin/isda
 ~/bin/.keyboard.scm &
 xrandr --output HDMI-2 --auto --right-of HDMI-1
-picom &
+compton &
 i3
 {%@@ endif @@%}
