@@ -63,20 +63,20 @@ set mouse=a
 set mouse=c
 set undolevels=1337
 set backspace=indent,eol,start
+set wildmenu " autocomplete :e
+set lazyredraw " redraw only when necessary
 
 " ------------------------------------- Indents & Whitespaces ------------------
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-"set noexpandtab " tabs are not spaces
+set tabstop=4 " how many spaces are a tab when opening a file
+set softtabstop=4 " how many spaces get placed instead of a tab
 set expandtab " tabs are spaces
 set smartindent
 
 " File specific indents
-autocmd FileType rust setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType perl setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType conf setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
-autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType rust setlocal tabstop=4 softtabstop=4 expandtab
+autocmd FileType perl setlocal tabstop=8 softtabstop=8 noexpandtab
+autocmd FileType conf setlocal tabstop=8 softtabstop=8 noexpandtab
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 expandtab
 
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
@@ -87,6 +87,12 @@ set ignorecase
 set smartcase " case sensitive with capital letters
 set hlsearch " highlight all results
 nnoremap<leader><space> :nohlsearch<CR>
+
+" ------------------------------------- Folding --------------------------------
+set foldenable
+set foldlevelstart=30 " open folds at start
+set foldnestmax=30
+set foldmethod=indent
 
 " ------------------------------------- netrw ----------------------------------
 map <C-f> :Ex <CR>
