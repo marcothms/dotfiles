@@ -4,6 +4,3 @@
 [submodule "dotfiles/zsh/ohmyzsh"]
 	path = dotfiles/zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "dotfiles/scripts/randomwallpaper"]
-	path = dotfiles/scripts/randomwallpaper
-	url = https://github.com/CramMK/randomwallpaper
