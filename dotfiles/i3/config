@@ -58,7 +58,7 @@ bindsym $mod+space exec "rofi -show"
 bindsym $mod+c exec "rofi -show ssh"
 
 # dmenu
-bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#2E3440' -nf '#ECEFF4' -sf '#A3BE8C' -p 'ﰌ' -l 3"
+bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#2E3440' -nf '#ECEFF4' -sf '#A3BE8C' -p 'ﰌ'"
 
 # change focus
 bindsym $mod+h focus left

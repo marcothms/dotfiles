@@ -31,7 +31,7 @@ let g:pear_tree_pairs = {
             \ '"': {'closer': '"'},
             \ '<': {'closer': '>'}
             \ }
-"
+
 " Vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
@@ -98,7 +98,6 @@ set foldmethod=indent
 map <C-f> :Ex <CR>
 
 let g:netrw_winsize = 25
-let g:netrw_browse_split = 4 " open in previous window
 let g:netrw_liststyle = 3 " Tree-like structure
 let g:netrw_banner = 0 " Remove useless banner at the top of netrw
 
@@ -113,3 +112,8 @@ if has("autocmd")
     au BufReadPost * if line("' f\"") > 0 && line("'\"") <= line("$")
         \| exe "normal! g'\"" | endif
 endif
+
+" ------------------------------------- Pandoc ---------------------------------
+map <leader>c :w! \| !~/scripts/pandoc-comp <c-r>%<CR><CR>
+map <leader>o :!~/scripts/open-pdf <c-r>%<CR><CR>
+

@@ -6,7 +6,7 @@ actions:
   font-cache: fc-cache -f -v
   xresources-reload: xrdb ~/.Xresources
 config:
-  backup: true
+  backup: false
   create: true
   dotpath: dotfiles
 dotfiles:
@@ -78,6 +78,9 @@ dotfiles:
   f_dir_colors:
     src: dir_colors/dir_colors
     dst: ~/.dir_colors
+  d_scripts:
+    src: scripts
+    dst: ~/scripts
 
 profiles:
   laptop:
@@ -96,6 +99,7 @@ profiles:
     - neofetch
     - ranger
     - dir_colors
+    - scripts
   sub-win:
     include:
     - zsh
@@ -104,6 +108,7 @@ profiles:
     - ranger
     - neofetch
     - dir_colors
+    - scripts
   work:
     include:
     - zsh
@@ -114,6 +119,7 @@ profiles:
     - compton
     - tmux
     - dir_colors
+    - scripts
   dev:
     include:
     - vim
@@ -171,3 +177,6 @@ profiles:
   dir_colors:
     dotfiles:
     - f_dir_colors
+  scripts:
+    dotfiles:
+    - d_scripts
