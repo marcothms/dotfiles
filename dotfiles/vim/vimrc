@@ -88,6 +88,11 @@ set smartcase " case sensitive with capital letters
 set hlsearch " highlight all results
 nnoremap<leader><space> :nohlsearch<CR>
 
+" ------------------------------------- Cursor ---------------------------------
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 " ------------------------------------- Folding --------------------------------
 set foldenable
 set foldlevelstart=30 " open folds at start
