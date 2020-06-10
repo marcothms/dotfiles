@@ -176,18 +176,17 @@ bindsym $mod+p workspace prev
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    position top
+    position bottom
     colors {
-        background #2f343f
-        statusline #2f343f
-        #separator #4b5262
-        separator #2f343f
+        background #2e3440
+        statusline #2e3440
+        separator #2e3440
 
         # class                 border  backgr. text
-        focused_workspace       #2f343f #00b111 #d8dee8
-        active_workspace        #2f343f #2f343f #d8dee8
-        inactive_workspace      #2f343f #2f343f #d8dee8
-        urgent_workspace       #2f343f #ebcb8b #bf616a
+        focused_workspace       #2e3440 #a3be8c #2e3440
+        active_workspace        #2e3440 #2e3440 #eceff4
+        inactive_workspace      #2e3440 #2e3440 #eceff4
+        urgent_workspace       #2e3440 #bf616a #eceff4
     }
     status_command i3status
 }
