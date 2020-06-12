@@ -13,13 +13,13 @@ i3lock \
     \
     --insidevercolor=ebcb8b7F \
     --ringvercolor=ebcb8b6f \
-    --verifcolor=ebcb8b6f \
+    --verifcolor=ebcb8bff \
     \
     --insidewrongcolor=BF616A7F \
     --ringwrongcolor=bf616a7f \
     --wrongcolor=bf616aff \
     \
-    --layoutcolor=ECEFF47f \
+    --layoutcolor=ECEFF4ff \
     --timecolor=ECEFF4ff \
     --datecolor=ECEFF4ff \
     \

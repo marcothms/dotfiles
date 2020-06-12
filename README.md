@@ -21,7 +21,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 ## Requirements
 + (`i3`, `xterm`, `zsh`)
 + Bar: `polybar`
-+ Browser: `chromium`
++ Browser: `firefox`
 + Mail: `Thunderbird`
 + Transparency: `compton`
 + Backlight: `light`
