@@ -1,0 +1,47 @@
+#!/bin/sh
+
+i3lock \
+    --blur=10 \
+    --keylayout 1 \
+    \
+    --insidecolor=3b42527F \
+    --ringcolor=2e34407f \
+    --line-uses-ring \
+    --keyhlcolor=a3be8c7f \
+    --bshlcolor=d087707f \
+    --separatorcolor=2e34407f \
+    \
+    --insidevercolor=ebcb8b7F \
+    --ringvercolor=ebcb8b6f \
+    --verifcolor=ebcb8b6f \
+    \
+    --insidewrongcolor=BF616A7F \
+    --ringwrongcolor=bf616a7f \
+    --wrongcolor=bf616aff \
+    \
+    --layoutcolor=ECEFF47f \
+    --timecolor=ECEFF4ff \
+    --datecolor=ECEFF4ff \
+    \
+    --timepos="ix:iy-300" \
+    --timestr="%H:%M" \
+    --datestr="%Y-%m-%d" \
+    \
+    --timesize=20 \
+    --datesize=20 \
+    --layoutsize=20 \
+    --verifsize=20 \
+    --wrongsize=20 \
+    \
+    --time-font=Inconsolata \
+    --date-font=Inconsolata \
+    --layout-font=Inconsolata \
+    --verif-font=Inconsolata \
+    --wrong-font=Inconsolata \
+    \
+    --veriftext="Tadasu..." \
+    --noinputtext="" \
+    --locktext="Itterasshai!" \
+    --wrongtext="Chigau!" \
+    \
+    --ring-width 4

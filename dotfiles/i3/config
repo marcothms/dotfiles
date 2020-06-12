@@ -216,7 +216,8 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 
 {%@@ if profile == "laptop" @@%}
 # Locking
-bindsym $mod+Shift+BackSpace exec "xlock -mode grav -info ''"
+#bindsym $mod+Shift+BackSpace exec "xlock -mode grav -info ''"
+bindsym $mod+Shift+BackSpace exec "~/scripts/lock-laptop"
 
 # Custom Workspaces
 # exec --no-startup-id "chromium-browser"

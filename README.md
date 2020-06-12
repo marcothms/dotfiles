@@ -34,6 +34,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + pdf-Viewer: `zathura`
 + Image-Viewer: `feh`
 + Movie-Viewer: `mpv`
++ Locking: `i3lock-color or xlock`
 
 ## Profiles
 + `laptop`: All of the dotfiles
