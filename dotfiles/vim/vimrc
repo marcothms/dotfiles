@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'tmsvg/pear-tree' " parathesis matching
 Plugin 'vimwiki/vimwiki'
+Plugin 'dhruvasagar/vim-table-mode' " manage markdown tables
 
 " Colors
 Plugin 'arcticicestudio/nord-vim'
@@ -75,7 +76,6 @@ set smartindent
 " File specific indents
 autocmd FileType rust setlocal tabstop=4 softtabstop=4 expandtab
 autocmd FileType perl setlocal tabstop=8 softtabstop=8 noexpandtab
-autocmd FileType conf setlocal tabstop=8 softtabstop=8 noexpandtab
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 expandtab
 
 set list
@@ -107,6 +107,7 @@ let g:netrw_liststyle = 3 " Tree-like structure
 let g:netrw_banner = 0 " Remove useless banner at the top of netrw
 
 " ------------------------------------- Macros & Mappings ----------------------
+let mapleader = "\<Space>"
 cmap Wq wq
 cmap Q q
 cmap W w
