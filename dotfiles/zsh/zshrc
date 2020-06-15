@@ -13,11 +13,9 @@ export EDITOR="vim"
 export LANG="en_US.UTF-8"
 export PATH=$PATH:$HOME/.local/bin
 
-## Enable ".."
-setopt autocd autopushd
-
 ## Aliases
 alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
 
 alias dotf="cd ~/dotfiles/dotfiles"
 alias dotdrop="~/dotfiles/dotdrop.sh" --cfg="~/dotfiles/config.yaml"
@@ -36,6 +34,15 @@ alias rm='rm -i' # Ask before removal
 alias cp='cp -i' # Ask before removal
 alias mv='mv -i' # Ask before removal
 
+alias gaa="git add ."
+alias gst="git status"
+alias gc="git commit -v"
+alias gc!="git commit -v --amend"
+alias gl="git pull"
+alias gp="git push"
+alias glog="git log --oneline --decorate --graph"
+
+
 ## Local Aliases
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
@@ -48,6 +55,19 @@ setopt auto_menu         # show completion menu on successive tab press
 setopt complete_in_word
 setopt always_to_end
 zstyle ':completion:*' menu select
+
+# Case Insensitive completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+autoload -Uz compinit
+
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
+## Directory navigation
+setopt autocd autopushd
 
 ## History command configuration
 setopt extended_history       # record timestamp of command in HISTFILE

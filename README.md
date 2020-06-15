@@ -10,7 +10,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 ## Features
 + Distro: `Fedora 31`
-+ Shell: `zsh + oh-my-zsh`
++ Shell: `zsh`
 + WM: `i3-gaps and i3`
 + Terminal: `xterm`
 + Font: `InconsolataLGC Nerd Font Mono (+ Inconsolata for text in polybar)`
