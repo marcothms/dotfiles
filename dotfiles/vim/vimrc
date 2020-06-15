@@ -1,3 +1,4 @@
+let mapleader = "\<Space>"
 " ------------------------------------- Vundle Setup ---------------------------
 set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -7,8 +8,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'tmsvg/pear-tree' " parathesis matching
+
+" Markdown
 Plugin 'vimwiki/vimwiki'
 Plugin 'dhruvasagar/vim-table-mode' " manage markdown tables
+
+" fzf
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Colors
 Plugin 'arcticicestudio/nord-vim'
@@ -43,6 +50,9 @@ let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
 
 set guifont="InconsolataLGC Nerd Font Mono"
+
+" fzf
+nmap <C-f> :Files<CR>
 " ------------------------------------- Colors ---------------------------------
 syntax on
 colorscheme nord
@@ -100,14 +110,13 @@ set foldnestmax=30
 set foldmethod=indent
 
 " ------------------------------------- netrw ----------------------------------
-map <C-f> :Ex <CR>
+nmap <C-e> :Ex <CR>
 
 let g:netrw_winsize = 25
 let g:netrw_liststyle = 3 " Tree-like structure
 let g:netrw_banner = 0 " Remove useless banner at the top of netrw
 
 " ------------------------------------- Macros & Mappings ----------------------
-let mapleader = "\<Space>"
 cmap Wq wq
 cmap Q q
 cmap W w
@@ -120,6 +129,6 @@ if has("autocmd")
 endif
 
 " ------------------------------------- Pandoc ---------------------------------
-map <leader>c :w! \| !~/scripts/pandoc-comp <c-r>%<CR><CR>
-map <leader>o :!~/scripts/open-pdf <c-r>%<CR><CR>
+nmap <leader>c :w! \| !~/scripts/pandoc-comp <c-r>%<CR><CR>
+nmap <leader>o :!~/scripts/open-pdf <c-r>%<CR><CR>
 

@@ -198,8 +198,10 @@ exec --no-startup-id "firefox"
 for_window [class="Firefox"] move container to workspace 9
 
 # Monitors
-set $monitor1 "HDMI-1" # Primary
-set $monitor2 "HDMI-2" # Secondary
+# Primary
+set $monitor1 "HDMI-1"
+# Secondary
+set $monitor2 "HDMI-2"
 
 workspace $ws10 output $monitor2
 workspace $ws9 output $monitor2
@@ -228,8 +230,10 @@ for_window [class="Chromium"] move container to workspace 9
 for_window [class="Firefox"] move container to workspace 9
 
 # Monitors
-set $monitor1 "eDP-1"  # Integrated
-set $monitor2 "HDMI-1" # pot. Secondary
+# Integrated
+set $monitor1 "eDP-1"
+# potential Secondary
+set $monitor2 "HDMI-1"
 
 workspace $ws10 output $monitor2
 
