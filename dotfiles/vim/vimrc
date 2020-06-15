@@ -14,8 +14,10 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'dhruvasagar/vim-table-mode' " manage markdown tables
 
 " fzf
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+if executable("fzf")
+    Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
+endif
 
 " Colors
 Plugin 'arcticicestudio/nord-vim'
