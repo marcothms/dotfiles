@@ -1,7 +1,3 @@
-export ZSH="/home/$USER/.ohmyzsh"
-
-ZSH_THEME="the-one"
-
 ## Prompt
 autoload -Uz vcs_info
 autoload -U colors && colors
@@ -10,13 +6,6 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 export PROMPT="%{$fg[yellow]%}%m %{$fg_bold[green]%}➜ %{$fg_bold[blue]%}%~ %{$fg_bold[red]%}\$vcs_info_msg_0_ %{$reset_color%}"
 zstyle ':vcs_info:git:*' formats '%b'
-
-DISABLE_AUTO_UPDATE="true"
-COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-plugins=()
-#source $ZSH/oh-my-zsh.sh
 
 ## Exports
 export TERM="xterm-256color"
@@ -90,7 +79,7 @@ bindkey -v
 export FZF_DEFAULT_OPTS='--preview="head {}" --layout=reverse --bind=tab:down --bind=btab:up'
 
 ## fzf Bindings in zsh (C-r and C-t)
-if [[ -x $(which fzf) ]]
+if [[ -x $(which fzf 2> /dev/null) ]]
 then
     source ~/.vim/bundle/fzf/shell/key-bindings.zsh
 else

@@ -77,7 +77,7 @@ set mouse=c
 set undolevels=1337
 set backspace=indent,eol,start
 set wildmenu " autocomplete :e
-set lazyredraw " redraw only when necessary
+"set lazyredraw " redraw only when necessary
 
 " ------------------------------------- Indents & Whitespaces ------------------
 set tabstop=4 " how many spaces are a tab when opening a file
