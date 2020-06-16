@@ -78,7 +78,7 @@ wm-restack = i3
 [bar/external]
 inherit = bar/laptop
 
-tray-position = right
+tray-position =
 
 monitor = ${env:MONITOR:}
 

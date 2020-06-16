@@ -6,7 +6,8 @@ My personal configurations, managed with the 'dotdrop' submodule.
 [Nord-themed.](https://www.nordtheme.com/) [Wallpaper.](https://www.reddit.com/r/swordartonline/comments/amj88q/aincrad_kirito_asuna_wallpaper/)
 
 ![home](https://i.imgur.com/DvgRFZH.png)
-![busy](https://i.imgur.com/T1bRQb5.png)
+![vim](https://i.imgur.com/wa1XaaI.png)
+![other](https://i.imgur.com/LmRGyHj.png)
 
 ## Features
 + Distro: `Fedora 31`
