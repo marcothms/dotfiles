@@ -36,6 +36,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Image-Viewer: `feh`
 + Movie-Viewer: `mpv`
 + Locking: `i3lock-color or xlock`
++ Music: `spotify with spicetify-cli`
 
 ## Profiles
 + `laptop`: All of the dotfiles
