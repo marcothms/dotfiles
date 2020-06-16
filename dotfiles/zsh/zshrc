@@ -25,6 +25,7 @@ alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
 
 alias w="vim ~/vimwiki/index.md"
+alias r="ranger"
 
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
@@ -43,7 +44,6 @@ alias gl="git pull"
 alias gp="git push"
 alias glog="git log --oneline --decorate --graph"
 
-
 ## Local Aliases
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
@@ -57,15 +57,12 @@ setopt complete_in_word
 setopt always_to_end
 zstyle ':completion:*' menu select
 
+autoload -Uz compinit
+compinit -C
+_comp_options+=(globdots)
+
 # Case Insensitive completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-autoload -Uz compinit
-
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
 
 ## Directory navigation
 setopt autocd autopushd
@@ -95,6 +92,10 @@ fi
 
 ## vi-mode
 bindkey -v
+export KEYTIMEOUT=1
+
+# Enable backspace to delete in vi-mode
+bindkey -v '^?' backward-delete-char
 
 ## fzf
 export FZF_DEFAULT_OPTS='--preview="head {}" --layout=reverse --bind=tab:down --bind=btab:up'
