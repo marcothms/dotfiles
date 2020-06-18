@@ -10,7 +10,6 @@ Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'tmsvg/pear-tree' " parathesis matching
 
 " Markdown
-Plugin 'vimwiki/vimwiki'
 Plugin 'dhruvasagar/vim-table-mode' " manage markdown tables
 
 " fzf
@@ -70,7 +69,7 @@ set noswapfile
 set confirm " can't quit without saving
 set noshowmode " don't show mode in status
 set noshowcmd " don't show command in status
-set cursorline " highlight cursorline
+"set cursorline " highlight cursorline
 set encoding=utf-8
 set mouse=a
 set mouse=c
@@ -82,13 +81,15 @@ set wildmenu " autocomplete :e
 " ------------------------------------- Indents & Whitespaces ------------------
 set tabstop=4 " how many spaces are a tab when opening a file
 set softtabstop=4 " how many spaces get placed instead of a tab
+set shiftwidth=4 " width of indents (<,>)
 set expandtab " tabs are spaces
 set smartindent
 
 " File specific indents
-autocmd FileType rust setlocal tabstop=4 softtabstop=4 expandtab
-autocmd FileType perl setlocal tabstop=8 softtabstop=8 noexpandtab
-autocmd FileType yaml setlocal tabstop=2 softtabstop=2 expandtab
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType tex setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType perl setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·

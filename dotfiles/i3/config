@@ -46,8 +46,8 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
-set $terminal xterm
+bindsym $mod+Return exec alacritty
+bindsym $mod+Ctrl+Return exec xterm
 # for_window [class="XTerm"] floating enable move right 450px,move down 350px
 
 # kill focused window
@@ -73,8 +73,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Splitting
-bindsym $mod+Shift+s split v
-bindsym $mod+Shift+v split h
+bindsym $mod+Shift+s split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -243,9 +242,8 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 # i3-gaps
 #smart_gaps on
 gaps inner 8
-
-# Ranger
-bindsym $mod+e exec $terminal ranger
+# polybar height + gaps inner
+gaps top 35
 
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp; # Fancy Bar
 exec_always --no-startup-id dunst # Notification Manager

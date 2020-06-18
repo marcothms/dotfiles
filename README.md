@@ -5,37 +5,36 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 [Nord-themed.](https://www.nordtheme.com/) [Wallpaper.](https://www.reddit.com/r/swordartonline/comments/amj88q/aincrad_kirito_asuna_wallpaper/)
 
-![home](https://i.imgur.com/DvgRFZH.png)
-![vim](https://i.imgur.com/wa1XaaI.png)
-![other](https://i.imgur.com/LmRGyHj.png)
+![home](https://i.imgur.com/T4XHdYi.png)
+![vim](https://i.imgur.com/XTn3wWx.png)
+![spotify](https://i.imgur.com/NE9BlBV.png)
 
 ## Features
 + Distro: `Fedora 31`
 + Shell: `zsh`
 + WM: `i3-gaps and i3`
-+ Terminal: `xterm`
-+ Font: `InconsolataLGC Nerd Font Mono (+ Inconsolata for text in polybar)`
-+ Vim-Theme: `Nord`
-+ Vim-Bar: `airline`
++ Terminal: `alacritty and xterm`
++ Font: `InconsolataLGC Nerd Font Mono (+ Inconsolata for polybar)`
++ vim-Theme: `Nord`
++ vim-Bar: `airline`
 + Xresources: `Nord`
++ Alacritty: `Nord`
 
 ## Requirements
-+ (`i3`, `xterm`, `zsh`)
++ `i3-gaps` or `i3`, `alacritty` or `xterm`, `zsh`
 + Bar: `polybar`
 + Browser: `firefox`
-+ Mail: `Thunderbird`
 + Transparency: `compton`
 + Backlight: `light`
 + Notifications: `dunst`
 + Audio Control: `playerctl`
 + App Launcher: `rofi`
-+ Audio Visualizer: `cava`
 + Wallpaper: `teh`
-+ Filebrowser: `ranger (with w3m-img)`
++ Filebrowser: `ranger with w3m-img`
 + pdf-Viewer: `zathura`
 + Image-Viewer: `feh`
 + Movie-Viewer: `mpv`
-+ Locking: `i3lock-color or xlock`
++ Locking: `i3lock-color and xlock`
 + Music: `spotify with spicetify-cli`
 
 ## Profiles

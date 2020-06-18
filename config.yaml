@@ -59,12 +59,6 @@ dotfiles:
   d_rofi:
     src: rofi
     dst: ~/.config/rofi
-  d_cava:
-    src: cava
-    dst: ~/.config/cava
-  d_neofetch:
-    src: neofetch
-    dst: ~/.config/neofetch
   d_ranger:
     src: ranger
     dst: ~/.config/ranger
@@ -74,6 +68,9 @@ dotfiles:
   d_scripts:
     src: scripts
     dst: ~/scripts
+  d_alacritty:
+    src: alacritty
+    dst: ~/.config/alacritty
 
 profiles:
   laptop:
@@ -88,18 +85,16 @@ profiles:
     - polybar
     - dunst
     - rofi
-    - cava
-    - neofetch
     - ranger
     - dir_colors
     - scripts
+    - alacritty
   sub-win:
     include:
     - zsh
     - vim
     - tmux
     - ranger
-    - neofetch
     - dir_colors
     - scripts
   work:
@@ -156,12 +151,6 @@ profiles:
   rofi:
     dotfiles:
     - d_rofi
-  cava:
-    dotfiles:
-    - d_cava
-  neofetch:
-    dotfiles:
-    - d_neofetch
   ranger:
     dotfiles:
     - d_ranger
@@ -171,3 +160,6 @@ profiles:
   scripts:
     dotfiles:
     - d_scripts
+  alacritty:
+    dotfiles:
+    - d_alacritty
