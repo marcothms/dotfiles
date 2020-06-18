@@ -3,7 +3,7 @@ Dotfiles
 
 My personal configurations, managed with the 'dotdrop' submodule.
 
-[Nord-themed.](https://www.nordtheme.com/) [Wallpaper.](https://www.reddit.com/r/swordartonline/comments/amj88q/aincrad_kirito_asuna_wallpaper/)
+[Nord-themed.](https://www.nordtheme.com/)
 
 ![home](https://i.imgur.com/T4XHdYi.png)
 ![vim](https://i.imgur.com/XTn3wWx.png)
