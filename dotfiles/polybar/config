@@ -1,5 +1,5 @@
 ; vim: ft=dosini
-###############################################################################
+
 [colors]
 nord_red = #BF616A
 nord_orange = #D08770
@@ -15,36 +15,38 @@ nord_blue3 = #5E81AC
 nord0 = #2E3440
 nord3 = #4C566A
 
-nord0_trans = #f02E3440
-
 frost2 = #ECEFF4
 
-# Set colors
+
 accent = ${colors.nord_green}
-
 modules_fg = ${colors.frost2}
-
 background = ${colors.nord0}
 foreground = ${colors.frost2}
 
 ###############################################################################
-[font]
-inconsolata = "Inconsolata:pixelsize=11;2"
-inconsolata_nerd = "InconsolataLGC Nerd Font Mono:pixelsize=14;4"
+[settings]
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-padding = 0
+format-margin = 0
+screenchange-reload = true
 
 ###############################################################################
 [bar/laptop]
 monitor = "eDP-1"
 enable-ipc = false
 
-font-0 = ${font.inconsolata}
-font-1 = ${font.inconsolata_nerd}
+font-0 = "Inconsolata:pixelsize=11;2"
+font-1 = "InconsolataLGC Nerd Font Mono:pixelsize=14;4"
+font-2 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11"
 
 bottom = false
 fixed-center = true
 
-#padding-left = 0.5
+padding-left = 0
 padding-right = 1
+
+radius = 0.0
 
 foreground = ${colors.foreground}
 background = ${colors.background}
@@ -62,8 +64,8 @@ override-redirect = true
 module-margin = 1
 
 modules-left = i3tabs title
-modules-center =
-modules-right = backlight volume battery date time powermenu
+modules-center = spotify_current
+modules-right = firefox spotify discord pipe backlight volume battery pipe date time pipe
 separator =
 
 wm-name = i3
@@ -78,8 +80,8 @@ tray-position =
 monitor = ${env:MONITOR:}
 
 modules-left = i3tabs title
-modules-center =
-modules-right = volume battery date time
+modules-center = spotify_current
+modules-right = firefox spotify discord pipe volume battery date time
 separator =
 
 ###############################################################################
@@ -113,12 +115,12 @@ label-focused-background = ${colors.accent}
 label-focused-padding = 1
 
 label-unfocused = %index%
-label-unfocused-foreground = ${colors.frost2}
+label-unfocused-foreground = ${colors.foreground}
 label-unfocused-background = ${self.background}
 label-unfocused-padding = 1
 
 label-visible = %index%
-label-visible-foreground = #ffffff
+label-visible-foreground = ${colors.foreground}
 label-visible-background = ${self.background}
 label-visible-padding = 1
 
@@ -141,10 +143,7 @@ interval = 1.0
 date = %Y-%m-%d%
 date-alt = %A, %d %B %Y
 
-label-underline = ${colors.frost2}
-label-foreground = ${colors.modules_fg}
-
-label = [ 冀 %date% ]
+label = 冀 %date%
 
 ###############################################################################
 [module/time]
@@ -154,9 +153,7 @@ interval = 1.0
 
 time = %H:%M
 
-label = [  %time% ]
-label-font = 0
-label-foreground = ${colors.modules_fg}
+label =  %time%
 
 ###############################################################################
 [module/title]
@@ -166,7 +163,6 @@ format = <label>
 label-maxlen = 80
 label-empty = "Yoroshiku!"
 format-padding = 2
-format-foreground = ${colors.modules_fg}
 
 ###############################################################################
 [module/battery]
@@ -175,11 +171,11 @@ full-at = 99
 battery = BAT0
 apdapter = ADP1
 
-format-charging = [ <ramp-capacity> <label-charging> ]
+format-charging = <ramp-capacity> <label-charging>
 format-charging-foreground = ${colors.nord_green}
 label-charging = %percentage%% 
 
-format-discharging = [ <ramp-capacity> <label-discharging> ]
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.nord_green}
 label-discharging = %percentage%%
 
@@ -190,19 +186,18 @@ ramp-capacity-3 = 
 
 format-full = <label-full>
 format-full-foreground = ${colors.nord_green}
-label-full = [  FULL ]
+label-full =  FULL
 
 ###############################################################################
 [module/volume]
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-format-volume-foreground = ${colors.frost2}
-label-volume = [ 墳 %percentage%% ]
+label-volume = 墳 %percentage%%
 
 format-muted = <label-muted>
 format-muted-foreground = ${colors.nord_red}
-label-muted = [ 婢 MUTED ]
+label-muted = 婢 MUTED
 
 ###############################################################################
 [module/network]
@@ -211,13 +206,10 @@ interface = wlo1
 interval = 10.0
 
 format-connected = <label-connected>
+label-connected = %essid%
+
 format-disconnectded = <label-disconnected>
-
-label-connected = [ %essid% ]
-label-connected-foreground = ${colors.modules_fg}
-
-label-disconnected =  [ NO WIFI ]
-label-disconnected-foreground = ${colors.modules_fg}
+label-disconnected = NO WIFI
 
 ###############################################################################
 [module/backlight]
@@ -226,76 +218,41 @@ type = internal/backlight
 card = amdgpu_bl0
 
 format = <label>
-format-foreground = ${colors.frost2}
-
-label = [  %percentage%% ]
-
-bar-width = 10
-bar-indicator = |
-bar-fill = -
-bar-empty = -
-
-###############################################################################
-[module/spotify]
-type = custom/script
-exec = ~/.config/polybar/scripts/spotify.sh %artist% - %title%
-tail = true
-interval = 2
-
-###############################################################################
-[module/powermenu]
-type = custom/text
-content = ""
-;content = ""
-click-left = polybar powermenu
-
-[bar/powermenu]
-
-width = 280
-height = 27
-radius = 0
-
-; 1920 - width - offset-y - mainbar-height
-offset-x = 1632
-offset-y = 35
-
-background = ${colors.background}
-
-separator = %{F#33}|
-
-font-0 = ${font.inconsolata}
-
-modules-center = logout reboot poweroff closepowermenubar
-
-override-redirect = true
-
-[module/powerbase]
-type = custom/text
-content-background = ${colors.background}
-content-foreground = ${colors.accent}
-
-[module/logout]
-inherit = module/powerbase
-content = " Logout "
-click-left = "pkill -n polybar ; i3-msg exit"
-
-[module/reboot]
-inherit = module/powerbase
-content = " Reboot "
-click-left = "pkill -n polybar ; systemctl reboot"
-
-[module/poweroff]
-inherit = module/powerbase
-content = " Shutdown "
-click-left = "pkill -n polybar ; systemctl poweroff"
-
-[module/closepowermenubar]
-type = custom/text
-content = " Cancel"
-click-left = "pkill -n polybar"
+label =  %percentage%%
 
 ###############################################################################
 [module/load]
 type = custom/script
 exec = ~/.config/polybar/scripts/load.sh
 interval = 5.0
+
+###############################################################################
+[module/spotify_current]
+type = custom/script
+exec = ~/.config/polybar/scripts/spotify.sh %artist% - %title%
+tail = true
+interval = 2
+click-left = spotify
+
+###############################################################################
+[module/spotify]
+type = custom/text
+content = ""
+click-left = spotify
+
+###############################################################################
+[module/discord]
+type = custom/text
+content = "ﭮ"
+click-left = Discord &
+
+###############################################################################
+[module/firefox]
+type = custom/text
+content = ""
+click-left = "firefox"
+
+###############################################################################
+[module/pipe]
+type = custom/text
+content = "|"

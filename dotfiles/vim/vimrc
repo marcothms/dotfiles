@@ -52,6 +52,12 @@ let g:bufferline_echo = 0
 
 set guifont="InconsolataLGC Nerd Font Mono"
 
+" Nord
+let g:nord_bold = 0
+let g:nord_italic = 1
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+
 " fzf
 nmap <C-f> :Files<CR>
 " ------------------------------------- Colors ---------------------------------

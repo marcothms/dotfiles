@@ -220,12 +220,7 @@ bindsym $mod+Ctrl+2 move workspace to output $monitor2
 bindsym $mod+Shift+BackSpace exec "~/scripts/lock-laptop"
 
 # Custom Workspaces
-for_window [class="Thunderbird"] move container to workspace 6
-# doesnt work
-# for_window [class="spotify"] move container to workspace 7
-#for_window [class="telegram"] move container to workspace 8
 for_window [class="discord"] move container to workspace 8
-for_window [class="Chromium"] move container to workspace 9
 for_window [class="Firefox"] move container to workspace 9
 
 # Monitors
