@@ -42,6 +42,6 @@ i3lock \
     --veriftext="Tadasu..." \
     --noinputtext="" \
     --locktext="Itterasshai!" \
-    --wrongtext="Machigau!" \
+    --wrongtext="Chigau!" \
     \
     --ring-width 4

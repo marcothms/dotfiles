@@ -65,7 +65,7 @@ module-margin = 1
 
 modules-left = i3tabs title
 modules-center = spotify_current
-modules-right = firefox spotify discord pipe backlight volume battery pipe date time pipe
+modules-right = firefox spotify discord pipe backlight volume battery pipe network pipe date time pipe
 separator =
 
 wm-name = i3
@@ -81,7 +81,7 @@ monitor = ${env:MONITOR:}
 
 modules-left = i3tabs title
 modules-center = spotify_current
-modules-right = firefox spotify discord pipe volume battery date time
+modules-right = firefox spotify discord pipe volume battery pipe network pipe date time
 separator =
 
 ###############################################################################
@@ -206,10 +206,10 @@ interface = wlo1
 interval = 10.0
 
 format-connected = <label-connected>
-label-connected = %essid%
+label-connected = 泌 %essid%
 
 format-disconnectded = <label-disconnected>
-label-disconnected = NO WIFI
+label-disconnected = 泌 No Wifi
 
 ###############################################################################
 [module/backlight]
@@ -232,13 +232,12 @@ type = custom/script
 exec = ~/.config/polybar/scripts/spotify.sh %artist% - %title%
 tail = true
 interval = 2
-click-left = spotify
 
 ###############################################################################
 [module/spotify]
 type = custom/text
 content = ""
-click-left = spotify
+click-left = spotify &
 
 ###############################################################################
 [module/discord]
@@ -250,7 +249,7 @@ click-left = Discord &
 [module/firefox]
 type = custom/text
 content = ""
-click-left = "firefox"
+click-left = firefox &
 
 ###############################################################################
 [module/pipe]
