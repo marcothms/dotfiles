@@ -11,31 +11,27 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 ## Features
 + Distro: `Fedora 31`
++ Font: `InconsolataLGC Nerd Font Mono` and `Inconsolata` (polybar)
 + Shell: `zsh`
-+ WM: `i3-gaps and i3`
-+ Terminal: `alacritty and xterm`
-+ Font: `InconsolataLGC Nerd Font Mono (+ Inconsolata for polybar)`
-+ vim-Theme: `Nord`
-+ vim-Bar: `airline`
-+ Xresources: `Nord`
-+ Alacritty: `Nord`
++ Terminal: `alacritty` and `xterm`
++ Theme: `Nord`
++ Vim-Bar: `airline`
++ WM: `i3-gaps` and `i3`
 
 ## Requirements
-+ `i3-gaps` or `i3`, `alacritty` or `xterm`, `zsh`
-+ Bar: `polybar`
-+ Browser: `firefox`
-+ Transparency: `compton`
-+ Backlight: `light`
-+ Notifications: `dunst`
-+ Audio Control: `playerctl`
 + App Launcher: `rofi`
-+ Wallpaper: `teh`
-+ Filebrowser: `ranger with w3m-img`
-+ pdf-Viewer: `zathura`
++ Audio Control: `playerctl`
++ Backlight: `light`
++ Bar: `polybar`
++ Browser: `firefox` with [minimal-fuctional-fox](https://github.com/mut-ex/minimal-functional-fox) and [nightTab](https://github.com/zombieFox/nightTab)
++ Filebrowser: `ranger`
 + Image-Viewer: `feh`
++ Locking: `i3lock-color` and `xlock`
 + Movie-Viewer: `mpv`
-+ Locking: `i3lock-color and xlock`
-+ Music: `spotify with spicetify-cli`
++ Music: `spotify` with [spicetify-cli](https://github.com/khanhas/spicetify-cli/)
++ Notifications: `dunst`
++ PDF-Viewer: `zathura`
++ Transparency: `compton`
 
 ## Profiles
 + `laptop`: All of the dotfiles
