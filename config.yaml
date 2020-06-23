@@ -110,6 +110,7 @@ profiles:
     - scripts
   dev:
     include:
+    - zsh
     - vim
     - tmux
 

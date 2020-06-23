@@ -65,7 +65,7 @@ module-margin = 1
 
 modules-left = i3tabs title
 modules-center = spotify_current
-modules-right = firefox spotify discord pipe backlight volume battery pipe network pipe date time pipe
+modules-right = firefox spotify discord pipe backlight volume battery pipe date time pipe
 separator =
 
 wm-name = i3
@@ -81,7 +81,7 @@ monitor = ${env:MONITOR:}
 
 modules-left = i3tabs title
 modules-center = spotify_current
-modules-right = firefox spotify discord pipe volume battery pipe network pipe date time
+modules-right = firefox spotify discord pipe volume battery pipe date time
 separator =
 
 ###############################################################################
