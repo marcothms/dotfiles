@@ -77,8 +77,8 @@ profiles:
     include:
     - zsh
     - vim
-    - x11
     - i3
+    - x11
     - font
     - compton
     - tmux
@@ -128,7 +128,6 @@ profiles:
     dotfiles:
     - f_xresources
     - d_xresources_themes
-    - f_xinitrc
   i3:
     dotfiles:
     - f_i3

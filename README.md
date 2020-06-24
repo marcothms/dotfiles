@@ -13,10 +13,10 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Distro: `Fedora 31`
 + Font: `InconsolataLGC Nerd Font Mono` and `Inconsolata` (polybar)
 + Shell: `zsh`
-+ Terminal: `alacritty` and `xterm`
++ Terminal: `alacritty`
 + Theme: `Nord`
 + Vim-Bar: `airline`
-+ WM: `i3-gaps` and `i3`
++ WM: `i3-gaps`
 
 ## Requirements
 + App Launcher: `rofi`
@@ -26,7 +26,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Browser: `firefox` with [minimal-fuctional-fox](https://github.com/mut-ex/minimal-functional-fox) and [nightTab](https://github.com/zombieFox/nightTab)
 + Filebrowser: `ranger`
 + Image-Viewer: `feh`
-+ Locking: `i3lock-color` and `xlock`
++ Locking: `i3lock-color`
 + Movie-Viewer: `mpv`
 + Music: `spotify` with [spicetify-cli](https://github.com/khanhas/spicetify-cli/)
 + Notifications: `dunst`
