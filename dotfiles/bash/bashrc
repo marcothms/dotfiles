@@ -10,7 +10,7 @@ HOST="\[\033[0;93m\]\h\[\033[m\]"
 GIT="\[\033[1;91m\](\$(git_branch))\[\033[m\]"
 ICON="\[\033[1;92m\]➜\[\033[m\]"
 DIR="\[\033[1;94m\]\w\[\033[m\]"
-export PS1="${HOST} ${ICON}  ${DIR} "
+export PS1="[${HOST}] ${ICON}  ${DIR} "
 
 # Quality of Life
 alias ..="cd .."

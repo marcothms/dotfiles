@@ -116,10 +116,10 @@ for_window [class="^.*"] border pixel 0
 
 # Colors from https://www.nordtheme.com/
 # class                 border  backgr. text    indicator child_border
-client.focused          #2e3440 #2e3440 #ECEFF4 #A3BE8C   #A3BE8C
-client.focused_inactive #2e3440 #2e3440 #ECEFF4 #BF616A   #5f676a
-client.unfocused        #333333 #222222 #D8DEE9 #BF616A   #222222
-client.urgent           #2f343a #BF616A #ECEFF4 #BF616A   #900000
+client.focused          #a3be8c #2e3440 #ECEFF4 #A3BE8C   #A3BE8C
+client.focused_inactive #2e3440 #2e3440 #ECEFF4 #2e3440   #5f676a
+client.unfocused        #333333 #222222 #D8DEE9 #2e3440   #2e3440
+client.urgent           #2f343a #BF616A #ECEFF4 #BF616A   #BF616A
 client.background       #ffffff
 
 {%@@ if profile == "work" @@%}

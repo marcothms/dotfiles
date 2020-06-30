@@ -4,7 +4,8 @@ autoload -U colors && colors
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-export PROMPT="%{$fg[yellow]%}%m %{$fg_bold[green]%}➜ %{$fg_bold[blue]%}%~ %{$fg_bold[green]%}\$vcs_info_msg_0_ %{$reset_color%}"
+#export PROMPT="%{$fg[yellow]%}%m %{$fg_bold[green]%}➜ %{$fg_bold[blue]%}%~ %{$fg_bold[green]%}\$vcs_info_msg_0_ %{$reset_color%}"
+export PROMPT="%{$fg[yellow]%}%m %{$fg_bold[blue]%}%~ %{$fg_bold[green]%}\$vcs_info_msg_0_ %{$reset_color%}"
 zstyle ':vcs_info:git:*' formats '%b'
 
 ## Exports
@@ -30,6 +31,8 @@ alias r="ranger"
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias ll='ls -l'      #long list
+
+alias c='clear'
 
 alias rm='rm -i' # Ask before removal
 alias cp='cp -i' # Ask before removal

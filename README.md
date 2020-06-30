@@ -15,7 +15,6 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Shell: `zsh`
 + Terminal: `alacritty`
 + Theme: `Nord`
-+ Vim-Bar: `airline`
 + WM: `i3-gaps`
 
 ## Requirements
