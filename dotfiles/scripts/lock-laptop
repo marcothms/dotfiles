@@ -1,47 +1,60 @@
 #!/bin/sh
 
+blank="ffffff00"
+
+nord0="2e3440"
+nord1="3b4252"
+
+frost2="eceff4"
+
+blue2="88c0d0"
+blue3="5e81ac"
+
+red="bf616a"
+yellow="ebcb8b"
+green="a3be8c"
+
+inside="${nord0}77"
+
 i3lock \
     --blur=10 \
-    --keylayout 1 \
     \
-    --insidecolor=3b42527F \
-    --ringcolor=2e34407f \
-    --line-uses-ring \
-    --keyhlcolor=a3be8c7f \
-    --bshlcolor=d087707f \
-    --separatorcolor=2e34407f \
+    --insidecolor=${inside} \
+    --ringcolor=${nord0}ff \
+    --linecolor=${blank} \
+    --keyhlcolor=${green}ff \
+    --bshlcolor=${red}ff \
+    --separatorcolor=${blue3}ff \
     \
-    --insidevercolor=ebcb8b7F \
-    --ringvercolor=ebcb8b6f \
-    --verifcolor=ebcb8bff \
+    --insidevercolor=${inside} \
+    --ringvercolor=${yellow}ff \
+    --verifcolor=${yellow}ff \
     \
-    --insidewrongcolor=BF616A7F \
-    --ringwrongcolor=bf616a7f \
-    --wrongcolor=bf616aff \
+    --insidewrongcolor=${inside} \
+    --ringwrongcolor=${red}ff \
+    --wrongcolor=${red}ff \
     \
     --layoutcolor=ECEFF4ff \
     --timecolor=ECEFF4ff \
     --datecolor=ECEFF4ff \
     \
-    --timepos="ix:iy-300" \
-    --timestr="%H:%M" \
-    --datestr="%Y-%m-%d" \
+    --clock \
+    --indicator \
     \
-    --timesize=20 \
-    --datesize=20 \
-    --layoutsize=20 \
-    --verifsize=20 \
-    --wrongsize=20 \
+    --timestr="%H:%M" \
+    --datestr="%B %d, %Y" \
+    --timepos="ix:iy-10" \
+    \
+    --timesize=19 \
+    --datesize=15 \
     \
     --time-font=Inconsolata \
     --date-font=Inconsolata \
-    --layout-font=Inconsolata \
-    --verif-font=Inconsolata \
-    --wrong-font=Inconsolata \
     \
-    --veriftext="Tadasu..." \
+    --veriftext="" \
     --noinputtext="" \
-    --locktext="Itterasshai!" \
-    --wrongtext="Chigau!" \
+    --locktext="" \
+    --wrongtext="" \
     \
-    --ring-width 4
+    --ring-width 4 \
+    --radius 100

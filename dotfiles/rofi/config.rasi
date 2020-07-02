@@ -1,13 +1,10 @@
 configuration {
-    modi: "drun,ssh";
+    modi: "drun";
     hide-scrollbar: true;
-    separator-style: none;
     show-icons: true;
-    terminal: "alacritty";
     font: "Inconsolata 13";
     lines: 7;
-    display-drun: "理";
-    display-ssh: "力";
+    display-drun: "";
     theme: "nord.rasi";
     width: 750;
     fullscreen: true;

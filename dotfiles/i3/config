@@ -14,8 +14,8 @@ floating_modifier $mod
 
 ### Keybinds ###
 #Terminal
-bindsym $mod+Return exec alacritty
-bindsym $mod+Ctrl+Return exec xterm
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Ctrl+Return exec --no-startup-id xterm
 
 # Windows
 bindsym $mod+h focus left
@@ -108,7 +108,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Itterasshai!' -B 'Hai!' 'i3-msg exit'"
 
 ### Design ###
 new_window 1pixel
@@ -140,6 +139,8 @@ bar {
     status_command i3status
 }
 
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Itterasshai!' -B 'Hai!' 'i3-msg exit'"
+
 # Locking
 bindsym $mod+Shift+BackSpace exec "~/scripts/lock-work"
 
@@ -154,6 +155,9 @@ set $monitor2 "HDMI-2"
 exec "~/scripts/startup-laptop"
 # i3 doesnt let me put this in the startscript
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
+
+# Powermenu
+bindsym $mod+Shift+e exec "~/scripts/powermenu"
 
 # Locking
 bindsym $mod+Shift+BackSpace exec "~/scripts/lock-laptop"

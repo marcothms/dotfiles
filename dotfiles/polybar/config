@@ -44,6 +44,7 @@ enable-ipc = false
 font-0 = "Inconsolata:pixelsize=11;2"
 font-1 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11"
 font-2 = "Siji:size=7;2"
+font-3 = "InconsolataLGC Nerd Font Mono:pixelsize=12;4"
 
 bottom = false
 fixed-center = true
@@ -68,7 +69,7 @@ override-redirect = true
 
 modules-left = i3
 modules-center =
-modules-right = spotify volume battery network date
+modules-right = spotify backlight volume battery network date
 separator =
 
 wm-name = i3
@@ -148,11 +149,14 @@ format-padding = 2
 [module/cpu]
 type = internal/cpu
 
-interval = 0.5
+interval = 5
+
+format-background = ${colors.frost1}
+format-foreground = ${colors.nord0}
 
 format = <label>
-format-prefix = 
-format-padding = 1
+format-prefix = 
+format-padding = 2
 
 label = " %percentage%%"
 
@@ -265,11 +269,17 @@ ramp-signal-4 = 
 ###############################################################################
 [module/backlight]
 type = internal/backlight
+
+format-padding = 2
+format-background = ${colors.frost0}
+format-foreground = ${colors.nord0}
+
 # ls -1 /sys/class/backlight
 card = amdgpu_bl0
 
 format = <label>
-label = %percentage%%
+format-prefix = 
+label = " %percentage%%"
 
 ###############################################################################
 [module/load]
@@ -279,10 +289,24 @@ interval = 5.0
 
 ###############################################################################
 [module/spotify]
+type = custom/script
+
 format-padding = 2
 format-background = ${colors.blue3}
+format-prefix = " "
 
-type = custom/script
 exec = ~/.config/polybar/scripts/spotify.sh %artist% - %title%
 tail = true
 interval = 2
+
+###############################################################################
+[module/powerbutton]
+type = custom/text
+
+content-padding = 2
+content-background = ${colors.nord1}
+content-foreground = ${colors.frost2}
+
+content = "襤"
+
+click-left = ~/scripts/powermenu

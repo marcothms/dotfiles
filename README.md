@@ -5,9 +5,9 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 [Nord-themed.](https://www.nordtheme.com/)
 
-![home](https://i.imgur.com/T4XHdYi.png)
-![vim](https://i.imgur.com/XTn3wWx.png)
-![spotify](https://i.imgur.com/NE9BlBV.png)
+![home](https://i.imgur.com/9yRK9Dk.png)
+![vim](https://i.imgur.com/aihcZMe.png)
+![spotify](https://i.imgur.com/hFKH7y1.png)
 
 ## Features
 + Distro: `Fedora 31`
