@@ -54,7 +54,6 @@ if [ -f ~/.zshrc_local ]; then
 fi
 
 ## Keybinds
-bindkey -s "^e" "ranger\n"
 
 ## Completion
 unsetopt menu_complete   # do not autoselect the first completion entry

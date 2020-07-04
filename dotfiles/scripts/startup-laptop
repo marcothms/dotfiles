@@ -10,4 +10,4 @@ feh --bg-scale $HOME/wallpaper/wallpaper.png
 
 nm-applet &
 dunst &
-compton &
+picom &

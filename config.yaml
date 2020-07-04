@@ -9,9 +9,6 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
-  f_bashrc:
-    src: bash/bashrc
-    dst: ~/.bashrc
   f_zshrc:
     src: zsh/zshrc
     dst: ~/.zshrc
@@ -115,9 +112,6 @@ profiles:
     - tmux
 
  # Packages to be used above
-  bash:
-    dotfiles:
-    - f_bashrc
   zsh:
     dotfiles:
     - f_zshrc
