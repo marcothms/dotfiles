@@ -23,14 +23,13 @@ frost2 = #ECEFF4
 
 nord0_trans = #dd2E3440
 
-accent = ${colors.green}
-background = ${colors.nord0}
+accent = ${colors.blue0}
 foreground = ${colors.frost2}
 
 ###############################################################################
 [settings]
 format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-background = ${colors.nord0}
 screenchange-reload = true
 
 ###############################################################################
@@ -57,9 +56,14 @@ radius = 0.0
 foreground = ${colors.foreground}
 background = ${colors.nord0_trans}
 
-tray-position =
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.nord1}
+tray-offset-x = 8
+tray-offset-y = 0
 
-width = 100%:-16px
+# 100%-16px(gaps)-8px(tray)
+width = 100%:-24px
 height = 27
 
 offset-y = 8px
@@ -69,7 +73,7 @@ override-redirect = true
 
 modules-left = i3
 modules-center =
-modules-right = spotify backlight volume battery network date
+modules-right = spotify backlight volume battery date
 separator =
 
 wm-name = i3
@@ -116,8 +120,8 @@ label-visible-background = ${self.background}
 label-visible-padding = 2
 
 label-urgent = %index%
-label-urgent-foreground = ${colors.red}
-label-urgent-background = ${self.background}
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
 ###############################################################################
@@ -125,7 +129,7 @@ label-urgent-padding = 2
 type = internal/date
 
 format-padding = 2
-format-background = ${colors.nord0}
+format-background = ${colors.nord1}
 
 interval = 1.0
 

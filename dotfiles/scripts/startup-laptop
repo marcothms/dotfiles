@@ -4,7 +4,6 @@ setxkbmap -layout za
 
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
-export SHELL="/bin/zsh"
 
 feh --bg-scale $HOME/wallpaper/wallpaper.png
 

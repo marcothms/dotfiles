@@ -24,9 +24,6 @@ dotfiles:
   d_xresources_themes:
     src: X11/Xresources.themes
     dst: ~/.Xresources.themes
-  f_xinitrc:
-    src: X11/xinitrc
-    dst: ~/.xinitrc
   f_i3:
     src: i3/config
     dst: ~/.config/i3/config
@@ -38,9 +35,9 @@ dotfiles:
     dst: ~/.local/share/fonts
     actions:
     - font-cache
-  f_compton:
-    src: compton/compton.conf
-    dst: ~/.config/compton.conf
+  f_picom:
+    src: picom/picom.conf
+    dst: ~/.config/picom.conf
   f_tmux:
     src: tmux/tmux.conf
     dst: ~/.tmux.conf
@@ -77,7 +74,7 @@ profiles:
     - i3
     - x11
     - font
-    - compton
+    - picom
     - tmux
     - polybar
     - dunst
@@ -101,7 +98,7 @@ profiles:
     - x11
     - i3
     - font
-    - compton
+    - picom
     - tmux
     - dir_colors
     - scripts
@@ -129,9 +126,9 @@ profiles:
   font:
     dotfiles:
     - d_fonts
-  compton:
+  picom:
     dotfiles:
-    - f_compton
+    - f_picom
   tmux:
     dotfiles:
     - f_tmux

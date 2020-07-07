@@ -111,14 +111,24 @@ bindsym $mod+Shift+r restart
 
 ### Design ###
 new_window 1pixel
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 4
 
 # Colors from https://www.nordtheme.com/
+set $nord0 "#2e3440"
+
+set $blue0 "#8FBCBB"
+
+set $frost0 "#d8dee9"
+set $frost2 "#eceff4"
+
+set $green "#A3BE8C"
+set $red "#bf616a"
+
 # class                 border  backgr. text    indicator child_border
-client.focused          #a3be8c #2e3440 #ECEFF4 #A3BE8C   #A3BE8C
-client.focused_inactive #2e3440 #2e3440 #ECEFF4 #2e3440   #5f676a
-client.unfocused        #333333 #222222 #D8DEE9 #2e3440   #2e3440
-client.urgent           #2f343a #BF616A #ECEFF4 #BF616A   #BF616A
+client.focused          $blue0  $nord0  $frost2 $green    $blue0
+client.focused_inactive $nord0  $nord   $nord0  $frost2   $nord0
+client.unfocused        #333333 #222222 $frost0 $nord0    $nord0
+client.urgent           $red    $red    $frost2 $red      $red
 client.background       #ffffff
 
 {%@@ if profile == "work" @@%}
