@@ -30,6 +30,8 @@ bindsym $mod+Shift+l move right
 
 bindsym $mod+Ctrl+l resize grow width 10 px
 bindsym $mod+Ctrl+h resize shrink width 10 px
+bindsym $mod+Ctrl+j resize shrink height 10 px
+bindsym $mod+Ctrl+k resize grow height 10 px
 
 bindsym $mod+Shift+q kill
 
@@ -50,7 +52,7 @@ bindsym $mod+p workspace prev
 
 # Rofi and dmenu
 bindsym $mod+space exec "rofi -show"
-bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#2E3440' -nf '#ECEFF4' -sf '#A3BE8C' -p 'ﰌ'"
+bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#2E3440' -nf '#ECEFF4' -sf '#5E81AC'"
 
 bindsym --release $mod+Shift+p exec"import ~/screenshots/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
 
@@ -116,7 +118,8 @@ for_window [class="^.*"] border pixel 4
 # Colors from https://www.nordtheme.com/
 set $nord0 "#2e3440"
 
-set $blue0 "#8FBCBB"
+set $blue1 "#88c0d0"
+set $blue3 "#5E81AC"
 
 set $frost0 "#d8dee9"
 set $frost2 "#eceff4"
@@ -125,9 +128,9 @@ set $green "#A3BE8C"
 set $red "#bf616a"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $blue0  $nord0  $frost2 $green    $blue0
-client.focused_inactive $nord0  $nord   $nord0  $frost2   $nord0
-client.unfocused        #333333 #222222 $frost0 $nord0    $nord0
+client.focused          $blue3  $nord0  $frost2 $blue3    $blue3
+client.focused_inactive $blue1  $nord0  $nord0  $frost2   $blue1
+client.unfocused        $blue1  #222222 $frost0 $blue1    $blue1
 client.urgent           $red    $red    $frost2 $red      $red
 client.background       #ffffff
 

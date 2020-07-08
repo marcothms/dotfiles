@@ -67,6 +67,7 @@ filetype indent plugin on
 
 " ------------------------------------- General --------------------------------
 set number
+set relativenumber
 " :highlight LineNr ctermfg=white "color
 set showmatch " Highlights paranthesis
 set mat=5

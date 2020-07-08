@@ -23,8 +23,14 @@ frost2 = #ECEFF4
 
 nord0_trans = #dd2E3440
 
-accent = ${colors.blue0}
+accent = ${colors.blue3}
 foreground = ${colors.frost2}
+
+tray = ${colors.nord1}
+shade0 = ${colors.nord2}
+shade1 = ${colors.nord3}
+shade2 = ${colors.nord2}
+shade3 = ${colors.nord1}
 
 ###############################################################################
 [settings]
@@ -54,11 +60,11 @@ padding-right = 0
 radius = 0.0
 
 foreground = ${colors.foreground}
-background = ${colors.nord0_trans}
+background = ${colors.nord0}
 
 tray-position = right
 tray-padding = 2
-tray-background = ${colors.nord1}
+tray-background = ${colors.tray}
 tray-offset-x = 8
 tray-offset-y = 0
 
@@ -105,7 +111,7 @@ ws-icon-8 = 9;9
 ws-icon-9 = 10;10
 
 label-focused = %icon%
-label-focused-foreground = ${self.background}
+label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.accent}
 label-focused-padding = 2
 
@@ -129,7 +135,7 @@ label-urgent-padding = 2
 type = internal/date
 
 format-padding = 2
-format-background = ${colors.nord1}
+format-background = ${colors.shade0}
 
 interval = 1.0
 
@@ -183,15 +189,15 @@ battery = BAT0
 apdapter = ADP1
 
 format-charging = <animation-charging> <label-charging>
-format-charging-background = ${colors.nord2}
+format-charging-background = ${colors.shade1}
 format-charging-padding = 2
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${colors.nord2}
+format-discharging-background = ${colors.shade1}
 format-discharging-padding = 2
 
 format-full = <ramp-capacity> <label-full>
-format-full-background = ${colors.nord2}
+format-full-background = ${colors.shade1}
 format-full-padding = 2
 
 label-charging = %percentage%%
@@ -223,7 +229,7 @@ animation-charging-framerate = 750
 [module/volume]
 type = internal/pulseaudio
 
-format-volume-background = ${colors.nord3}
+format-volume-background = ${colors.shade2}
 format-volume-padding = 2
 
 format-volume = <ramp-volume> <label-volume>
@@ -275,8 +281,8 @@ ramp-signal-4 = 
 type = internal/backlight
 
 format-padding = 2
-format-background = ${colors.frost0}
-format-foreground = ${colors.nord0}
+format-background = ${colors.shade3}
+format-foreground = ${colors.foreground}
 
 # ls -1 /sys/class/backlight
 card = amdgpu_bl0
