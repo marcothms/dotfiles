@@ -4,8 +4,8 @@ autoload -U colors && colors
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-export PROMPT="%{$fg[yellow]%}%m %{$fg_bold[blue]%}%~ %{$fg_bold[green]%}\$vcs_info_msg_0_ %{$reset_color%}"
-zstyle ':vcs_info:git:*' formats '%b'
+export PROMPT="%{$fg[yellow]%}%m %{$fg_bold[blue]%}%~ %{$fg_bold[cyan]%}\$vcs_info_msg_0_ %{$reset_color%}"
+zstyle ':vcs_info:git:*' formats '%b '
 
 export RPROMPT=""
 
