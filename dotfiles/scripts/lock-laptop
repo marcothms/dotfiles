@@ -45,11 +45,11 @@ i3lock \
     --datestr="%B %d, %Y" \
     --timepos="ix:iy-10" \
     \
-    --timesize=19 \
-    --datesize=15 \
+    --timesize=17 \
+    --datesize=13 \
     \
-    --time-font=Inconsolata \
-    --date-font=Inconsolata \
+    --time-font="InconsolataLGC Nerd Font Mono" \
+    --date-font="InconsolataLGC Nerd Font Mono" \
     \
     --veriftext="" \
     --noinputtext="" \

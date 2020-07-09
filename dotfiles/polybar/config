@@ -46,10 +46,9 @@ enable-ipc = false
 # FONTS PROVIDED WITH DOTFILES
 # https://github.com/stark/siji
 
-font-0 = "Inconsolata:pixelsize=11;2"
+font-0 = "InconsolataLGC Nerd Font Mono:pixelsize=9;2"
 font-1 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11"
 font-2 = "Siji:size=7;2"
-font-3 = "InconsolataLGC Nerd Font Mono:pixelsize=12;4"
 
 bottom = false
 fixed-center = true

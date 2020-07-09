@@ -1,7 +1,7 @@
 set $mod Mod4
 
 # Font for Window Titles
-font pango:Inconsolata 8
+font pango:InconsolataLGC Nerd Font Mono 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -113,7 +113,7 @@ bindsym $mod+Shift+r restart
 
 ### Design ###
 new_window 1pixel
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
 
 # Colors from https://www.nordtheme.com/
 set $nord0 "#2e3440"
