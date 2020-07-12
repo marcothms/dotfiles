@@ -15,6 +15,9 @@ configuration {
 
   nord-blue-light: #88C0D0;
   nord-yellow: #EBCB8B;
+  nord-green: #a3be8c;
+
+  accent: @nord-yellow;
 
   border: 0;
   lines: 12;
@@ -56,11 +59,11 @@ prompt {
   enabled: true;
   font: "InconsolataLGC Nerd Font Mono 16";
   padding: 5 -12 0 12;
-  text-color: @nord-yellow;
+  text-color: @accent;
 }
 
 entry {
   padding: 12;
-  text-color: @nord-yellow;
+  text-color: @accent;
 }
 

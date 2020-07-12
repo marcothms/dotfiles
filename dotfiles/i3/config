@@ -40,7 +40,6 @@ bindsym $mod+Shift+space floating toggle
 
 # Layout
 bindsym $mod+s layout stacking
-bindsym $mod+a layout toggle split
 
 # Create splits just like in vim
 bindsym $mod+Shift+s split v
@@ -128,10 +127,10 @@ set $green "#A3BE8C"
 set $red "#bf616a"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $blue3  $nord0  $frost2 $blue3    $blue3
-client.focused_inactive $blue1  $nord0  $nord0  $frost2   $blue1
-client.unfocused        $blue1  #222222 $frost0 $blue1    $blue1
-client.urgent           $red    $red    $frost2 $red      $red
+client.focused          $blue3  $blue3 $frost2 $blue3    $blue3
+client.focused_inactive $nord0  $blue3 $nord0  $frost2   $nord0
+client.unfocused        $nord0  $nord0 $frost0 $blue1    $nord0
+client.urgent           $red    $red   $frost2 $red      $red
 client.background       #ffffff
 
 {%@@ if profile == "work" @@%}

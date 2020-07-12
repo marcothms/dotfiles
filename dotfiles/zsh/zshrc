@@ -147,6 +147,7 @@ bindkey '^Z' fancy-ctrl-z
 ## Nord dir colors
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
+## Syntax Highlighting
 if [ -f ~/.zsh-highlighting/zsh-syntax-highlighting.zsh ]; then
     source /home/marc/.zsh-highlighting/zsh-syntax-highlighting.zsh
 fi

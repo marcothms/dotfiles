@@ -26,11 +26,10 @@ nord0_trans = #dd2E3440
 accent = ${colors.blue3}
 foreground = ${colors.frost2}
 
-tray = ${colors.nord1}
-shade0 = ${colors.nord2}
-shade1 = ${colors.nord3}
-shade2 = ${colors.nord2}
-shade3 = ${colors.nord1}
+shade0 = ${colors.nord3}
+shade1 = ${colors.nord2}
+shade2 = ${colors.nord1}
+tray = ${colors.nord0}
 
 ###############################################################################
 [settings]
@@ -47,7 +46,7 @@ enable-ipc = false
 # https://github.com/stark/siji
 
 font-0 = "InconsolataLGC Nerd Font Mono:pixelsize=9;2"
-font-1 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11"
+font-1 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11;2"
 font-2 = "Siji:size=7;2"
 
 bottom = false
@@ -64,11 +63,12 @@ background = ${colors.nord0}
 tray-position = right
 tray-padding = 2
 tray-background = ${colors.tray}
-tray-offset-x = 8
+#tray-offset-x = 8
 tray-offset-y = 0
 
 # 100%-16px(gaps)-8px(tray)
-width = 100%:-24px
+#width = 100%:-24px
+width = 100%:-16px
 height = 27
 
 offset-y = 8px
@@ -77,8 +77,8 @@ offset-x = 8px
 override-redirect = true
 
 modules-left = i3
-modules-center =
-modules-right = spotify backlight volume battery date
+modules-center = date
+modules-right = spotify backlight volume battery
 separator =
 
 wm-name = i3
@@ -134,12 +134,11 @@ label-urgent-padding = 2
 type = internal/date
 
 format-padding = 2
-format-background = ${colors.shade0}
 
 interval = 1.0
 
 time =  %I:%M %p
-time-alt =  %Y-%m-%d%
+time-alt =  %Y-%m-%d%
 
 format = <label>
 
@@ -187,16 +186,18 @@ full-at = 99
 battery = BAT0
 apdapter = ADP1
 
+bg = ${colors.shade2}
+
 format-charging = <animation-charging> <label-charging>
-format-charging-background = ${colors.shade1}
+format-charging-background = ${self.bg}
 format-charging-padding = 2
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${colors.shade1}
+format-discharging-background = ${self.bg}
 format-discharging-padding = 2
 
 format-full = <ramp-capacity> <label-full>
-format-full-background = ${colors.shade1}
+format-full-background = ${self.bg}
 format-full-padding = 2
 
 label-charging = %percentage%%
@@ -228,7 +229,7 @@ animation-charging-framerate = 750
 [module/volume]
 type = internal/pulseaudio
 
-format-volume-background = ${colors.shade2}
+format-volume-background = ${colors.shade1}
 format-volume-padding = 2
 
 format-volume = <ramp-volume> <label-volume>
@@ -280,15 +281,20 @@ ramp-signal-4 = 
 type = internal/backlight
 
 format-padding = 2
-format-background = ${colors.shade3}
+format-background = ${colors.shade0}
 format-foreground = ${colors.foreground}
 
 # ls -1 /sys/class/backlight
 card = amdgpu_bl0
 
-format = <label>
-format-prefix = 
+format = <bar>
+format-prefix = " "
 label = " %percentage%%"
+
+bar-width = 10
+bar-indicator = |
+bar-fill = ─
+bar-empty= ─
 
 ###############################################################################
 [module/load]

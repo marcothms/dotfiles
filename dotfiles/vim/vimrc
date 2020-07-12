@@ -66,7 +66,6 @@ set colorcolumn=81
 filetype indent plugin on
 
 " ------------------------------------- General --------------------------------
-set number
 set relativenumber
 " :highlight LineNr ctermfg=white "color
 set showmatch " Highlights paranthesis
@@ -77,7 +76,6 @@ set noshowmode " don't show mode in status
 set noshowcmd " don't show command in status
 "set cursorline " highlight cursorline
 set encoding=utf-8
-set mouse=a
 set mouse=c
 set undolevels=1337
 set backspace=indent,eol,start
@@ -111,12 +109,6 @@ nnoremap<leader><space> :nohlsearch<CR>
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
-
-" ------------------------------------- Folding --------------------------------
-set foldenable
-set foldlevelstart=30 " open folds at start
-set foldnestmax=30
-set foldmethod=indent
 
 " ------------------------------------- netrw ----------------------------------
 nmap <C-e> :Ex <CR>
