@@ -6,11 +6,17 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive' " Git wrapper
-Plugin 'tmsvg/pear-tree' " parathesis matching
+" Show git-branch
+Plugin 'tpope/vim-fugitive'
 
-" Markdown
-Plugin 'dhruvasagar/vim-table-mode' " manage markdown tables
+" match parents
+Plugin 'tmsvg/pear-tree'
+
+" tex helper
+Plugin 'lervag/vimtex'
+
+" manage markdown tables (:TableModeToggle)
+Plugin 'dhruvasagar/vim-table-mode'
 
 " fzf
 if executable("fzf")
@@ -41,10 +47,6 @@ let g:pear_tree_pairs = {
             \ '<': {'closer': '>'}
             \ }
 
-" Vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
 " Airline
 let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
@@ -57,6 +59,9 @@ let g:nord_bold = 0
 let g:nord_italic = 1
 let g:nord_underline = 1
 
+" vimtex
+let g:vimtex_view_general_viewer = 'zathura'
+
 " fzf
 nmap <C-f> :Files<CR>
 " ------------------------------------- Colors ---------------------------------
@@ -67,7 +72,7 @@ filetype indent plugin on
 
 " ------------------------------------- General --------------------------------
 set relativenumber
-" :highlight LineNr ctermfg=white "color
+":highlight LineNr ctermfg=white "color
 set showmatch " Highlights paranthesis
 set mat=5
 set noswapfile
@@ -110,6 +115,10 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
+" ------------------------------------- vimtex ---------------------------------
+nmap <C-c> :VimtexCompile <CR>
+nmap <C-t> :VimtexTocToggle <CR>
+
 " ------------------------------------- netrw ----------------------------------
 nmap <C-e> :Ex <CR>
 
@@ -122,8 +131,3 @@ cmap Wq wq
 cmap Q q
 cmap W w
 cmap q1 q!
-
-" ------------------------------------- Pandoc ---------------------------------
-nmap <leader>c :w! \| !~/scripts/pandoc-comp <c-r>%<CR><CR>
-nmap <leader>o :!~/scripts/open-pdf <c-r>%<CR><CR>
-

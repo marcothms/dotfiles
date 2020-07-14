@@ -10,7 +10,6 @@ zstyle ':vcs_info:git:*' formats '%b '
 export RPROMPT=""
 
 ## Exports
-export TERM="xterm-256color"
 export EDITOR="vim"
 export LANG="en_US.UTF-8"
 export PATH=$PATH:$HOME/.local/bin:$HOME/scripts
@@ -26,7 +25,6 @@ alias fonts="/home/$USER/.local/share/fonts"
 alias listfonts="fc-list :scalable=true:spacing=mono: family"
 alias cachefonts="fc-cache -f -v"
 
-alias w="vim ~/vimwiki/index.md"
 alias r="ranger"
 alias s="cd ~/scripts/"
 alias c='clear'

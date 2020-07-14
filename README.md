@@ -31,9 +31,3 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Notifications: `dunst`
 + PDF-Viewer: `zathura`
 + Transparency: `compton`
-
-## Profiles
-+ `laptop`: All of the dotfiles
-+ `win-sub`: Linux Subsystem in Windows
-+ `work`: Everything I need for work
-+ `dev`: Working on remote (dev-)servers

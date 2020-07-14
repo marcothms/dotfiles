@@ -1,6 +1,6 @@
 configuration {
   show-icons: true;
-  font: "Inconsolata Nerd Font Mono 11";
+  font: "InconsolataLGC Nerd Font Mono 11";
   drun-display-format: "{icon} {name}";
   display-run: " ";
   display-drun: " ";
@@ -58,7 +58,7 @@ inputbar {
 prompt {
   enabled: true;
   font: "InconsolataLGC Nerd Font Mono 16";
-  padding: 5 -12 0 12;
+  padding: 7 -12 0 12;
   text-color: @accent;
 }
 
