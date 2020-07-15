@@ -1,6 +1,8 @@
 ; vim: ft=dosini
 
 [colors]
+transparent = #00000000
+
 red = #BF616A
 orange = #D08770
 yellow = #EBCB8B
@@ -29,6 +31,7 @@ foreground = ${colors.frost2}
 shade0 = ${colors.nord3}
 shade1 = ${colors.nord2}
 shade2 = ${colors.nord1}
+shade3 = ${colors.nord0}
 tray = ${colors.nord0}
 
 ###############################################################################
@@ -58,17 +61,17 @@ padding-right = 0
 radius = 0.0
 
 foreground = ${colors.foreground}
-background = ${colors.nord0}
+background = ${colors.transparent}
 
 tray-position = right
 tray-padding = 2
 tray-background = ${colors.tray}
-#tray-offset-x = 8
+tray-offset-x = 8
 tray-offset-y = 0
 
 # 100%-16px(gaps)-8px(tray)
-#width = 100%:-24px
-width = 100%:-16px
+width = 100%:-24px
+#width = 100%:-16px
 height = 27
 
 offset-y = 8px
@@ -77,8 +80,8 @@ offset-x = 8px
 override-redirect = true
 
 modules-left = i3
-modules-center = date
-modules-right = spotify backlight volume battery
+modules-center =
+modules-right = spotify backlight volume battery date
 separator =
 
 wm-name = i3
@@ -134,6 +137,7 @@ label-urgent-padding = 2
 type = internal/date
 
 format-padding = 2
+format-background = ${colors.shade3}
 
 interval = 1.0
 
