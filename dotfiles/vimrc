@@ -66,6 +66,13 @@ let g:nord_italic = 1
 let g:nord_underline = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocomplete
+if has('nvim')
+    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
+let g:deoplete#enable_at_startup = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()
 filetype plugin indent on
 
@@ -90,20 +97,19 @@ set mouse=c
 set undolevels=1337
 set backspace=indent,eol,start
 set wildmenu " autocomplete :e
-"set lazyredraw " redraw only when necessary
 
 " ------------------------------------- Indents & Whitespaces ------------------
-set tabstop=4 " how many spaces are a tab when opening a file
-set softtabstop=4 " how many spaces get placed instead of a tab
-set shiftwidth=4 " width of indents (<,>)
-set expandtab " tabs are spaces
-set smartindent
-
-" File specific indents
-autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType tex setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType perl setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
+"set tabstop=4 " how many spaces are a tab when opening a file
+"set softtabstop=4 " how many spaces get placed instead of a tab
+"set shiftwidth=4 " width of indents (<,>)
+"set expandtab " tabs are spaces
+"set smartindent
+"
+"" File specific indents
+"autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+"autocmd FileType tex setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+"autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+"autocmd FileType perl setlocal tabstop=8 shiftwidth=8 softtabstop=8 noexpandtab
 
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·

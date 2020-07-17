@@ -65,6 +65,9 @@ dotfiles:
   f_alacritty:
     src: config/alacritty/alacritty.yml
     dst: ~/.config/alacritty/alacritty.yml
+  f_nvim:
+    src: config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
 
 profiles:
   laptop:
@@ -72,6 +75,7 @@ profiles:
     - zsh
     - zshhighlighting
     - vim
+    - nvim
     - i3
     - x11
     - font
@@ -156,3 +160,9 @@ profiles:
   alacritty:
     dotfiles:
     - f_alacritty
+  nvim:
+    dotfiles:
+    - f_nvim
+  nvim:
+    dotfiles:
+    - f_nvim
