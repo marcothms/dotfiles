@@ -10,28 +10,25 @@ config:
   dotpath: dotfiles
 dotfiles:
   f_zshrc:
-    src: zsh/zshrc
+    src: zshrc
     dst: ~/.zshrc
   f_zshhighlighting:
     src: zsh-highlighting
     dst: ~/.zsh-highlighting
   f_vimrc:
-    src: vim/vimrc
+    src: vimrc
     dst: ~/.vimrc
     actions:
     - vundle-install
     - vundle-refresh
   f_xresources:
-    src: X11/Xresources
+    src: Xresources
     dst: ~/.Xresources
-  d_xresources_themes:
-    src: X11/Xresources.themes
-    dst: ~/.Xresources.themes
   f_i3:
-    src: i3/config
+    src: config/i3/config
     dst: ~/.config/i3/config
   f_i3status:
-    src: i3/i3status
+    src: config/i3/i3status
     dst: ~/.config/i3status/config
   d_fonts:
     src: fonts
@@ -39,35 +36,35 @@ dotfiles:
     actions:
     - font-cache
   f_picom:
-    src: picom/picom.conf
+    src: config/picom.conf
     dst: ~/.config/picom.conf
   f_tmux:
-    src: tmux/tmux.conf
+    src: tmux.conf
     dst: ~/.tmux.conf
   d_tmux_themes:
     src: tmux/themes
     dst: ~/.tmux/themes
   d_polybar:
-    src: polybar
+    src: config/polybar
     dst: ~/.config/polybar
-  d_dunst:
-    src: dunst
-    dst: ~/.config/dunst
-  d_rofi:
-    src: rofi
-    dst: ~/.config/rofi
+  f_dunst:
+    src: config/dunst/dunstrc
+    dst: ~/.config/dunst/dunstrc
+  f_rofi:
+    src: config/rofi/config.rasi
+    dst: ~/.config/rofi/config.rasi
   d_ranger:
-    src: ranger
+    src: config/ranger
     dst: ~/.config/ranger
   f_dir_colors:
-    src: dir_colors/dir_colors
+    src: dir_colors
     dst: ~/.dir_colors
   d_scripts:
     src: scripts
     dst: ~/scripts
-  d_alacritty:
-    src: alacritty
-    dst: ~/.config/alacritty
+  f_alacritty:
+    src: config/alacritty/alacritty.yml
+    dst: ~/.config/alacritty/alacritty.yml
 
 profiles:
   laptop:
@@ -125,7 +122,6 @@ profiles:
   x11:
     dotfiles:
     - f_xresources
-    - d_xresources_themes
   i3:
     dotfiles:
     - f_i3
@@ -139,16 +135,15 @@ profiles:
   tmux:
     dotfiles:
     - f_tmux
-    - d_tmux_themes
   polybar:
     dotfiles:
     - d_polybar
   dunst:
     dotfiles:
-    - d_dunst
+    - f_dunst
   rofi:
     dotfiles:
-    - d_rofi
+    - f_rofi
   ranger:
     dotfiles:
     - d_ranger
@@ -160,4 +155,4 @@ profiles:
     - d_scripts
   alacritty:
     dotfiles:
-    - d_alacritty
+    - f_alacritty

@@ -19,10 +19,10 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 ## Requirements
 + App Launcher: `rofi`
-+ Audio Control: `playerctl`
++ Audio Control: `playerctl and pactl`
 + Backlight: `light`
 + Bar: `polybar`
-+ Browser: `firefox` with [minimal-fuctional-fox](https://github.com/mut-ex/minimal-functional-fox) and [nightTab](https://github.com/zombieFox/nightTab)
++ Browser: `firefox`
 + Filebrowser: `ranger`
 + Image-Viewer: `feh`
 + Locking: `i3lock-color`
