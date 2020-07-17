@@ -23,8 +23,6 @@ frost0 = #d8dee9
 frost1 = #e5e9f0
 frost2 = #ECEFF4
 
-nord0_trans = #dd2E3440
-
 accent = ${colors.blue3}
 foreground = ${colors.frost2}
 
@@ -42,7 +40,7 @@ screenchange-reload = true
 
 ###############################################################################
 [bar/main]
-monitor = "eDP-1"
+monitor = ${env:MONITOR}
 enable-ipc = false
 
 # FONTS PROVIDED WITH DOTFILES

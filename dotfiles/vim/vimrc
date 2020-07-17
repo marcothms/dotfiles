@@ -6,34 +6,18 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" Show git-branch
-Plugin 'tpope/vim-fugitive'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Show git changes
+Plugin 'airblade/vim-gitgutter'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" adjust indents
+Plugin 'tpope/vim-sleuth'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " match parents
 Plugin 'tmsvg/pear-tree'
 
-" tex helper
-Plugin 'lervag/vimtex'
-
-" manage markdown tables (:TableModeToggle)
-Plugin 'dhruvasagar/vim-table-mode'
-
-" fzf
-if executable("fzf")
-    Plugin 'junegunn/fzf'
-    Plugin 'junegunn/fzf.vim'
-endif
-
-" Colors
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-call vundle#end()
-filetype plugin indent on
-
-" ------------------------------------- Plugin Settings ------------------------
-" PearTree
 let g:pear_tree_smart_openers=1
 let g:pear_tree_smart_closers=1
 let g:pear_tree_smart_backspace=1
@@ -47,23 +31,44 @@ let g:pear_tree_pairs = {
             \ '<': {'closer': '>'}
             \ }
 
-" Airline
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tex helper
+Plugin 'lervag/vimtex'
+
+let g:vimtex_view_general_viewer = 'zathura'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" manage markdown tables (:TableModeToggle)
+Plugin 'dhruvasagar/vim-table-mode'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fzf
+if executable("fzf")
+    Plugin 'junegunn/fzf'
+    Plugin 'junegunn/fzf.vim'
+
+    nmap <C-f> :Files<CR>
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 let g:bufferline_echo = 0
-
 set guifont="InconsolataLGC Nerd Font Mono"
 
-" Nord
 let g:nord_bold = 0
 let g:nord_italic = 1
 let g:nord_underline = 1
 
-" vimtex
-let g:vimtex_view_general_viewer = 'zathura'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call vundle#end()
+filetype plugin indent on
 
-" fzf
-nmap <C-f> :Files<CR>
 " ------------------------------------- Colors ---------------------------------
 syntax on
 colorscheme nord
