@@ -163,6 +163,3 @@ profiles:
   nvim:
     dotfiles:
     - f_nvim
-  nvim:
-    dotfiles:
-    - f_nvim

@@ -27,7 +27,7 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Image-Viewer: `feh`
 + Locking: `i3lock-color`
 + Movie-Viewer: `mpv`
-+ Music: `spotify` with [spicetify-cli](https://github.com/khanhas/spicetify-cli/)
++ Music: `spotify` with [spicetify-cli](https://github.com/khanhas/spicetify-cli/) 'Dribbblish Nord-Dark'
 + Notifications: `dunst`
 + PDF-Viewer: `zathura`
-+ Transparency: `compton`
++ Transparency: `picom`

@@ -39,6 +39,7 @@ alias mv='mv -i' # Ask before removal
 
 alias gaa="git add ."
 alias gst="git status"
+alias gsh="git show"
 alias gd="git diff"
 alias gc="git commit -v"
 alias gc!="git commit -v --amend"

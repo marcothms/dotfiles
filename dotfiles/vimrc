@@ -69,8 +69,9 @@ let g:nord_underline = 1
 " autocomplete
 if has('nvim')
     Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+    let g:deoplete#enable_at_startup = 1
 endif
-let g:deoplete#enable_at_startup = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()
@@ -83,6 +84,7 @@ set colorcolumn=81
 filetype indent plugin on
 
 " ------------------------------------- General --------------------------------
+set number
 set relativenumber
 ":highlight LineNr ctermfg=white "color
 set showmatch " Highlights paranthesis
