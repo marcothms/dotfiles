@@ -43,6 +43,7 @@ alias gsh="git show"
 alias gd="git diff"
 alias gc="git commit -v"
 alias gc!="git commit -v --amend"
+alias gco="git checkout"
 alias gl="git pull"
 alias gp="git push"
 alias glog="git log --oneline --decorate --graph"
@@ -148,5 +149,5 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
 ## Syntax Highlighting
 if [ -f ~/.zsh-highlighting/zsh-syntax-highlighting.zsh ]; then
-    source /home/marc/.zsh-highlighting/zsh-syntax-highlighting.zsh
+    source $HOME/.zsh-highlighting/zsh-syntax-highlighting.zsh
 fi

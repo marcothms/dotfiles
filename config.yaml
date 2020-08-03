@@ -77,7 +77,7 @@ profiles:
     - vim
     - nvim
     - i3
-    - x11
+    - xresources
     - font
     - picom
     - tmux
@@ -96,17 +96,6 @@ profiles:
     - ranger
     - dir_colors
     - scripts
-  work:
-    include:
-    - zsh
-    - vim
-    - x11
-    - i3
-    - font
-    - picom
-    - tmux
-    - dir_colors
-    - scripts
   dev:
     include:
     - zsh
@@ -123,7 +112,7 @@ profiles:
   vim:
     dotfiles:
     - f_vimrc
-  x11:
+  xresources:
     dotfiles:
     - f_xresources
   i3:

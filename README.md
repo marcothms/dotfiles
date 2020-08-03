@@ -22,7 +22,6 @@ My personal configurations, managed with the 'dotdrop' submodule.
 + Audio Control: `playerctl and pactl`
 + Backlight: `light`
 + Bar: `polybar`
-+ Browser: `firefox`
 + Filebrowser: `ranger`
 + Image-Viewer: `feh`
 + Locking: `i3lock-color`

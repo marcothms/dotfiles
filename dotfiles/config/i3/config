@@ -39,7 +39,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 
 # Layout
-bindsym $mod+s layout stacking
+bindsym $mod+s layout toggle stacking splith
 
 # Create splits just like in vim
 bindsym $mod+Shift+s split v
@@ -51,7 +51,7 @@ bindsym $mod+p workspace prev
 
 # Rofi and dmenu
 bindsym $mod+space exec "rofi -show"
-bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#2E3440' -nf '#ECEFF4' -sf '#5E81AC'"
+bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#5E81AC' -nf '#ECEFF4' -sf '#ECEFF4'
 
 bindsym --release $mod+Shift+p exec"import ~/screenshots/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
 
@@ -128,42 +128,11 @@ set $red "#bf616a"
 
 # class                 border  backgr. text    indicator child_border
 client.focused          $blue3  $blue3 $frost2 $blue3    $blue3
-client.focused_inactive $nord0  $blue3 $nord0  $frost2   $nord0
+client.focused_inactive $nord0  $blue3 $nord0  $nord0    $nord0
 client.unfocused        $nord0  $nord0 $frost0 $blue1    $nord0
 client.urgent           $red    $red   $frost2 $red      $red
 client.background       #ffffff
 
-{%@@ if profile == "work" @@%}
-# work start
-bar {
-    position bottom
-    colors {
-        background #2e3440
-        statusline #2e3440
-        separator #2e3440
-
-        # class                 border  backgr. text
-        focused_workspace       #2e3440 #a3be8c #2e3440
-        active_workspace        #2e3440 #2e3440 #eceff4
-        inactive_workspace      #2e3440 #2e3440 #eceff4
-        urgent_workspace       #2e3440 #bf616a #eceff4
-    }
-    status_command i3status
-}
-
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Itterasshai!' -B 'Hai!' 'i3-msg exit'"
-
-# Locking
-bindsym $mod+Shift+BackSpace exec "~/scripts/lock-work"
-
-# Monitors
-set $monitor1 "HDMI-1"
-set $monitor2 "HDMI-2"
-# work end
-{%@@ endif @@%}
-
-{%@@ if profile == "laptop" @@%}
-# laptop start
 exec "~/scripts/startup-laptop"
 # i3 doesnt let me put this in the startscript
 exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
@@ -181,8 +150,6 @@ set $monitor2 "HDMI-1"
 gaps inner 8
 # polybar height + gaps inner
 gaps top 35
-# laptop end
-{%@@ endif @@%}
 
 bindsym $mod+Ctrl+1 move workspace to output $monitor1
 bindsym $mod+Ctrl+2 move workspace to output $monitor2
