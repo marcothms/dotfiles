@@ -12,7 +12,7 @@ dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
-  f_zshhighlighting:
+  f_zsh-highlighting:
     src: zsh-highlighting
     dst: ~/.zsh-highlighting
   f_vimrc:
@@ -73,7 +73,7 @@ profiles:
   laptop:
     include:
     - zsh
-    - zshhighlighting
+    - zsh-highlighting
     - vim
     - nvim
     - i3
@@ -106,9 +106,9 @@ profiles:
   zsh:
     dotfiles:
     - f_zshrc
-  zshhighlighting:
+  zsh-highlighting:
     dotfiles:
-    - f_zshhighlighting
+    - f_zsh-highlighting
   vim:
     dotfiles:
     - f_vimrc
