@@ -5,6 +5,8 @@ My personal configurations, managed with the 'dotdrop' submodule.
 
 [Nord-themed.](https://www.nordtheme.com/)
 
+[Lock Screen Wallpaper](https://i.imgur.com/csyOJZJ.jpg)
+
 ![home](https://i.imgur.com/zayLDb6.png)
 ![vim](https://i.imgur.com/aihcZMe.png)
 ![spotify](https://i.imgur.com/hFKH7y1.png)

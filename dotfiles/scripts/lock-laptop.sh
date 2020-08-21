@@ -17,7 +17,7 @@ green="a3be8c"
 inside="${nord0}77"
 
 i3lock \
-    --blur=10 \
+    -i ~/data/wallpaper/forest_staircase.png \
     \
     --insidecolor=${inside} \
     --ringcolor=${nord0}ff \

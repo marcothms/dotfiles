@@ -1,329 +1,395 @@
-; vim: ft=dosini
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
 
 [colors]
-transparent = #00000000
+background = ${xrdb:background}
+background-alt = #444
+foreground = ${xrdb:foreground}
+foreground-alt = #555
+black       = ${xrdb:Polybar.color0}
+red         = ${xrdb:Polybar.color1}
+green       = ${xrdb:Polybar.color2}
+yellow      = ${xrdb:Polybar.color3}
+blue        = ${xrdb:Polybar.color4}
+magenta     = ${xrdb:Polybar.color5}
+cyan        = ${xrdb:Polybar.color6}
+white       = ${xrdb:Polybar.color7}
 
-red = #BF616A
-orange = #D08770
-yellow = #EBCB8B
-green = #A3BE8C
-purple = #B48EAD
+;; ========================== WORKSPACES BAR =====================
 
-blue0 = #8FBCBB
-blue1 = #88C0D0
-blue2 = #81A1C1
-blue3 = #5E81AC
-
-nord0 = #2E3440
-nord1 = #3b4252
-nord2 = #434c5e
-nord3 = #4C566A
-
-frost0 = #d8dee9
-frost1 = #e5e9f0
-frost2 = #ECEFF4
-
-accent = ${colors.blue3}
-foreground = ${colors.frost2}
-
-shade0 = ${colors.nord3}
-shade1 = ${colors.nord2}
-shade2 = ${colors.nord1}
-shade3 = ${colors.nord0}
-tray = ${colors.nord0}
-
-###############################################################################
-[settings]
-format-foreground = ${colors.foreground}
-format-background = ${colors.nord0}
-screenchange-reload = true
-
-###############################################################################
-[bar/main]
-monitor = ${env:MONITOR}
-enable-ipc = false
-
-# FONTS PROVIDED WITH DOTFILES
-# https://github.com/stark/siji
-
-font-0 = "InconsolataLGC Nerd Font Mono:pixelsize=9;2"
-font-1 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11;2"
-font-2 = "Siji:size=7;2"
-
-bottom = false
+[bar/workspaces]
+width = 17%
+height = 30px
+offset-x = 10px 
+offset-y = 5px
+radius = 12
 fixed-center = true
 
-padding-left = 0
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
 padding-right = 0
 
-radius = 0.0
+module-margin-left = 0
+module-margin-right = 0
 
-foreground = ${colors.foreground}
-background = ${colors.transparent}
+font-0 =  Fira Code Nerd Font:pixelsize=10;1
+font-1 = Material Design Icons:pixelsize=16:style:Regular;2
+font-2 = Material Design Icons:pixelsize=50:style:Regular;3
+font-3 = BreezeSans:pixelsize=16:style=Bold;-10
 
-tray-position = right
-tray-padding = 2
-tray-background = ${colors.tray}
-tray-offset-x = 8
-tray-offset-y = 0
+modules-left = app
+modules-right = terminal browser
+modules-center = i3
 
-# 100%-16px(gaps)-8px(tray)
-width = 100%:-24px
-#width = 100%:-16px
-height = 27
-
-offset-y = 8px
-offset-x = 8px
-
+wm-restack = i3
 override-redirect = true
 
-modules-left = i3
-modules-center =
-modules-right = spotify backlight volume battery date
-separator =
+cursor-click = pointer
+cursor-scroll = default
 
-wm-name = i3
+;; =================== MUSIC BAR ========================
+
+[bar/music]
+width = 25%
+height = 30px
+offset-x = 37.25%
+offset-y = 5px
+radius = 12
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 =  Fira Code Nerd Font:pixelsize=10;1
+font-1 = Material Design Icons:pixelsize=16:style:Regular;2
+font-2 = Material Design Icons:pixelsize=50:style:Regular;3
+font-3 = BreezeSans:pixelsize=16:style=Bold;-10
+font-4 = "IPAGothic:fontformat=truetype:antialias=false:pixelsize=11;2"
+
+
+modules-center = spotify  prev toggle next
+
 wm-restack = i3
+override-redirect = true
 
-###############################################################################
+cursor-click = pointer
+cursor-scroll = default
+
+
+;; =================== BAR STATUS =========================
+
+[bar/status]
+width = 20%
+height = 30px
+offset-x = 80%:-10
+offset-y = 5px
+radius = 12
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = BreezeSans:pixelsize=16:style=Bold;-10
+font-1 =  Fira Code Nerd Font:pixelsize=10;1
+font-2 = Material Design Icons:pixelsize=16:style:Regular;2
+font-3 = Fira Code Nerd Font:pixelsize=8;10
+font-4 = Fira Code Nerd Font:pixelsize=8;-8
+
+modules-right = brightness battery volume update date power-menu
+modules-left = open
+
+wm-restack = i3
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = default
+
+
+;; ==================== BAR INFO ============================
+
+[bar/info]
+width = 10%
+height = 30px
+offset-x = 72%:-5
+offset-y = 5px
+radius = 12
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = BreezeSans:pixelsize=16:style=Bold;-10
+font-1 =  Fira Code Nerd Font:pixelsize=10;1
+font-2 = Material Design Icons:pixelsize=16:style:Regular;2
+font-3 = Fira Code Nerd Font:pixelsize=8;10
+font-4 = Fira Code Nerd Font:pixelsize=8;-8
+
+modules-center = cpu temperature memory
+modules-left = close
+
+wm-restack = i3
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = default
+
+
+;; =================== I3 MODULE ============================
+
 [module/i3]
 type = internal/i3
-
-pin-workspaces = true
-index-sort = true
-enable-click = true
-enable-scroll = true
+format = <label-state> <label-mode>
 wrapping-scroll = false
 
-format = <label-state> <label-mode>
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
 
-background = ${colors.nord0}
+label-mode-padding = 2
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
 
-ws-icon-0 = 1;1
-ws-icon-1 = 2;2
-ws-icon-2 = 3;3
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;7
-ws-icon-7 = 8;8
-ws-icon-8 = 9;9
-ws-icon-9 = 10;10
+; focused = Active workspace on focused monitor
+label-focused = ""
+label-focused-padding = 1
+label-focused-font = 3
 
-label-focused = %icon%
-label-focused-foreground = ${colors.foreground}
-label-focused-background = ${colors.accent}
-label-focused-padding = 2
+; unfocused = Inactive workspace on any monitor
+label-unfocused = ""
+label-unfocused-padding = 1
+label-unfocused-font = 3
 
-label-unfocused = %index%
-label-unfocused-foreground = ${colors.foreground}
-label-unfocused-background = ${self.background}
-label-unfocused-padding = 2
+; urgent = Workspace with urgency hint set
+label-urgent = ""
+label-urgent-foreground = ${colors.red}
+label-urgent-font = 3
+label-urgent-padding = 1
 
-label-visible = %index%
-label-visible-foreground = ${colors.foreground}
-label-visible-background = ${self.background}
-label-visible-padding = 2
 
-label-urgent = %index%
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.red}
-label-urgent-padding = 2
+;; ===================== MODULE OPEN APP =================
 
-###############################################################################
+[module/app]
+type = custom/text
+
+content = "%{T4} %{T-}"
+content-background = ${colors.background}
+content-foreground = ${colors.cyan}
+content-padding = 1
+content-font = 2
+
+click-left = "~/.config/rofi/launchers-git/launcher.sh"
+
+
+;; ======================== SPOTIFY =========================
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/scripts/song.sh 2>/dev/null || echo "No player found"
+format = "<label>  "
+format-prefix = "%{T4}%{F#79e6f3}    %{F-}%{T-}"
+interval = 1
+
+tail = true
+
+;; ===================== TOGGLE =============================
+
+[module/toggle]
+type = custom/script
+
+exec = ~/.config/polybar/scripts/toggle.sh
+interval = 0.2
+format = <label>
+format-foreground = ${colors.cyan}
+format-padding = 1
+label = %output%
+
+tail = true
+click-left = playerctl play-pause &
+
+
+;; ======================== PREV =============================
+
+[module/prev]
+type = custom/text
+
+content = "%{T4}%{T-}"
+content-foreground = ${colors.cyan}
+content-padding = 2
+content-font = 2
+
+click-left = playerctl previous &
+
+
+;; ======================== NEXT =============================
+
+[module/next]
+type = custom/text
+
+content = "%{T4} %{T-}"
+content-foreground = ${colors.cyan}
+content-padding = 2
+content-font = 2
+
+click-left = playerctl next &
+
+
+;; ======================= DATE ===============================
+
 [module/date]
-type = internal/date
+type = custom/script
 
-format-padding = 2
-format-background = ${colors.shade3}
+exec =  ~/.config/polybar/scripts/date.sh
+interval = 1
+tail = true
 
-interval = 1.0
+;; ====================== POWERMENU ===========================
 
-time =  %I:%M %p
-time-alt =  %Y-%m-%d%
+[module/power-menu]
+type = custom/script
 
-format = <label>
+exec = echo "  󰐥  "
+format-foreground = ${colors.red}
+click-left = ~/.config/polybar/scripts/powermenu.sh &
 
-label = %time%
 
-###############################################################################
-[module/title]
-type = internal/xwindow
-label = %title%
-format = <label>
-label-maxlen = 80
-label-empty = "Yoroshiku!"
-format-padding = 2
+;; ======================= UPDATES ============================
 
-###############################################################################
-[module/cpu]
-type = internal/cpu
+[module/update]
+type = custom/script
+
+exec = ~/.config/polybar/scripts/updates.sh
 
 interval = 5
 
-format-background = ${colors.frost1}
-format-foreground = ${colors.nord0}
+tail =true
 
-format = <label>
-format-prefix = 
-format-padding = 2
+click-left = ~/.config/polybar/scripts/lupdates &
 
-label = " %percentage%%"
 
-###############################################################################
-[module/memory]
-type = internal/memory
-
-interval = 3
-
-format = <label>
-format-prefix = 
-
-label = " %mb_used%"
-
-###############################################################################
-[module/battery]
-type = internal/battery
-full-at = 99
-battery = BAT0
-apdapter = ADP1
-
-bg = ${colors.shade2}
-
-format-charging = <animation-charging> <label-charging>
-format-charging-background = ${self.bg}
-format-charging-padding = 2
-
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-background = ${self.bg}
-format-discharging-padding = 2
-
-format-full = <ramp-capacity> <label-full>
-format-full-background = ${self.bg}
-format-full-padding = 2
-
-label-charging = %percentage%%
-label-discharging = %percentage%%
-label-full = 100%
-
-; Only applies if <ramp-capacity> is used
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-5 = 
-ramp-capacity-6 = 
-ramp-capacity-7 = 
-ramp-capacity-8 = 
-ramp-capacity-9 = 
-
-; Only applies if <animation-charging> is used
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-
-; Framerate in milliseconds
-animation-charging-framerate = 750
-
-###############################################################################
-[module/volume]
-type = internal/pulseaudio
-
-format-volume-background = ${colors.shade1}
-format-volume-padding = 2
-
-format-volume = <ramp-volume> <label-volume>
-
-label-volume = %percentage%%
-
-format-muted-prefix = " "
-format-muted-padding = 2
-label-muted = "Muted"
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-
-ramp-headphones-0 = 
-ramp-headphones-1 = 
-
-###############################################################################
-[module/network]
-type = internal/network
-interface = wlo1
-
-interval = 1.0
-accumulate-stats = true
-unknown-as-up = true
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-background = ${colors.nord1}
-format-connected-padding = 2
-
-format-disconnected = <label-disconnected>
-format-disconnected-background = ${colors.nord1}
-format-disconnected-padding = 2
-
-label-connected = %essid%
-label-disconnected =  Disconnected
-
-; Only applies if <ramp-signal> is used
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-
-###############################################################################
-[module/backlight]
+;; ======================= BRIGHTNESS ===============================
+[module/brightness]
 type = internal/backlight
-
-format-padding = 2
-format-background = ${colors.shade0}
-format-foreground = ${colors.foreground}
 
 # ls -1 /sys/class/backlight
 card = amdgpu_bl0
 
-format = <bar>
-format-prefix = " "
-label = " %percentage%%"
+format = <label>
+label= "%{T2}%percentage%%%{T2} "
 
-bar-width = 10
-bar-indicator = |
-bar-fill = ─
-bar-empty= ─
+;; ======================= BATTERY ===============================
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = ADP1
 
-###############################################################################
-[module/load]
-type = custom/script
-exec = ~/.config/polybar/scripts/load.sh
-interval = 5.0
+format-full = <label-full>
+label-full = "%{T2}FULL%{T2} "
 
-###############################################################################
-[module/spotify]
-type = custom/script
+format-charging = <label-charging>
+label-charging = "%{T2}%percentage%%%{T2} "
 
-format-padding = 2
-format-background = ${colors.blue3}
-format-prefix = " "
+format-discharging = <label-discharging>
+label-discharging = "%{T2}%percentage%%%{T2} "
 
-exec = ~/.config/polybar/scripts/spotify.sh %artist% - %title%
-tail = true
+;; ======================= VOLUME ===============================
+
+[module/volume]
+type = internal/pulseaudio
+
+format = <label>
+
+label-volume = "󰎇%{T2}%percentage%%%{T-}  "
+
+label-muted = "󰎊  "
+label-muted-foreground = #607290
+
+
+;; ======================== CPU ================================
+
+[module/cpu]
+type = internal/cpu
+
+interval = 1
+format = <label>
+
+format-prefix = "  " 
+label = "%{T2}%percentage%%%{T2} "
+
+
+;; ======================== TEMPERATURE ========================
+
+[module/temperature]
+type = internal/temperature
+
+format = <label>
+format-prefix = "  "
+
+hwmon-path = /sys/devices/pci0000:00/0000:00:08.1/0000:07:00.0/hwmon/hwmon2/temp1_input
+
+label = "%{T2}%temperature-c%%{T-}  "
+
+
+;; ========================= MEMORY ===============================
+
+[module/memory]
+type = internal/memory
+
 interval = 2
+format-prefix = "ﴵ  "
+label = "%{T2}%percentage_used%%%{T-}   " 
 
-###############################################################################
-[module/powerbutton]
-type = custom/text
 
-content-padding = 2
-content-background = ${colors.nord1}
-content-foreground = ${colors.frost2}
+;; ========================= OPEN =================================
 
-content = "襤"
+[module/open]
+type = custom/script
 
-click-left = ~/scripts/powermenu
+exec = echo "%{F#79e6f3}  %{F-}"
+
+click-left = ~/.config/polybar/scripts/open.sh &
+
+;; ========================= CLOSE =================================
+
+[module/close]
+type = custom/script
+
+exec = echo "%{F#f37f97} %{F-}"
+
+click-left = ~/.config/polybar/scripts/close.sh
+
+# vim:ft=dosini

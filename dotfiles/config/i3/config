@@ -50,10 +50,11 @@ bindsym $mod+n workspace next
 bindsym $mod+p workspace prev
 
 # Rofi and dmenu
-bindsym $mod+space exec "rofi -show"
+bindsym $mod+space exec "~/.config/rofi/launchers-git/launcher.sh"
 bindsym $mod+d exec "dmenu_run -fn 'InconsolataLGC Nerd Font Mono' -nb '#2E3440' -sb '#5E81AC' -nf '#ECEFF4' -sf '#ECEFF4'
 
-bindsym --release $mod+Shift+p exec"import ~/screenshots/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
+#bindsym --release $mod+Shift+p exec"import ~/screenshots/Screenshot-$(date '+%Y%m%d-%H%M%S').png"
+bindsym $mod+Shift+p exec "flameshot gui"
 
 # Screen brightness
 bindsym XF86MonBrightnessUp exec light -A 5 # increase
@@ -112,7 +113,7 @@ bindsym $mod+Shift+r restart
 
 ### Design ###
 new_window 1pixel
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
 # Colors from https://www.nordtheme.com/
 set $nord0 "#2e3440"
@@ -133,15 +134,12 @@ client.unfocused        $nord0  $nord0 $frost0 $blue1    $nord0
 client.urgent           $red    $red   $frost2 $red      $red
 client.background       #ffffff
 
-exec "~/scripts/startup-laptop"
+exec "~/scripts/startup-laptop.sh"
 # i3 doesnt let me put this in the startscript
-exec_always --no-startup-id ~/.config/polybar/start.sh &amp;
-
-# Powermenu
-bindsym $mod+Shift+e exec "~/scripts/powermenu"
+exec_always --no-startup-id ~/.config/polybar/launch.sh &amp;
 
 # Locking
-bindsym $mod+Shift+BackSpace exec "~/scripts/lock-laptop"
+bindsym $mod+Shift+BackSpace exec "~/scripts/lock-laptop.sh"
 
 # Monitors
 set $monitor1 "eDP-1"
